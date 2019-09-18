@@ -47,7 +47,7 @@ import java.util.List;
  * <p>GridFS is useful not only for storing files that exceed 16MB but also for storing any files for which you want access without having
  * to load the entire file into memory. For more information on the indications of GridFS, see MongoDB official documentation.</p>
  *
- * @mongodb.driver.manual core/gridfs/ GridFS
+ *
  */
 @SuppressWarnings("rawtypes")
 public class GridFS {

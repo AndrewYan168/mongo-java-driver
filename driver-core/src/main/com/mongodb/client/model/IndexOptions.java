@@ -23,7 +23,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * The options to apply to the creation of an index.
  *
- * @mongodb.driver.manual reference/command/createIndexes Index options
+ *
  * @since 3.0
  */
 public class IndexOptions {
@@ -131,7 +131,7 @@ public class IndexOptions {
      *
      * @return the time to live for documents in the collection
      * @param timeUnit the time unit
-     * @mongodb.driver.manual tutorial/expire-data TTL
+     *
      */
     public Long getExpireAfter(final TimeUnit timeUnit) {
         if (expireAfterSeconds == null) {
@@ -146,7 +146,7 @@ public class IndexOptions {
      * @param expireAfter the time to live for documents in the collection
      * @param timeUnit the time unit for expireAfter
      * @return this
-     * @mongodb.driver.manual tutorial/expire-data TTL
+     *
      */
     public IndexOptions expireAfter(final Long expireAfter, final TimeUnit timeUnit) {
         if (expireAfter == null) {
@@ -184,7 +184,7 @@ public class IndexOptions {
      * of the field relative to the other indexed fields in terms of the score.</p>
      *
      * @return the weighting object
-     * @mongodb.driver.manual tutorial/control-results-of-text-search Control Search Results with Weights
+     *
      */
     public Bson getWeights() {
         return weights;
@@ -198,7 +198,7 @@ public class IndexOptions {
      *
      * @param weights the weighting object
      * @return this
-     * @mongodb.driver.manual tutorial/control-results-of-text-search Control Search Results with Weights
+     *
      */
     public IndexOptions weights(final Bson weights) {
         this.weights = weights;
@@ -211,7 +211,7 @@ public class IndexOptions {
      * <p>The language that determines the list of stop words and the rules for the stemmer and tokenizer.</p>
      *
      * @return the language for a text index.
-     * @mongodb.driver.manual reference/text-search-languages Text Search languages
+     *
      */
     public String getDefaultLanguage() {
         return defaultLanguage;
@@ -224,7 +224,7 @@ public class IndexOptions {
      *
      * @param defaultLanguage the language for the text index.
      * @return this
-     * @mongodb.driver.manual reference/text-search-languages Text Search languages
+     *
      */
     public IndexOptions defaultLanguage(final String defaultLanguage) {
         this.defaultLanguage = defaultLanguage;
@@ -237,7 +237,7 @@ public class IndexOptions {
      * <p>For text indexes, the name of the field, in the collection's documents, that contains the override language for the document.</p>
      *
      * @return the name of the field that contains the language string.
-     * @mongodb.driver.manual tutorial/specify-language-for-text-index/#specify-language-field-text-index-example Language override
+     *
      */
     public String getLanguageOverride() {
         return languageOverride;
@@ -250,7 +250,7 @@ public class IndexOptions {
      *
      * @param languageOverride the name of the field that contains the language string.
      * @return this
-     * @mongodb.driver.manual tutorial/specify-language-for-text-index/#specify-language-field-text-index-example Language override
+     *
      */
     public IndexOptions languageOverride(final String languageOverride) {
         this.languageOverride = languageOverride;
@@ -361,7 +361,7 @@ public class IndexOptions {
      * Gets the specified the number of units within which to group the location values for geoHaystack Indexes
      *
      * @return the specified the number of units within which to group the location values for geoHaystack Indexes
-     * @mongodb.driver.manual core/geohaystack/ geoHaystack Indexes
+     *
      */
     public Double getBucketSize() {
         return bucketSize;
@@ -372,7 +372,7 @@ public class IndexOptions {
      *
      * @param bucketSize the specified the number of units within which to group the location values for geoHaystack Indexes
      * @return this
-     * @mongodb.driver.manual core/geohaystack/ geoHaystack Indexes
+     *
      */
     public IndexOptions bucketSize(final Double bucketSize) {
         this.bucketSize = bucketSize;
@@ -383,7 +383,7 @@ public class IndexOptions {
      * Gets the storage engine options document for this index.
      *
      * @return the storage engine options
-     * @mongodb.server.release 3.0
+     *
      */
     public Bson getStorageEngine() {
         return storageEngine;
@@ -394,7 +394,7 @@ public class IndexOptions {
      *
      * @param storageEngine the storage engine options
      * @return this
-     * @mongodb.server.release 3.0
+     *
      */
     public IndexOptions storageEngine(final Bson storageEngine) {
         this.storageEngine = storageEngine;
@@ -405,7 +405,7 @@ public class IndexOptions {
      * Get the filter expression for the documents to be included in the index or null if not set
      *
      * @return the filter expression for the documents to be included in the index or null if not set
-     * @mongodb.server.release 3.2
+     *
      * @since 3.2
      */
     public Bson getPartialFilterExpression() {
@@ -417,7 +417,7 @@ public class IndexOptions {
      *
      * @param partialFilterExpression the filter expression for the documents to be included in the index
      * @return this
-     * @mongodb.server.release 3.2
+     *
      * @since 3.2
      */
     public IndexOptions partialFilterExpression(final Bson partialFilterExpression) {
@@ -430,7 +430,7 @@ public class IndexOptions {
      *
      * @return the collation options
      * @since 3.4
-     * @mongodb.server.release 3.4
+     *
      */
     public Collation getCollation() {
         return collation;
@@ -443,7 +443,7 @@ public class IndexOptions {
      * @param collation the collation options to use
      * @return this
      * @since 3.4
-     * @mongodb.server.release 3.4
+     *
      */
     public IndexOptions collation(final Collation collation) {
         this.collation = collation;

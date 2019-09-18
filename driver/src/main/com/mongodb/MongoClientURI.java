@@ -166,7 +166,7 @@ import static com.mongodb.assertions.Assertions.notNull;
  * <p>Note: This class is a replacement for {@code MongoURI}, to be used with {@code MongoClient}.  The main difference in
  * behavior is that the default write concern is {@code WriteConcern.ACKNOWLEDGED}.</p>
  *
- * @mongodb.driver.manual reference/connection-string Connection String URI Format
+ *
  * @see MongoClientOptions for the default values for all options
  * @since 2.10.0
  */

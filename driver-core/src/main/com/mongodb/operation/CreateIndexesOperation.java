@@ -65,7 +65,7 @@ import static java.util.Arrays.asList;
  *
  * <p>Multiple index creation is supported starting with MongoDB server version 2.6</p>
  *
- * @mongodb.driver.manual reference/command/createIndexes/ Create indexes
+ *
  * @since 3.0
  */
 public class CreateIndexesOperation implements AsyncWriteOperation<Void>, WriteOperation<Void> {

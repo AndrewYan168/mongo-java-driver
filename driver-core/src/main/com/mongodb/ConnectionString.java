@@ -182,7 +182,7 @@ import static java.util.Collections.singletonList;
  * the application to the server, for use in server logs, slow query logs, and profile collection.</li>
  * </ul>
  *
- * @mongodb.driver.manual reference/connection-string Connection String Format
+ *
  * @since 3.0.0
  */
 public class ConnectionString {
@@ -1000,7 +1000,7 @@ public class ConnectionString {
      *
      * @return the application name, which may be null
      * @since 3.4
-     * @mongodb.server.release 3.4
+     *
      */
     public String getApplicationName() {
         return applicationName;

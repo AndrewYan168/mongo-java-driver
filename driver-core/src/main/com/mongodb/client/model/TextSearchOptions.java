@@ -19,7 +19,7 @@ package com.mongodb.client.model;
 /**
  * Text search options for the {@link Filters#text(String, TextSearchOptions)} helper
  *
- * @mongodb.driver.manual reference/operator/query/text $text
+ *
  * @since 3.2
  */
 public final class TextSearchOptions {
@@ -52,7 +52,7 @@ public final class TextSearchOptions {
      * Returns the case-sensitive flag to use with the text search
      *
      * @return the case-sensitive flag if set or null
-     * @mongodb.server.release 3.2
+     *
      */
     public Boolean getCaseSensitive() {
         return caseSensitive;
@@ -63,7 +63,7 @@ public final class TextSearchOptions {
      *
      * @param caseSensitive the case-sensitive flag for the text search
      * @return this
-     * @mongodb.server.release 3.2
+     *
      */
     public TextSearchOptions caseSensitive(final Boolean caseSensitive) {
         this.caseSensitive = caseSensitive;
@@ -74,7 +74,7 @@ public final class TextSearchOptions {
      * Returns the diacritic-sensitive flag to use with the text search
      *
      * @return the diacritic-sensitive flag if set or null
-     * @mongodb.server.release 3.2
+     *
      */
     public Boolean getDiacriticSensitive() {
         return diacriticSensitive;
@@ -85,7 +85,7 @@ public final class TextSearchOptions {
      *
      * @param diacriticSensitive the diacritic-sensitive flag for the text search
      * @return this
-     * @mongodb.server.release 3.2
+     *
      */
     public TextSearchOptions diacriticSensitive(final Boolean diacriticSensitive) {
         this.diacriticSensitive = diacriticSensitive;

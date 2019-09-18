@@ -26,7 +26,7 @@ import static com.mongodb.assertions.Assertions.notNull;
  * The options for a count operation.
  *
  * @since 3.0
- * @mongodb.driver.manual reference/command/count/ Count
+ *
  */
 public class CountOptions {
     private Bson hint;
@@ -80,7 +80,7 @@ public class CountOptions {
      * Gets the limit to apply.  The default is 0, which means there is no limit.
      *
      * @return the limit
-     * @mongodb.driver.manual reference/method/cursor.limit/#cursor.limit Limit
+     *
      */
     public int getLimit() {
         return limit;
@@ -91,7 +91,7 @@ public class CountOptions {
      *
      * @param limit the limit
      * @return this
-     * @mongodb.driver.manual reference/method/cursor.limit/#cursor.limit Limit
+     *
      */
     public CountOptions limit(final int limit) {
         this.limit = limit;
@@ -102,7 +102,7 @@ public class CountOptions {
      * Gets the number of documents to skip.  The default is 0.
      *
      * @return the number of documents to skip
-     * @mongodb.driver.manual reference/method/cursor.skip/#cursor.skip Skip
+     *
      */
     public int getSkip() {
         return skip;
@@ -113,7 +113,7 @@ public class CountOptions {
      *
      * @param skip the number of documents to skip
      * @return this
-     * @mongodb.driver.manual reference/method/cursor.skip/#cursor.skip Skip
+     *
      */
     public CountOptions skip(final int skip) {
         this.skip = skip;
@@ -149,7 +149,7 @@ public class CountOptions {
      *
      * @return the collation options
      * @since 3.4
-     * @mongodb.server.release 3.4
+     *
      */
     public Collation getCollation() {
         return collation;
@@ -162,7 +162,7 @@ public class CountOptions {
      * @param collation the collation options to use
      * @return this
      * @since 3.4
-     * @mongodb.server.release 3.4
+     *
      */
     public CountOptions collation(final Collation collation) {
         this.collation = collation;

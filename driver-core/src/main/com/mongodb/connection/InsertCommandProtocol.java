@@ -32,7 +32,7 @@ import static java.lang.String.format;
 /**
  * An implementation of the insert command.
  *
- * @mongodb.driver.manual reference/command/insert/#dbcmd.insert Insert Command
+ *
  */
 class InsertCommandProtocol extends WriteCommandProtocol {
 

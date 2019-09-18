@@ -22,7 +22,7 @@ import static java.lang.String.format;
  * Collation support allows the specific configuration of how character cases are handled.
  *
  * @since 3.4
- * @mongodb.server.release 3.4
+ *
  */
 public enum CollationCaseFirst {
 

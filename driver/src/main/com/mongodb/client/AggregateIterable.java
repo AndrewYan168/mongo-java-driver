@@ -24,7 +24,7 @@ import java.util.concurrent.TimeUnit;
  * Iterable for aggregate.
  *
  * @param <TResult> The type of the result.
- * @mongodb.driver.manual reference/command/aggregate/ Aggregation
+ *
  * @since 3.0
  */
 public interface AggregateIterable<TResult> extends MongoIterable<TResult> {
@@ -33,7 +33,7 @@ public interface AggregateIterable<TResult> extends MongoIterable<TResult> {
      * Aggregates documents according to the specified aggregation pipeline, which must end with a $out stage.
      *
      * @throws IllegalStateException if the pipeline does not end with a $out stage
-     * @mongodb.driver.manual reference/operator/aggregation/out/ $out stage
+     *
      * @since 3.4
      */
     void toCollection();
@@ -43,8 +43,8 @@ public interface AggregateIterable<TResult> extends MongoIterable<TResult> {
      *
      * @param allowDiskUse true if writing to temporary files is enabled
      * @return this
-     * @mongodb.driver.manual reference/command/aggregate/ Aggregation
-     * @mongodb.server.release 2.6
+     *
+     *
      */
     AggregateIterable<TResult> allowDiskUse(Boolean allowDiskUse);
 
@@ -53,7 +53,7 @@ public interface AggregateIterable<TResult> extends MongoIterable<TResult> {
      *
      * @param batchSize the batch size
      * @return this
-     * @mongodb.driver.manual reference/method/cursor.batchSize/#cursor.batchSize Batch Size
+     *
      */
     AggregateIterable<TResult> batchSize(int batchSize);
 
@@ -63,7 +63,7 @@ public interface AggregateIterable<TResult> extends MongoIterable<TResult> {
      * @param maxTime  the max time
      * @param timeUnit the time unit, which may not be null
      * @return this
-     * @mongodb.driver.manual reference/method/cursor.maxTimeMS/#cursor.maxTimeMS Max Time
+     *
      */
     AggregateIterable<TResult> maxTime(long maxTime, TimeUnit timeUnit);
 
@@ -72,8 +72,8 @@ public interface AggregateIterable<TResult> extends MongoIterable<TResult> {
      *
      * @param useCursor whether the server should use a cursor to return results
      * @return this
-     * @mongodb.driver.manual reference/command/aggregate/ Aggregation
-     * @mongodb.server.release 2.6
+     *
+     *
      */
     AggregateIterable<TResult> useCursor(Boolean useCursor);
 
@@ -85,8 +85,8 @@ public interface AggregateIterable<TResult> extends MongoIterable<TResult> {
      * @param bypassDocumentValidation If true, allows the write to opt-out of document level validation.
      * @return this
      * @since 3.2
-     * @mongodb.driver.manual reference/command/aggregate/ Aggregation
-     * @mongodb.server.release 3.2
+     *
+     *
      */
     AggregateIterable<TResult> bypassDocumentValidation(Boolean bypassDocumentValidation);
 
@@ -97,7 +97,7 @@ public interface AggregateIterable<TResult> extends MongoIterable<TResult> {
      * @param collation the collation options to use
      * @return this
      * @since 3.4
-     * @mongodb.server.release 3.4
+     *
      */
     AggregateIterable<TResult> collation(Collation collation);
 }

@@ -58,7 +58,7 @@ public class BsonArray extends BsonValue implements List<BsonValue>, Cloneable {
      * @param json the JSON string
      * @return a corresponding {@code BsonArray} object
      * @see org.bson.json.JsonReader
-     * @mongodb.driver.manual reference/mongodb-extended-json/ MongoDB Extended JSON
+     *
      *
      * @since 3.4
      */

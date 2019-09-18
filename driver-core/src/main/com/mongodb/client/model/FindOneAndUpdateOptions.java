@@ -27,7 +27,7 @@ import static java.util.concurrent.TimeUnit.MILLISECONDS;
  * The options to apply to an operation that atomically finds a document and updates it.
  *
  * @since 3.0
- * @mongodb.driver.manual reference/command/findAndModify/
+ *
  */
 public class FindOneAndUpdateOptions {
     private Bson projection;
@@ -42,7 +42,7 @@ public class FindOneAndUpdateOptions {
      * Gets a document describing the fields to return for all matching documents.
      *
      * @return the project document, which may be null
-     * @mongodb.driver.manual tutorial/project-fields-from-query-results Projection
+     *
      */
     public Bson getProjection() {
         return projection;
@@ -53,7 +53,7 @@ public class FindOneAndUpdateOptions {
      *
      * @param projection the project document, which may be null.
      * @return this
-     * @mongodb.driver.manual tutorial/project-fields-from-query-results Projection
+     *
      */
     public FindOneAndUpdateOptions projection(final Bson projection) {
         this.projection = projection;
@@ -65,7 +65,7 @@ public class FindOneAndUpdateOptions {
      * order.
      *
      * @return a document describing the sort criteria
-     * @mongodb.driver.manual reference/method/cursor.sort/ Sort
+     *
      */
     public Bson getSort() {
         return sort;
@@ -76,7 +76,7 @@ public class FindOneAndUpdateOptions {
      *
      * @param sort the sort criteria, which may be null.
      * @return this
-     * @mongodb.driver.manual reference/method/cursor.sort/ Sort
+     *
      */
     public FindOneAndUpdateOptions sort(final Bson sort) {
         this.sort = sort;
@@ -152,7 +152,7 @@ public class FindOneAndUpdateOptions {
      *
      * @return the bypass document level validation flag
      * @since 3.2
-     * @mongodb.server.release 3.2
+     *
      */
     public Boolean getBypassDocumentValidation() {
         return bypassDocumentValidation;
@@ -164,7 +164,7 @@ public class FindOneAndUpdateOptions {
      * @param bypassDocumentValidation If true, allows the write to opt-out of document level validation.
      * @return this
      * @since 3.2
-     * @mongodb.server.release 3.2
+     *
      */
     public FindOneAndUpdateOptions bypassDocumentValidation(final Boolean bypassDocumentValidation) {
         this.bypassDocumentValidation = bypassDocumentValidation;
@@ -176,7 +176,7 @@ public class FindOneAndUpdateOptions {
      *
      * @return the collation options
      * @since 3.4
-     * @mongodb.server.release 3.4
+     *
      */
     public Collation getCollation() {
         return collation;
@@ -189,7 +189,7 @@ public class FindOneAndUpdateOptions {
      * @param collation the collation options to use
      * @return this
      * @since 3.4
-     * @mongodb.server.release 3.4
+     *
      */
     public FindOneAndUpdateOptions collation(final Collation collation) {
         this.collation = collation;

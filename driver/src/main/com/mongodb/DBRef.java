@@ -25,7 +25,7 @@ import static com.mongodb.assertions.Assertions.notNull;
 /**
  * A representation of a database reference.
  *
- * @mongodb.driver.manual reference/database-references/ Database References
+ *
  */
 public class DBRef implements Serializable {
 

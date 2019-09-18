@@ -23,8 +23,8 @@ import static java.lang.String.format;
  * Determines whether to error on invalid documents or just warn about the violations but allow invalid documents.
  *
  * @since 3.2
- * @mongodb.server.release 3.2
- * @mongodb.driver.manual reference/method/db.createCollection/ Create Collection
+ *
+ *
  */
 public enum ValidationAction {
 

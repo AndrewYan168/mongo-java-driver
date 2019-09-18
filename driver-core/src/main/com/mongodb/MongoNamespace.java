@@ -42,7 +42,7 @@ public final class MongoNamespace {
      * @param databaseName the database name
      * @throws IllegalArgumentException if the database name is invalid
      * @since 3.4
-     * @mongodb.driver.manual reference/limits/#naming-restrictions Naming Restrictions
+     *
      */
     public static void checkDatabaseNameValidity(final String databaseName) {
         notNull("databaseName", databaseName);
@@ -59,7 +59,7 @@ public final class MongoNamespace {
      * @param collectionName the collection name
      * @throws IllegalArgumentException if the collection name is invalid
      * @since 3.4
-     * @mongodb.driver.manual reference/limits/#naming-restrictions Naming Restrictions
+     *
      */
     public static void checkCollectionNameValidity(final String collectionName) {
         notNull("collectionName", collectionName);

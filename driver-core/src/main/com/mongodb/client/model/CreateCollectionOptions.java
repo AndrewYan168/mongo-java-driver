@@ -23,7 +23,7 @@ import static com.mongodb.assertions.Assertions.notNull;
 /**
  * Options for creating a collection
  *
- * @mongodb.driver.manual reference/method/db.createCollection/ Create Collection
+ *
  * @since 3.0
  */
 public class CreateCollectionOptions {
@@ -122,8 +122,8 @@ public class CreateCollectionOptions {
      * Gets whether the usePowerOf2Sizes allocation strategy is turned on for this collection.
      *
      * @return true if the usePowerOf2Sizes allocation strategy is turned on for this collection
-     * @mongodb.driver.manual reference/command/collMod/#usePowerOf2Sizes usePowerOf2Sizes
-     * @mongodb.server.release 2.6
+     *
+     *
      * @deprecated As of MongoDB 3.0, power of 2 sizes is ignored by the MongoDB server
      */
     @Deprecated
@@ -136,8 +136,8 @@ public class CreateCollectionOptions {
      *
      * @param usePowerOf2Sizes true if the usePowerOf2Sizes allocation strategy is turned on for this collection
      * @return this
-     * @mongodb.driver.manual reference/command/collMod/#usePowerOf2Sizes usePowerOf2Sizes
-     * @mongodb.server.release 2.6
+     *
+     *
      * @deprecated As of MongoDB 3.0, power of 2 sizes is ignored by the MongoDB server
      */
     @Deprecated
@@ -150,7 +150,7 @@ public class CreateCollectionOptions {
      * Gets the storage engine options document for the collection.
      *
      * @return the storage engine options
-     * @mongodb.server.release 3.0
+     *
      */
     public Bson getStorageEngineOptions() {
         return storageEngineOptions;
@@ -161,7 +161,7 @@ public class CreateCollectionOptions {
      *
      * @param storageEngineOptions the storage engine options
      * @return this
-     * @mongodb.server.release 3.0
+     *
      */
     public CreateCollectionOptions storageEngineOptions(final Bson storageEngineOptions) {
         this.storageEngineOptions = storageEngineOptions;
@@ -173,7 +173,7 @@ public class CreateCollectionOptions {
      *
      * @return the index option defaults
      * @since 3.2
-     * @mongodb.server.release 3.2
+     *
      */
     public IndexOptionDefaults getIndexOptionDefaults() {
         return indexOptionDefaults;
@@ -185,7 +185,7 @@ public class CreateCollectionOptions {
      * @param indexOptionDefaults the index option defaults
      * @return this
      * @since 3.2
-     * @mongodb.server.release 3.2
+     *
      */
     public CreateCollectionOptions indexOptionDefaults(final IndexOptionDefaults indexOptionDefaults) {
         this.indexOptionDefaults = indexOptionDefaults;
@@ -197,7 +197,7 @@ public class CreateCollectionOptions {
      *
      * @return the validation options
      * @since 3.2
-     * @mongodb.server.release 3.2
+     *
      */
     public ValidationOptions getValidationOptions() {
         return validationOptions;
@@ -209,7 +209,7 @@ public class CreateCollectionOptions {
      * @param validationOptions the validation options
      * @return this
      * @since 3.2
-     * @mongodb.server.release 3.2
+     *
      */
     public CreateCollectionOptions validationOptions(final ValidationOptions validationOptions) {
         this.validationOptions = notNull("validationOptions", validationOptions);
@@ -221,7 +221,7 @@ public class CreateCollectionOptions {
      *
      * @return the collation options
      * @since 3.4
-     * @mongodb.server.release 3.4
+     *
      */
     public Collation getCollation() {
         return collation;
@@ -234,7 +234,7 @@ public class CreateCollectionOptions {
      * @param collation the collation options to use
      * @return this
      * @since 3.4
-     * @mongodb.server.release 3.4
+     *
      */
     public CreateCollectionOptions collation(final Collation collation) {
         this.collation = collation;

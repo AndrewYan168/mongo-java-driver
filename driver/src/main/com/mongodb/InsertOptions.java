@@ -20,7 +20,7 @@ package com.mongodb;
  * Options related to insertion of documents into MongoDB.  The setter methods return {@code this} so that a chaining style can be used.
  *
  * @since 2.13
- * @mongodb.driver.manual tutorial/insert-documents/ Insert Tutorial
+ *
  */
 public final class InsertOptions {
     private WriteConcern writeConcern;
@@ -95,7 +95,7 @@ public final class InsertOptions {
      *
      * @return whether to bypass document validation, or null if unspecified.
      * @since 2.14
-     * @mongodb.server.release 3.2
+     *
      */
     public Boolean getBypassDocumentValidation() {
         return bypassDocumentValidation;
@@ -107,7 +107,7 @@ public final class InsertOptions {
      * @param bypassDocumentValidation whether to bypass document validation, or null if unspecified
      * @return this
      * @since 2.14
-     * @mongodb.server.release 3.2
+     *
      */
     public InsertOptions bypassDocumentValidation(final Boolean bypassDocumentValidation) {
         this.bypassDocumentValidation = bypassDocumentValidation;

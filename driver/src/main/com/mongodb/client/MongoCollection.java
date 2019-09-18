@@ -99,8 +99,8 @@ public interface MongoCollection<TDocument> {
      *
      * @return the {@link com.mongodb.ReadConcern}
      * @since 3.2
-     * @mongodb.server.release 3.2
-     * @mongodb.driver.manual reference/readConcern/ Read Concern
+     *
+     *
      */
     ReadConcern getReadConcern();
 
@@ -143,8 +143,8 @@ public interface MongoCollection<TDocument> {
      * @param readConcern the new {@link ReadConcern} for the collection
      * @return a new MongoCollection instance with the different ReadConcern
      * @since 3.2
-     * @mongodb.server.release 3.2
-     * @mongodb.driver.manual reference/readConcern/ Read Concern
+     *
+     *
      */
     MongoCollection<TDocument> withReadConcern(ReadConcern readConcern);
 
@@ -179,7 +179,7 @@ public interface MongoCollection<TDocument> {
      * @param resultClass the class to cast any distinct items into.
      * @param <TResult>   the target type of the iterable.
      * @return an iterable of distinct values
-     * @mongodb.driver.manual reference/command/distinct/ Distinct
+     *
      */
     <TResult> DistinctIterable<TResult> distinct(String fieldName, Class<TResult> resultClass);
 
@@ -191,7 +191,7 @@ public interface MongoCollection<TDocument> {
      * @param resultClass the class to cast any distinct items into.
      * @param <TResult>   the target type of the iterable.
      * @return an iterable of distinct values
-     * @mongodb.driver.manual reference/command/distinct/ Distinct
+     *
      */
     <TResult> DistinctIterable<TResult> distinct(String fieldName, Bson filter, Class<TResult> resultClass);
 
@@ -199,7 +199,7 @@ public interface MongoCollection<TDocument> {
      * Finds all documents in the collection.
      *
      * @return the find iterable interface
-     * @mongodb.driver.manual tutorial/query-documents/ Find
+     *
      */
     FindIterable<TDocument> find();
 
@@ -209,7 +209,7 @@ public interface MongoCollection<TDocument> {
      * @param resultClass the class to decode each document into
      * @param <TResult>   the target document type of the iterable.
      * @return the find iterable interface
-     * @mongodb.driver.manual tutorial/query-documents/ Find
+     *
      */
     <TResult> FindIterable<TResult> find(Class<TResult> resultClass);
 
@@ -218,7 +218,7 @@ public interface MongoCollection<TDocument> {
      *
      * @param filter the query filter
      * @return the find iterable interface
-     * @mongodb.driver.manual tutorial/query-documents/ Find
+     *
      */
     FindIterable<TDocument> find(Bson filter);
 
@@ -229,7 +229,7 @@ public interface MongoCollection<TDocument> {
      * @param resultClass the class to decode each document into
      * @param <TResult>   the target document type of the iterable.
      * @return the find iterable interface
-     * @mongodb.driver.manual tutorial/query-documents/ Find
+     *
      */
     <TResult> FindIterable<TResult> find(Bson filter, Class<TResult> resultClass);
 
@@ -238,8 +238,8 @@ public interface MongoCollection<TDocument> {
      *
      * @param pipeline the aggregate pipeline
      * @return an iterable containing the result of the aggregation operation
-     * @mongodb.driver.manual aggregation/ Aggregation
-     * @mongodb.server.release 2.2
+     *
+     *
      */
     AggregateIterable<TDocument> aggregate(List<? extends Bson> pipeline);
 
@@ -250,8 +250,8 @@ public interface MongoCollection<TDocument> {
      * @param resultClass the class to decode each document into
      * @param <TResult>   the target document type of the iterable.
      * @return an iterable containing the result of the aggregation operation
-     * @mongodb.driver.manual aggregation/ Aggregation
-     * @mongodb.server.release 2.2
+     *
+     *
      */
     <TResult> AggregateIterable<TResult> aggregate(List<? extends Bson> pipeline, Class<TResult> resultClass);
 
@@ -261,7 +261,7 @@ public interface MongoCollection<TDocument> {
      * @param mapFunction    A JavaScript function that associates or "maps" a value with a key and emits the key and value pair.
      * @param reduceFunction A JavaScript function that "reduces" to a single object all the values associated with a particular key.
      * @return an iterable containing the result of the map-reduce operation
-     * @mongodb.driver.manual reference/command/mapReduce/ map-reduce
+     *
      */
     MapReduceIterable<TDocument> mapReduce(String mapFunction, String reduceFunction);
 
@@ -273,7 +273,7 @@ public interface MongoCollection<TDocument> {
      * @param resultClass    the class to decode each resulting document into.
      * @param <TResult>      the target document type of the iterable.
      * @return an iterable containing the result of the map-reduce operation
-     * @mongodb.driver.manual reference/command/mapReduce/ map-reduce
+     *
      */
     <TResult> MapReduceIterable<TResult> mapReduce(String mapFunction, String reduceFunction, Class<TResult> resultClass);
 
@@ -401,7 +401,7 @@ public interface MongoCollection<TDocument> {
      * @throws com.mongodb.MongoWriteException        if the write failed due some other failure specific to the replace command
      * @throws com.mongodb.MongoWriteConcernException if the write failed due being unable to fulfil the write concern
      * @throws com.mongodb.MongoException             if the write failed due some other failure
-     * @mongodb.driver.manual tutorial/modify-documents/#replace-the-document Replace
+     *
      */
     UpdateResult replaceOne(Bson filter, TDocument replacement);
 
@@ -415,7 +415,7 @@ public interface MongoCollection<TDocument> {
      * @throws com.mongodb.MongoWriteException        if the write failed due some other failure specific to the replace command
      * @throws com.mongodb.MongoWriteConcernException if the write failed due being unable to fulfil the write concern
      * @throws com.mongodb.MongoException             if the write failed due some other failure
-     * @mongodb.driver.manual tutorial/modify-documents/#replace-the-document Replace
+     *
      */
     UpdateResult replaceOne(Bson filter, TDocument replacement, UpdateOptions updateOptions);
 
@@ -428,8 +428,8 @@ public interface MongoCollection<TDocument> {
      * @throws com.mongodb.MongoWriteException        if the write failed due some other failure specific to the update command
      * @throws com.mongodb.MongoWriteConcernException if the write failed due being unable to fulfil the write concern
      * @throws com.mongodb.MongoException             if the write failed due some other failure
-     * @mongodb.driver.manual tutorial/modify-documents/ Updates
-     * @mongodb.driver.manual reference/operator/update/ Update Operators
+     *
+     *
      */
     UpdateResult updateOne(Bson filter, Bson update);
 
@@ -443,8 +443,8 @@ public interface MongoCollection<TDocument> {
      * @throws com.mongodb.MongoWriteException        if the write failed due some other failure specific to the update command
      * @throws com.mongodb.MongoWriteConcernException if the write failed due being unable to fulfil the write concern
      * @throws com.mongodb.MongoException             if the write failed due some other failure
-     * @mongodb.driver.manual tutorial/modify-documents/ Updates
-     * @mongodb.driver.manual reference/operator/update/ Update Operators
+     *
+     *
      */
     UpdateResult updateOne(Bson filter, Bson update, UpdateOptions updateOptions);
 
@@ -457,8 +457,8 @@ public interface MongoCollection<TDocument> {
      * @throws com.mongodb.MongoWriteException        if the write failed due some other failure specific to the update command
      * @throws com.mongodb.MongoWriteConcernException if the write failed due being unable to fulfil the write concern
      * @throws com.mongodb.MongoException             if the write failed due some other failure
-     * @mongodb.driver.manual tutorial/modify-documents/ Updates
-     * @mongodb.driver.manual reference/operator/update/ Update Operators
+     *
+     *
      */
     UpdateResult updateMany(Bson filter, Bson update);
 
@@ -472,8 +472,8 @@ public interface MongoCollection<TDocument> {
      * @throws com.mongodb.MongoWriteException        if the write failed due some other failure specific to the update command
      * @throws com.mongodb.MongoWriteConcernException if the write failed due being unable to fulfil the write concern
      * @throws com.mongodb.MongoException             if the write failed due some other failure
-     * @mongodb.driver.manual tutorial/modify-documents/ Updates
-     * @mongodb.driver.manual reference/operator/update/ Update Operators
+     *
+     *
      */
     UpdateResult updateMany(Bson filter, Bson update, UpdateOptions updateOptions);
 
@@ -542,7 +542,7 @@ public interface MongoCollection<TDocument> {
     /**
      * Drops this collection from the Database.
      *
-     * @mongodb.driver.manual reference/command/drop/ Drop Collection
+     *
      */
     void drop();
 
@@ -551,7 +551,7 @@ public interface MongoCollection<TDocument> {
      *
      * @param keys an object describing the index key(s), which may not be null.
      * @return the index name
-     * @mongodb.driver.manual reference/command/createIndexes Create indexes
+     *
      */
     String createIndex(Bson keys);
 
@@ -561,7 +561,7 @@ public interface MongoCollection<TDocument> {
      * @param keys                an object describing the index key(s), which may not be null.
      * @param indexOptions the options for the index
      * @return the index name
-     * @mongodb.driver.manual reference/command/createIndexes Create indexes
+     *
      */
     String createIndex(Bson keys, IndexOptions indexOptions);
 
@@ -570,8 +570,8 @@ public interface MongoCollection<TDocument> {
      *
      * @param indexes the list of indexes
      * @return the list of index names
-     * @mongodb.driver.manual reference/command/createIndexes Create indexes
-     * @mongodb.server.release 2.6
+     *
+     *
      */
     List<String> createIndexes(List<IndexModel> indexes);
 
@@ -579,7 +579,7 @@ public interface MongoCollection<TDocument> {
      * Get all the indexes in this collection.
      *
      * @return the list indexes iterable interface
-     * @mongodb.driver.manual reference/command/listIndexes/ List indexes
+     *
      */
     ListIndexesIterable<Document> listIndexes();
 
@@ -589,7 +589,7 @@ public interface MongoCollection<TDocument> {
      * @param resultClass the class to decode each document into
      * @param <TResult>   the target document type of the iterable.
      * @return the list indexes iterable interface
-     * @mongodb.driver.manual reference/command/listIndexes/ List indexes
+     *
      */
     <TResult> ListIndexesIterable<TResult> listIndexes(Class<TResult> resultClass);
 
@@ -597,7 +597,7 @@ public interface MongoCollection<TDocument> {
      * Drops the index given its name.
      *
      * @param indexName the name of the index to remove
-     * @mongodb.driver.manual reference/command/dropIndexes/ Drop indexes
+     *
      */
     void dropIndex(String indexName);
 
@@ -605,14 +605,14 @@ public interface MongoCollection<TDocument> {
      * Drops the index given the keys used to create it.
      *
      * @param keys the keys of the index to remove
-     * @mongodb.driver.manual reference/command/dropIndexes/ Drop indexes
+     *
      */
     void dropIndex(Bson keys);
 
     /**
      * Drop all the indexes on this collection, except for the default on _id.
      *
-     * @mongodb.driver.manual reference/command/dropIndexes/ Drop indexes
+     *
      */
     void dropIndexes();
 
@@ -622,7 +622,7 @@ public interface MongoCollection<TDocument> {
      * @param newCollectionNamespace the namespace the collection will be renamed to
      * @throws com.mongodb.MongoServerException if you provide a newCollectionName that is the name of an existing collection, or if the
      *                                          oldCollectionName is the name of a collection that doesn't exist
-     * @mongodb.driver.manual reference/command/renameCollection Rename collection
+     *
      */
     void renameCollection(MongoNamespace newCollectionNamespace);
 
@@ -633,7 +633,7 @@ public interface MongoCollection<TDocument> {
      * @param renameCollectionOptions the options for renaming a collection
      * @throws com.mongodb.MongoServerException if you provide a newCollectionName that is the name of an existing collection and dropTarget
      *                                          is false, or if the oldCollectionName is the name of a collection that doesn't exist
-     * @mongodb.driver.manual reference/command/renameCollection Rename collection
+     *
      */
     void renameCollection(MongoNamespace newCollectionNamespace, RenameCollectionOptions renameCollectionOptions);
 

@@ -49,7 +49,7 @@ public abstract class GridFSDownloadStream extends InputStream {
      *
      * @param batchSize the batch size
      * @return this
-     * @mongodb.driver.manual reference/method/cursor.batchSize/#cursor.batchSize Batch Size
+     *
      */
     public abstract GridFSDownloadStream batchSize(int batchSize);
 

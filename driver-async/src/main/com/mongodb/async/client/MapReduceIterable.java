@@ -47,7 +47,7 @@ public interface MapReduceIterable<TResult> extends MongoIterable<TResult> {
      *
      * @param finalizeFunction the JavaScript function that follows the reduce method and modifies the output.
      * @return this
-     * @mongodb.driver.manual reference/command/mapReduce/#mapreduce-finalize-cmd Requirements for the finalize Function
+     *
      */
     MapReduceIterable<TResult> finalizeFunction(String finalizeFunction);
 
@@ -56,7 +56,7 @@ public interface MapReduceIterable<TResult> extends MongoIterable<TResult> {
      *
      * @param scope the global variables that are accessible in the map, reduce and finalize functions.
      * @return this
-     * @mongodb.driver.manual reference/command/mapReduce mapReduce
+     *
      */
     MapReduceIterable<TResult> scope(Bson scope);
 
@@ -65,7 +65,7 @@ public interface MapReduceIterable<TResult> extends MongoIterable<TResult> {
      *
      * @param sort the sort criteria, which may be null.
      * @return this
-     * @mongodb.driver.manual reference/method/cursor.sort/ Sort
+     *
      */
     MapReduceIterable<TResult> sort(Bson sort);
 
@@ -74,7 +74,7 @@ public interface MapReduceIterable<TResult> extends MongoIterable<TResult> {
      *
      * @param filter the filter to apply to the query.
      * @return this
-     * @mongodb.driver.manual reference/method/db.collection.find/ Filter
+     *
      */
     MapReduceIterable<TResult> filter(Bson filter);
 
@@ -83,7 +83,7 @@ public interface MapReduceIterable<TResult> extends MongoIterable<TResult> {
      *
      * @param limit the limit, which may be null
      * @return this
-     * @mongodb.driver.manual reference/method/cursor.limit/#cursor.limit Limit
+     *
      */
     MapReduceIterable<TResult> limit(int limit);
 
@@ -94,7 +94,7 @@ public interface MapReduceIterable<TResult> extends MongoIterable<TResult> {
      * @param jsMode the flag that specifies whether to convert intermediate data into BSON format between the execution of the map and
      *               reduce functions
      * @return jsMode
-     * @mongodb.driver.manual reference/command/mapReduce mapReduce
+     *
      */
     MapReduceIterable<TResult> jsMode(boolean jsMode);
 
@@ -112,7 +112,7 @@ public interface MapReduceIterable<TResult> extends MongoIterable<TResult> {
      * @param maxTime  the max time
      * @param timeUnit the time unit, which may not be null
      * @return this
-     * @mongodb.driver.manual reference/method/cursor.maxTimeMS/#cursor.maxTimeMS Max Time
+     *
      */
     MapReduceIterable<TResult> maxTime(long maxTime, TimeUnit timeUnit);
 
@@ -129,7 +129,7 @@ public interface MapReduceIterable<TResult> extends MongoIterable<TResult> {
      *
      * @param databaseName the name of the database to output into.
      * @return this
-     * @mongodb.driver.manual reference/command/mapReduce/#output-to-a-collection-with-an-action output with an action
+     *
      */
     MapReduceIterable<TResult> databaseName(String databaseName);
     /**
@@ -137,7 +137,7 @@ public interface MapReduceIterable<TResult> extends MongoIterable<TResult> {
      *
      * @param sharded if the output database is sharded
      * @return this
-     * @mongodb.driver.manual reference/command/mapReduce/#output-to-a-collection-with-an-action output with an action
+     *
      */
     MapReduceIterable<TResult> sharded(boolean sharded);
 
@@ -148,7 +148,7 @@ public interface MapReduceIterable<TResult> extends MongoIterable<TResult> {
      *
      * @param nonAtomic if the post-processing step will prevent MongoDB from locking the database.
      * @return this
-     * @mongodb.driver.manual reference/command/mapReduce/#output-to-a-collection-with-an-action output with an action
+     *
      */
     MapReduceIterable<TResult> nonAtomic(boolean nonAtomic);
 
@@ -157,7 +157,7 @@ public interface MapReduceIterable<TResult> extends MongoIterable<TResult> {
      *
      * @param batchSize the batch size
      * @return this
-     * @mongodb.driver.manual reference/method/cursor.batchSize/#cursor.batchSize Batch Size
+     *
      */
     MapReduceIterable<TResult> batchSize(int batchSize);
 
@@ -169,8 +169,8 @@ public interface MapReduceIterable<TResult> extends MongoIterable<TResult> {
      * @param bypassDocumentValidation If true, allows the write to opt-out of document level validation.
      * @return this
      * @since 3.2
-     * @mongodb.driver.manual reference/command/mapReduce mapReduce
-     * @mongodb.server.release 3.2
+     *
+     *
      */
     MapReduceIterable<TResult> bypassDocumentValidation(Boolean bypassDocumentValidation);
 
@@ -181,7 +181,7 @@ public interface MapReduceIterable<TResult> extends MongoIterable<TResult> {
      * @param collation the collation options to use
      * @return this
      * @since 3.4
-     * @mongodb.server.release 3.4
+     *
      */
     MapReduceIterable<TResult> collation(Collation collation);
 
@@ -192,7 +192,7 @@ public interface MapReduceIterable<TResult> extends MongoIterable<TResult> {
      * @param callback the callback, which is called when the aggregation completes
      * @throws IllegalStateException if a collection name to write the results to has not been specified
      * @see #collectionName(String)
-     * @mongodb.driver.manual aggregation/ Aggregation
+     *
      */
     void toCollection(SingleResultCallback<Void> callback);
 }

@@ -23,9 +23,9 @@ import com.mongodb.WriteConcern;
  * The options to apply when updating documents in the DBCollection
  *
  * @since 3.4
- * @mongodb.driver.manual tutorial/modify-documents/ Updates
- * @mongodb.driver.manual reference/operator/update/ Update Operators
- * @mongodb.driver.manual reference/command/update/ Update Command
+ *
+ *
+ *
  */
 public class DBCollectionUpdateOptions {
     private boolean upsert;
@@ -65,7 +65,7 @@ public class DBCollectionUpdateOptions {
      * Gets the the bypass document level validation flag
      *
      * @return the bypass document level validation flag
-     * @mongodb.server.release 3.2
+     *
      */
     public Boolean getBypassDocumentValidation() {
         return bypassDocumentValidation;
@@ -76,7 +76,7 @@ public class DBCollectionUpdateOptions {
      *
      * @param bypassDocumentValidation If true, allows the write to opt-out of document level validation.
      * @return this
-     * @mongodb.server.release 3.2
+     *
      */
     public DBCollectionUpdateOptions bypassDocumentValidation(final Boolean bypassDocumentValidation) {
         this.bypassDocumentValidation = bypassDocumentValidation;
@@ -107,7 +107,7 @@ public class DBCollectionUpdateOptions {
      * Returns the collation options
      *
      * @return the collation options
-     * @mongodb.server.release 3.4
+     *
      */
     public Collation getCollation() {
         return collation;
@@ -118,7 +118,7 @@ public class DBCollectionUpdateOptions {
      *
      * @param collation the collation
      * @return this
-     * @mongodb.server.release 3.4
+     *
      */
     public DBCollectionUpdateOptions collation(final Collation collation) {
         this.collation = collation;

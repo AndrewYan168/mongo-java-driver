@@ -24,8 +24,8 @@ import static com.mongodb.assertions.Assertions.notNull;
 /**
  * A read concern allows clients to choose a level of isolation for their reads.
  *
- * @mongodb.server.release 3.2
- * @mongodb.driver.manual reference/readConcern/ Read Concern
+ *
+ *
  * @since 3.2
  */
 public final class ReadConcern {
@@ -63,7 +63,7 @@ public final class ReadConcern {
      * </p>
      *
      * @since 3.4
-     * @mongodb.server.release 3.4
+     *
      */
     public static final ReadConcern LINEARIZABLE = new ReadConcern(ReadConcernLevel.LINEARIZABLE);
 

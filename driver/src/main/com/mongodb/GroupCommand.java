@@ -26,7 +26,7 @@ import static com.mongodb.assertions.Assertions.notNull;
 /**
  * This class groups the argument for a group operation and can build the underlying command object
  *
- * @mongodb.driver.manual reference/command/group/ Group
+ *
  */
 public class GroupCommand {
     private final String collectionName;

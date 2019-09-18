@@ -22,9 +22,9 @@ import org.bson.conversions.Bson;
  * The default options for a collection to apply on the creation of indexes.
  *
  * @since 3.2
- * @mongodb.driver.manual reference/method/db.createCollection/ Create Collection
- * @mongodb.driver.manual reference/command/createIndexes Index options
- * @mongodb.server.release 3.2
+ *
+ *
+ *
  */
 public final class IndexOptionDefaults {
     private Bson storageEngine;

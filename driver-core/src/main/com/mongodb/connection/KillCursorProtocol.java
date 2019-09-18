@@ -38,7 +38,7 @@ import static java.lang.String.format;
 /**
  * An implementation of the OP_KILL_CURSOR protocol.
  *
- * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#op-kill-cursors OP_KILL_CURSOR
+ *
  */
 class KillCursorProtocol implements Protocol<Void> {
     public static final Logger LOGGER = Loggers.getLogger("protocol.killcursor");

@@ -47,7 +47,7 @@ public interface MongoCursor<TResult> extends Iterator<TResult>, Closeable {
      * {@code tryNext()} would return a new element if a document had been added to the capped collection.</p>
      *
      * @return the next element in the iteration if available or null.
-     * @mongodb.driver.manual reference/glossary/#term-tailable-cursor Tailable Cursor
+     *
      */
     TResult tryNext();
 

@@ -43,7 +43,7 @@ public interface GridFSDownloadStream extends AsyncInputStream {
      *
      * @param batchSize the batch size
      * @return this
-     * @mongodb.driver.manual reference/method/cursor.batchSize/#cursor.batchSize Batch Size
+     *
      */
     GridFSDownloadStream batchSize(int batchSize);
 }

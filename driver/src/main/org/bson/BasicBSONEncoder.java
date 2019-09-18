@@ -316,7 +316,7 @@ public class BasicBSONEncoder implements BSONEncoder {
      * @param name   the field name
      * @param value the value
      * @since 3.4
-     * @mongodb.server.release 3.4
+     *
      */
     protected void putDecimal128(final String name, final Decimal128 value) {
         putName(name);
@@ -391,7 +391,7 @@ public class BasicBSONEncoder implements BSONEncoder {
      *
      * @param name  the field name
      * @param value the value
-     * @mongodb.driver.manual reference/operator/query/regex/ $regex
+     *
      * @see org.bson.BsonType#BINARY
      */
     protected void putPattern(final String name, final Pattern value) {

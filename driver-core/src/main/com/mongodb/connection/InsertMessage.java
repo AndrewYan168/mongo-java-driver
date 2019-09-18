@@ -29,7 +29,7 @@ import java.util.List;
 /**
  * An insert message.
  *
- * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#op-insert OP_INSERT
+ *
  */
 class InsertMessage extends RequestMessage {
 

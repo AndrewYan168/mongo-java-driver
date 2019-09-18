@@ -54,8 +54,8 @@ import static com.mongodb.operation.WriteConcernHelper.writeConcernErrorTransfor
  * An operation that executes an aggregation that writes its results to a collection (which is what makes this a write operation rather than
  * a read operation).
  *
- * @mongodb.server.release 2.6
- * @mongodb.driver.manual reference/command/aggregate/ Aggregation
+ *
+ *
  * @since 3.0
  */
 public class AggregateToCollectionOperation implements AsyncWriteOperation<Void>, WriteOperation<Void> {
@@ -103,7 +103,7 @@ public class AggregateToCollectionOperation implements AsyncWriteOperation<Void>
      * Gets the aggregation pipeline.
      *
      * @return the pipeline
-     * @mongodb.driver.manual core/aggregation-introduction/#aggregation-pipelines Aggregation Pipeline
+     *
      */
     public List<BsonDocument> getPipeline() {
         return pipeline;
@@ -124,8 +124,8 @@ public class AggregateToCollectionOperation implements AsyncWriteOperation<Void>
      * Whether writing to temporary files is enabled. A null value indicates that it's unspecified.
      *
      * @return true if writing to temporary files is enabled
-     * @mongodb.driver.manual reference/command/aggregate/ Aggregation
-     * @mongodb.server.release 2.6
+     *
+     *
      */
     public Boolean getAllowDiskUse() {
         return allowDiskUse;
@@ -136,8 +136,8 @@ public class AggregateToCollectionOperation implements AsyncWriteOperation<Void>
      *
      * @param allowDiskUse true if writing to temporary files is enabled
      * @return this
-     * @mongodb.driver.manual reference/command/aggregate/ Aggregation
-     * @mongodb.server.release 2.6
+     *
+     *
      */
     public AggregateToCollectionOperation allowDiskUse(final Boolean allowDiskUse) {
         this.allowDiskUse = allowDiskUse;
@@ -149,7 +149,7 @@ public class AggregateToCollectionOperation implements AsyncWriteOperation<Void>
      *
      * @param timeUnit the time unit to return the result in
      * @return the maximum execution time in the given time unit
-     * @mongodb.driver.manual reference/method/cursor.maxTimeMS/#cursor.maxTimeMS Max Time
+     *
      */
     public long getMaxTime(final TimeUnit timeUnit) {
         notNull("timeUnit", timeUnit);
@@ -162,7 +162,7 @@ public class AggregateToCollectionOperation implements AsyncWriteOperation<Void>
      * @param maxTime  the max time
      * @param timeUnit the time unit, which may not be null
      * @return this
-     * @mongodb.driver.manual reference/method/cursor.maxTimeMS/#cursor.maxTimeMS Max Time
+     *
      */
     public AggregateToCollectionOperation maxTime(final long maxTime, final TimeUnit timeUnit) {
         notNull("timeUnit", timeUnit);
@@ -188,7 +188,7 @@ public class AggregateToCollectionOperation implements AsyncWriteOperation<Void>
      * @param bypassDocumentValidation If true, allows the write to opt-out of document level validation.
      * @return this
      * @since 3.2
-     * @mongodb.server.release 3.2
+     *
      */
     public AggregateToCollectionOperation bypassDocumentValidation(final Boolean bypassDocumentValidation) {
         this.bypassDocumentValidation = bypassDocumentValidation;
@@ -200,7 +200,7 @@ public class AggregateToCollectionOperation implements AsyncWriteOperation<Void>
      *
      * @return the collation options
      * @since 3.4
-     * @mongodb.server.release 3.4
+     *
      */
     public Collation getCollation() {
         return collation;
@@ -213,7 +213,7 @@ public class AggregateToCollectionOperation implements AsyncWriteOperation<Void>
      * @param collation the collation options to use
      * @return this
      * @since 3.4
-     * @mongodb.server.release 3.4
+     *
      */
     public AggregateToCollectionOperation collation(final Collation collation) {
         this.collation = collation;

@@ -32,7 +32,7 @@ import java.util.List;
 /**
  * A message for the delete command.
  *
- * @mongodb.driver.manual reference/command/insert/#dbcmd.delete Delete Command
+ *
  */
 class DeleteCommandMessage extends BaseWriteCommandMessage {
     private final List<DeleteRequest> deletes;

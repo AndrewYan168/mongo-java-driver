@@ -56,7 +56,7 @@ public class BsonDocument extends BsonValue implements Map<String, BsonValue>, C
      * @param json the JSON string
      * @return a corresponding {@code BsonDocument} object
      * @see org.bson.json.JsonReader
-     * @mongodb.driver.manual reference/mongodb-extended-json/ MongoDB Extended JSON
+     *
      */
     public static BsonDocument parse(final String json) {
         return new BsonDocumentCodec().decode(new JsonReader(json), DecoderContext.builder().build());

@@ -34,7 +34,7 @@ public interface DistinctIterable<TResult> extends MongoIterable<TResult> {
      *
      * @param filter the filter, which may be null.
      * @return this
-     * @mongodb.driver.manual reference/method/db.collection.find/ Filter
+     *
      */
     DistinctIterable<TResult> filter(Bson filter);
 
@@ -52,7 +52,7 @@ public interface DistinctIterable<TResult> extends MongoIterable<TResult> {
      *
      * @param batchSize the batch size
      * @return this
-     * @mongodb.driver.manual reference/method/cursor.batchSize/#cursor.batchSize Batch Size
+     *
      */
     DistinctIterable<TResult> batchSize(int batchSize);
 
@@ -63,7 +63,7 @@ public interface DistinctIterable<TResult> extends MongoIterable<TResult> {
      * @param collation the collation options to use
      * @return this
      * @since 3.4
-     * @mongodb.server.release 3.4
+     *
      */
     DistinctIterable<TResult> collation(Collation collation);
 }

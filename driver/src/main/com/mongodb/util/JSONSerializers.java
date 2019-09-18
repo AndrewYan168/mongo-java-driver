@@ -56,7 +56,7 @@ public class JSONSerializers {
      * compatibility with previous versions of the driver.  Clients should generally prefer {@code getStrict} in preference to this method.
      *
      * @return object serializer
-     * @mongodb.driver.manual reference/mongodb-extended-json/ MongoDB Extended JSON
+     *
      * @see #getStrict()
      */
     public static ObjectSerializer getLegacy() {
@@ -75,7 +75,7 @@ public class JSONSerializers {
      * <a href="http://docs.mongodb.org/manual/reference/mongodb-extended-json/">extended JSON</a>.
      *
      * @return object serializer
-     * @mongodb.driver.manual reference/mongodb-extended-json/ MongoDB Extended JSON
+     *
      */
     public static ObjectSerializer getStrict() {
 

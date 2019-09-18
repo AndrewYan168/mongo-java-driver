@@ -23,7 +23,7 @@ import org.bson.io.BsonOutput;
 /**
  * An OP_QUERY message for an actual query (not a command).
  *
- * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#op-query OP_QUERY
+ *
  */
 class QueryMessage extends BaseQueryMessage {
     private final BsonDocument queryDocument;

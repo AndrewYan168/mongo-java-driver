@@ -47,15 +47,15 @@ public final class MongoCredential {
 
     /**
      * The MongoDB Challenge Response mechanism.
-     * @mongodb.driver.manual core/authentication/#mongodb-cr-authentication MONGODB-CR
+     *
      */
     public static final String MONGODB_CR_MECHANISM = AuthenticationMechanism.MONGODB_CR.getMechanismName();
 
     /**
      * The GSSAPI mechanism.  See the <a href="http://tools.ietf.org/html/rfc4752">RFC</a>.
      *
-     * @mongodb.server.release 2.4
-     * @mongodb.driver.manual core/authentication/#kerberos-authentication GSSAPI
+     *
+     *
      */
     public static final String GSSAPI_MECHANISM = AuthenticationMechanism.GSSAPI.getMechanismName();
 
@@ -63,8 +63,8 @@ public final class MongoCredential {
      * The PLAIN mechanism.  See the <a href="http://www.ietf.org/rfc/rfc4616.txt">RFC</a>.
      *
      * @since 2.12
-     * @mongodb.server.release 2.6
-     * @mongodb.driver.manual core/authentication/#ldap-proxy-authority-authentication PLAIN
+     *
+     *
      */
     public static final String PLAIN_MECHANISM = AuthenticationMechanism.PLAIN.getMechanismName();
 
@@ -72,8 +72,8 @@ public final class MongoCredential {
      * The MongoDB X.509
      *
      * @since 2.12
-     * @mongodb.server.release 2.6
-     * @mongodb.driver.manual core/authentication/#x-509-certificate-authentication X-509
+     *
+     *
      */
     public static final String MONGODB_X509_MECHANISM = AuthenticationMechanism.MONGODB_X509.getMechanismName();
 
@@ -81,8 +81,8 @@ public final class MongoCredential {
      * The SCRAM-SHA-1 Mechanism.
      *
      * @since 2.13
-     * @mongodb.server.release 3.0
-     * @mongodb.driver.manual core/authentication/#authentication-scram-sha-1 SCRAM-SHA-1
+     *
+     *
      */
     public static final String SCRAM_SHA_1_MECHANISM = AuthenticationMechanism.SCRAM_SHA_1.getMechanismName();
 
@@ -147,8 +147,8 @@ public final class MongoCredential {
      * @return the credential
      *
      * @since 2.13
-     * @mongodb.driver.manual core/authentication/#mongodb-cr-authentication MONGODB-CR
-     * @mongodb.driver.manual core/authentication/#authentication-scram-sha-1 SCRAM-SHA-1
+     *
+     *
      */
     public static MongoCredential createCredential(final String userName, final String database, final char[] password) {
         return new MongoCredential(null, userName, database, password);
@@ -168,8 +168,8 @@ public final class MongoCredential {
      * @see #createCredential(String, String, char[])
      *
      * @since 2.13
-     * @mongodb.server.release 3.0
-     * @mongodb.driver.manual core/authentication/#authentication-scram-sha-1 SCRAM-SHA-1
+     *
+     *
      */
     public static MongoCredential createScramSha1Credential(final String userName, final String source, final char[] password) {
         return new MongoCredential(SCRAM_SHA_1, userName, source, password);
@@ -186,7 +186,7 @@ public final class MongoCredential {
      * @param password the user's password
      * @return the credential
      * @see #createCredential(String, String, char[])
-     * @mongodb.driver.manual core/authentication/#mongodb-cr-authentication MONGODB-CR
+     *
      */
     public static MongoCredential createMongoCRCredential(final String userName, final String database, final char[] password) {
         return new MongoCredential(MONGODB_CR, userName, database, password);
@@ -199,8 +199,8 @@ public final class MongoCredential {
      * @return the credential
      *
      * @since 2.12
-     * @mongodb.server.release 2.6
-     * @mongodb.driver.manual core/authentication/#x-509-certificate-authentication X-509
+     *
+     *
      */
     public static MongoCredential createMongoX509Credential(final String userName) {
         return new MongoCredential(MONGODB_X509, userName, "$external", null);
@@ -215,8 +215,8 @@ public final class MongoCredential {
      * @return the credential
      *
      * @since 3.4
-     * @mongodb.server.release 3.4
-     * @mongodb.driver.manual core/authentication/#x-509-certificate-authentication X-509
+     *
+     *
      */
     public static MongoCredential createMongoX509Credential() {
         return new MongoCredential(MONGODB_X509, null, "$external", null);
@@ -231,8 +231,8 @@ public final class MongoCredential {
      * @return the credential
      *
      * @since 2.12
-     * @mongodb.server.release 2.6
-     * @mongodb.driver.manual core/authentication/#ldap-proxy-authority-authentication PLAIN
+     *
+     *
      */
     public static MongoCredential createPlainCredential(final String userName, final String source, final char[] password) {
         return new MongoCredential(PLAIN, userName, source, password);
@@ -256,8 +256,8 @@ public final class MongoCredential {
      *
      * @param userName the non-null user name
      * @return the credential
-     * @mongodb.server.release 2.4
-     * @mongodb.driver.manual core/authentication/#kerberos-authentication GSSAPI
+     *
+     *
      * @see #withMechanismProperty(String, Object)
      * @see #SERVICE_NAME_KEY
      * @see #CANONICALIZE_HOST_NAME_KEY

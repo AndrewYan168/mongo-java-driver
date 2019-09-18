@@ -63,8 +63,8 @@ import static java.util.concurrent.TimeUnit.MILLISECONDS;
  * <p>To run a map reduce operation into a given collection, use {@code MapReduceToCollectionOperation}.</p>
  *
  * @param <T> the operations result type.
- * @mongodb.driver.manual reference/command/mapReduce/ mapReduce
- * @mongodb.driver.manual core/map-reduce Map-Reduce
+ *
+ *
  * @since 3.0
  */
 public class MapReduceWithInlineResultsOperation<T> implements AsyncReadOperation<MapReduceAsyncBatchCursor<T>>,
@@ -91,7 +91,7 @@ public class MapReduceWithInlineResultsOperation<T> implements AsyncReadOperatio
      * @param mapFunction a JavaScript function that associates or "maps" a value with a key and emits the key and value pair.
      * @param reduceFunction a JavaScript function that "reduces" to a single object all the values associated with a particular key.
      * @param decoder the decoder for the result documents.
-     * @mongodb.driver.manual reference/command/mapReduce/ mapReduce
+     *
      */
     public MapReduceWithInlineResultsOperation(final MongoNamespace namespace, final BsonJavaScript mapFunction,
                                                final BsonJavaScript reduceFunction, final Decoder<T> decoder) {
@@ -143,7 +143,7 @@ public class MapReduceWithInlineResultsOperation<T> implements AsyncReadOperatio
      * Gets the JavaScript function that follows the reduce method and modifies the output. Default is null
      *
      * @return the JavaScript function that follows the reduce method and modifies the output.
-     * @mongodb.driver.manual reference/command/mapReduce/#mapreduce-finalize-cmd Requirements for the finalize Function
+     *
      */
     public BsonJavaScript getFinalizeFunction() {
         return finalizeFunction;
@@ -154,7 +154,7 @@ public class MapReduceWithInlineResultsOperation<T> implements AsyncReadOperatio
      *
      * @param finalizeFunction the JavaScript function that follows the reduce method and modifies the output.
      * @return this
-     * @mongodb.driver.manual reference/command/mapReduce/#mapreduce-finalize-cmd Requirements for the finalize Function
+     *
      */
     public MapReduceWithInlineResultsOperation<T> finalizeFunction(final BsonJavaScript finalizeFunction) {
         this.finalizeFunction = finalizeFunction;
@@ -165,7 +165,7 @@ public class MapReduceWithInlineResultsOperation<T> implements AsyncReadOperatio
      * Gets the global variables that are accessible in the map, reduce and finalize functions.
      *
      * @return the global variables that are accessible in the map, reduce and finalize functions.
-     * @mongodb.driver.manual reference/command/mapReduce Scope
+     *
      */
     public BsonDocument getScope() {
         return scope;
@@ -176,7 +176,7 @@ public class MapReduceWithInlineResultsOperation<T> implements AsyncReadOperatio
      *
      * @param scope the global variables that are accessible in the map, reduce and finalize functions.
      * @return this
-     * @mongodb.driver.manual reference/command/mapReduce mapReduce
+     *
      */
     public MapReduceWithInlineResultsOperation<T> scope(final BsonDocument scope) {
         this.scope = scope;
@@ -187,7 +187,7 @@ public class MapReduceWithInlineResultsOperation<T> implements AsyncReadOperatio
      * Gets the query filter.
      *
      * @return the query filter
-     * @mongodb.driver.manual reference/method/db.collection.find/ Filter
+     *
      */
     public BsonDocument getFilter() {
         return filter;
@@ -198,7 +198,7 @@ public class MapReduceWithInlineResultsOperation<T> implements AsyncReadOperatio
      *
      * @param filter the filter to apply to the query.
      * @return this
-     * @mongodb.driver.manual reference/method/db.collection.find/ Filter
+     *
      */
     public MapReduceWithInlineResultsOperation<T> filter(final BsonDocument filter) {
         this.filter = filter;
@@ -210,7 +210,7 @@ public class MapReduceWithInlineResultsOperation<T> implements AsyncReadOperatio
      * order.
      *
      * @return a document describing the sort criteria
-     * @mongodb.driver.manual reference/method/cursor.sort/ Sort
+     *
      */
     public BsonDocument getSort() {
         return sort;
@@ -221,7 +221,7 @@ public class MapReduceWithInlineResultsOperation<T> implements AsyncReadOperatio
      *
      * @param sort the sort criteria, which may be null.
      * @return this
-     * @mongodb.driver.manual reference/method/cursor.sort/ Sort
+     *
      */
     public MapReduceWithInlineResultsOperation<T> sort(final BsonDocument sort) {
         this.sort = sort;
@@ -232,7 +232,7 @@ public class MapReduceWithInlineResultsOperation<T> implements AsyncReadOperatio
      * Gets the limit to apply.  The default is null.
      *
      * @return the limit
-     * @mongodb.driver.manual reference/method/cursor.limit/#cursor.limit Limit
+     *
      */
     public int getLimit() {
         return limit;
@@ -243,7 +243,7 @@ public class MapReduceWithInlineResultsOperation<T> implements AsyncReadOperatio
      *
      * @param limit the limit, which may be null
      * @return this
-     * @mongodb.driver.manual reference/method/cursor.limit/#cursor.limit Limit
+     *
      */
     public MapReduceWithInlineResultsOperation<T> limit(final int limit) {
         this.limit = limit;
@@ -255,7 +255,7 @@ public class MapReduceWithInlineResultsOperation<T> implements AsyncReadOperatio
      * functions. Defaults to false.
      *
      * @return jsMode
-     * @mongodb.driver.manual reference/command/mapReduce mapReduce
+     *
      */
     public boolean isJsMode() {
         return jsMode;
@@ -268,7 +268,7 @@ public class MapReduceWithInlineResultsOperation<T> implements AsyncReadOperatio
      * @param jsMode the flag that specifies whether to convert intermediate data into BSON format between the execution of the map and
      *               reduce functions
      * @return jsMode
-     * @mongodb.driver.manual reference/command/mapReduce mapReduce
+     *
      */
     public MapReduceWithInlineResultsOperation<T> jsMode(final boolean jsMode) {
         this.jsMode = jsMode;
@@ -300,7 +300,7 @@ public class MapReduceWithInlineResultsOperation<T> implements AsyncReadOperatio
      *
      * @return the collation options
      * @since 3.4
-     * @mongodb.server.release 3.4
+     *
      */
     public Collation getCollation() {
         return collation;
@@ -313,7 +313,7 @@ public class MapReduceWithInlineResultsOperation<T> implements AsyncReadOperatio
      * @param collation the collation options to use
      * @return this
      * @since 3.4
-     * @mongodb.server.release 3.4
+     *
      */
     public MapReduceWithInlineResultsOperation<T> collation(final Collation collation) {
         this.collation = collation;
@@ -325,7 +325,7 @@ public class MapReduceWithInlineResultsOperation<T> implements AsyncReadOperatio
      *
      * @param timeUnit the time unit to return the result in
      * @return the maximum execution time in the given time unit
-     * @mongodb.driver.manual reference/method/cursor.maxTimeMS/#cursor.maxTimeMS Max Time
+     *
      */
     public long getMaxTime(final TimeUnit timeUnit) {
         notNull("timeUnit", timeUnit);
@@ -338,7 +338,7 @@ public class MapReduceWithInlineResultsOperation<T> implements AsyncReadOperatio
      * @param maxTime  the max time
      * @param timeUnit the time unit, which may not be null
      * @return this
-     * @mongodb.driver.manual reference/method/cursor.maxTimeMS/#cursor.maxTimeMS Max Time
+     *
      */
     public MapReduceWithInlineResultsOperation<T> maxTime(final long maxTime, final TimeUnit timeUnit) {
         notNull("timeUnit", timeUnit);
@@ -351,7 +351,7 @@ public class MapReduceWithInlineResultsOperation<T> implements AsyncReadOperatio
      *
      * @return the read concern
      * @since 3.2
-     * @mongodb.driver.manual reference/readConcern/ Read Concern
+     *
      */
     public ReadConcern getReadConcern() {
         return readConcern;
@@ -362,7 +362,7 @@ public class MapReduceWithInlineResultsOperation<T> implements AsyncReadOperatio
      * @param readConcern the read concern
      * @return this
      * @since 3.2
-     * @mongodb.driver.manual reference/readConcern/ Read Concern
+     *
      */
     public MapReduceWithInlineResultsOperation<T> readConcern(final ReadConcern readConcern) {
         this.readConcern = notNull("readConcern", readConcern);

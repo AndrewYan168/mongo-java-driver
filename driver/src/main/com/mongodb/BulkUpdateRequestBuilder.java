@@ -22,8 +22,8 @@ import org.bson.codecs.Encoder;
 /**
  * A builder for a single update request.
  *
- * @mongodb.server.release 2.6
- * @mongodb.driver.manual /reference/command/update
+ *
+ *
  * @since 2.12
  */
 public class BulkUpdateRequestBuilder {
@@ -50,7 +50,7 @@ public class BulkUpdateRequestBuilder {
      *
      * @return the collation
      * @since 3.4
-     * @mongodb.server.release 3.4
+     *
      */
     public Collation getCollation() {
         return collation;
@@ -62,7 +62,7 @@ public class BulkUpdateRequestBuilder {
      * @param collation the collation
      * @return this
      * @since 3.4
-     * @mongodb.server.release 3.4
+     *
      */
     public BulkUpdateRequestBuilder collation(final Collation collation) {
         this.collation = collation;

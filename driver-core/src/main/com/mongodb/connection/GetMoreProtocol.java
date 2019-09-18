@@ -44,7 +44,7 @@ import static java.lang.String.format;
  * An implementation of the OP_GET_MORE protocol.
  *
  * @param <T> the type of document to decode query results to
- * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#op-query OP_QUERY
+ *
  */
 class GetMoreProtocol<T> implements Protocol<QueryResult<T>> {
 

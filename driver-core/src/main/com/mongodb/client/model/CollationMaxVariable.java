@@ -25,7 +25,7 @@ import static java.lang.String.format;
  *
  * @see CollationAlternate#SHIFTED
  * @since 3.4
- * @mongodb.server.release 3.4
+ *
  */
 public enum CollationMaxVariable {
     /**

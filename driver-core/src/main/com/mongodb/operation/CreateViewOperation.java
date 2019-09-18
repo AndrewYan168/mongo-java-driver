@@ -49,8 +49,8 @@ import static com.mongodb.operation.WriteConcernHelper.writeConcernErrorTransfor
  * An operation to create a view.
  *
  * @since 3.4
- * @mongodb.server.release 3.4
- * @mongodb.driver.manual reference/command/create Create
+ *
+ *
  */
 public class CreateViewOperation implements AsyncWriteOperation<Void>, WriteOperation<Void> {
     private final String databaseName;

@@ -24,7 +24,7 @@ import static java.lang.String.format;
 /**
  * Contains the details of a reply from a MongoDB server.
  *
- * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#database-response-messages Database Response Messages
+ *
  */
 class ReplyHeader {
     /**

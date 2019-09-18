@@ -25,8 +25,8 @@ package com.mongodb.client.model;
  * of replica sets.  The Enum values dictate what to do with the output collection if it already exists when the map reduce is run.</p>
  *
  * @since 3.0
- * @mongodb.driver.manual reference/command/mapReduce/ mapReduce Command
- * @mongodb.driver.manual core/map-reduce/ mapReduce Overview
+ *
+ *
  */
 public enum MapReduceAction {
     /**

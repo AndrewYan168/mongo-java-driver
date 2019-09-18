@@ -22,8 +22,8 @@ import static java.lang.String.format;
 /**
  * A read concern level allows clients to choose a level of isolation for their reads.
  *
- * @mongodb.server.release 3.2
- * @mongodb.driver.manual reference/read-concern/#read-concern-levels Read Concern Levels
+ *
+ *
  * @since 3.2
  */
 public enum ReadConcernLevel {
@@ -46,7 +46,7 @@ public enum ReadConcernLevel {
      * </p>
      *
      * @since 3.4
-     * @mongodb.server.release 3.4
+     *
      */
     LINEARIZABLE("linearizable");
 

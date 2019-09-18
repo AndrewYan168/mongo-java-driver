@@ -24,7 +24,7 @@ import com.mongodb.ReadPreference;
  * The options for a count operation.
  *
  * @since 3.4
- * @mongodb.driver.manual reference/command/count/ Count
+ *
  */
 public class DBCollectionDistinctOptions {
     private DBObject filter;
@@ -82,7 +82,7 @@ public class DBCollectionDistinctOptions {
      * Returns the readConcern
      *
      * @return the readConcern
-     * @mongodb.server.release 3.2
+     *
      */
     public ReadConcern getReadConcern() {
         return readConcern;
@@ -93,7 +93,7 @@ public class DBCollectionDistinctOptions {
      *
      * @param readConcern the readConcern
      * @return this
-     * @mongodb.server.release 3.2
+     *
      */
     public DBCollectionDistinctOptions readConcern(final ReadConcern readConcern) {
         this.readConcern = readConcern;
@@ -104,7 +104,7 @@ public class DBCollectionDistinctOptions {
      * Returns the collation options
      *
      * @return the collation options
-     * @mongodb.server.release 3.4
+     *
      */
     public Collation getCollation() {
         return collation;
@@ -115,7 +115,7 @@ public class DBCollectionDistinctOptions {
      *
      * @param collation the collation
      * @return this
-     * @mongodb.server.release 3.4
+     *
      */
     public DBCollectionDistinctOptions collation(final Collation collation) {
         this.collation = collation;

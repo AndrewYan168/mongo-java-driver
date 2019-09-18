@@ -32,7 +32,7 @@ import static java.lang.String.format;
 /**
  * An implementation of the update command.
  *
- * @mongodb.driver.manual reference/command/insert/#dbcmd.update Update Command
+ *
  */
 class UpdateCommandProtocol extends WriteCommandProtocol {
 

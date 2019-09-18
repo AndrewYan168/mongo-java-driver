@@ -27,7 +27,7 @@ import static java.util.concurrent.TimeUnit.MILLISECONDS;
  * The options to apply to an operation that atomically finds a document and deletes it.
  *
  * @since 3.0
- * @mongodb.driver.manual reference/command/findAndModify/
+ *
  */
 public class FindOneAndDeleteOptions {
     private Bson projection;
@@ -39,7 +39,7 @@ public class FindOneAndDeleteOptions {
      * Gets a document describing the fields to return for all matching documents.
      *
      * @return the project document, which may be null
-     * @mongodb.driver.manual tutorial/project-fields-from-query-results Projection
+     *
      */
     public Bson getProjection() {
         return projection;
@@ -50,7 +50,7 @@ public class FindOneAndDeleteOptions {
      *
      * @param projection the project document, which may be null.
      * @return this
-     * @mongodb.driver.manual tutorial/project-fields-from-query-results Projection
+     *
      */
     public FindOneAndDeleteOptions projection(final Bson projection) {
         this.projection = projection;
@@ -62,7 +62,7 @@ public class FindOneAndDeleteOptions {
      * order.
      *
      * @return a document describing the sort criteria
-     * @mongodb.driver.manual reference/method/cursor.sort/ Sort
+     *
      */
     public Bson getSort() {
         return sort;
@@ -73,7 +73,7 @@ public class FindOneAndDeleteOptions {
      *
      * @param sort the sort criteria, which may be null.
      * @return this
-     * @mongodb.driver.manual reference/method/cursor.sort/ Sort
+     *
      */
     public FindOneAndDeleteOptions sort(final Bson sort) {
         this.sort = sort;
@@ -108,7 +108,7 @@ public class FindOneAndDeleteOptions {
      *
      * @return the collation options
      * @since 3.4
-     * @mongodb.server.release 3.4
+     *
      */
     public Collation getCollation() {
         return collation;
@@ -121,7 +121,7 @@ public class FindOneAndDeleteOptions {
      * @param collation the collation options to use
      * @return this
      * @since 3.4
-     * @mongodb.server.release 3.4
+     *
      */
     public FindOneAndDeleteOptions collation(final Collation collation) {
         this.collation = collation;

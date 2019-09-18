@@ -20,8 +20,8 @@ package com.mongodb.client.model;
  * The options to apply when deleting documents.
  *
  * @since 3.4
- * @mongodb.driver.manual tutorial/remove-documents/ Remove documents
- * @mongodb.driver.manual reference/command/delete/ Delete Command
+ *
+ *
  */
 public class DeleteOptions {
     private Collation collation;
@@ -30,7 +30,7 @@ public class DeleteOptions {
      * Returns the collation options
      *
      * @return the collation options
-     * @mongodb.server.release 3.4
+     *
      */
     public Collation getCollation() {
         return collation;
@@ -42,7 +42,7 @@ public class DeleteOptions {
      * <p>A null value represents the server default.</p>
      * @param collation the collation options to use
      * @return this
-     * @mongodb.server.release 3.4
+     *
      */
     public DeleteOptions collation(final Collation collation) {
         this.collation = collation;

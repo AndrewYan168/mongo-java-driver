@@ -21,7 +21,7 @@ import org.bson.io.BsonOutput;
 /**
  * Base class for OP_QUERY messages.
  *
- * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#op-query OP_QUERY
+ *
  */
 abstract class BaseQueryMessage extends RequestMessage {
     private final int skip;
@@ -55,7 +55,7 @@ abstract class BaseQueryMessage extends RequestMessage {
      * the cursor may become invalid at some point - for example if the final object it references were deleted.</p>
      *
      * @return true if the cursor is configured to be a tailable cursor
-     * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#op-query OP_QUERY
+     *
      */
     public boolean isTailableCursor() {
         return tailableCursor;
@@ -70,7 +70,7 @@ abstract class BaseQueryMessage extends RequestMessage {
      *
      * @param tailableCursor whether the cursor should be a tailable cursor.
      * @return this
-     * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#op-query OP_QUERY
+     *
      */
     public BaseQueryMessage tailableCursor(final boolean tailableCursor) {
         this.tailableCursor = tailableCursor;
@@ -81,7 +81,7 @@ abstract class BaseQueryMessage extends RequestMessage {
      * Returns true if set to allowed to query non-primary replica set members.
      *
      * @return true if set to allowed to query non-primary replica set members.
-     * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#op-query OP_QUERY
+     *
      */
     public boolean isSlaveOk() {
         return slaveOk;
@@ -92,7 +92,7 @@ abstract class BaseQueryMessage extends RequestMessage {
      *
      * @param slaveOk true if allowed to query non-primary replica set members.
      * @return this
-     * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#op-query OP_QUERY
+     *
      */
     public BaseQueryMessage slaveOk(final boolean slaveOk) {
         this.slaveOk = slaveOk;
@@ -103,7 +103,7 @@ abstract class BaseQueryMessage extends RequestMessage {
      * Internal replication use only.  Driver users should ordinarily not use this.
      *
      * @return oplogReplay
-     * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#op-query OP_QUERY
+     *
      */
     public boolean isOplogReplay() {
         return oplogReplay;
@@ -114,7 +114,7 @@ abstract class BaseQueryMessage extends RequestMessage {
      *
      * @param oplogReplay the oplogReplay value
      * @return this
-     * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#op-query OP_QUERY
+     *
      */
     public BaseQueryMessage oplogReplay(final boolean oplogReplay) {
         this.oplogReplay = oplogReplay;
@@ -127,7 +127,7 @@ abstract class BaseQueryMessage extends RequestMessage {
      * <p>The server normally times out idle cursors after an inactivity period (10 minutes) to prevent excess memory use.</p>
      *
      * @return if cursor timeout has been turned off
-     * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#op-query OP_QUERY
+     *
      */
     public boolean isNoCursorTimeout() {
         return noCursorTimeout;
@@ -138,7 +138,7 @@ abstract class BaseQueryMessage extends RequestMessage {
      *
      * @param noCursorTimeout true if the cursor timeout should be turned off.
      * @return this
-     * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#op-query OP_QUERY
+     *
      */
     public BaseQueryMessage noCursorTimeout(final boolean noCursorTimeout) {
         this.noCursorTimeout = noCursorTimeout;
@@ -152,7 +152,7 @@ abstract class BaseQueryMessage extends RequestMessage {
      * timeout period, we do return as normal.</p>
      *
      * @return if the cursor should await for data
-     * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#op-query OP_QUERY
+     *
      */
     public boolean isAwaitData() {
         return awaitData;
@@ -166,7 +166,7 @@ abstract class BaseQueryMessage extends RequestMessage {
      *
      * @param awaitData if we should await for data
      * @return this
-     * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#op-query OP_QUERY
+     *
      */
     public BaseQueryMessage awaitData(final boolean awaitData) {
         this.awaitData = awaitData;
@@ -177,7 +177,7 @@ abstract class BaseQueryMessage extends RequestMessage {
      * Returns true if can get partial results from a mongos if some shards are down.
      *
      * @return if can get partial results from a mongos if some shards are down
-     * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#op-query OP_QUERY
+     *
      */
     public boolean isPartial() {
         return partial;
@@ -188,7 +188,7 @@ abstract class BaseQueryMessage extends RequestMessage {
      *
      * @param partial allow partial results from a mongos if some shards are down
      * @return this
-     * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#op-query OP_QUERY
+     *
      */
     public BaseQueryMessage partial(final boolean partial) {
         this.partial = partial;

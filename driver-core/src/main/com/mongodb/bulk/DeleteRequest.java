@@ -75,7 +75,7 @@ public final class DeleteRequest extends WriteRequest {
      *
      * @return the collation options
      * @since 3.4
-     * @mongodb.server.release 3.4
+     *
      */
     public Collation getCollation() {
         return collation;
@@ -88,7 +88,7 @@ public final class DeleteRequest extends WriteRequest {
      * @param collation the collation options to use
      * @return this
      * @since 3.4
-     * @mongodb.server.release 3.4
+     *
      */
     public DeleteRequest collation(final Collation collation) {
         this.collation = collation;

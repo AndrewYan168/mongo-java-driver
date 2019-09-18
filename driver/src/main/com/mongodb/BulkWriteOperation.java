@@ -30,10 +30,10 @@ import static com.mongodb.assertions.Assertions.isTrue;
  * @see DBCollection#initializeOrderedBulkOperation()
  * @see com.mongodb.DBCollection#initializeUnorderedBulkOperation()
  *
- * @mongodb.server.release 2.6
- * @mongodb.driver.manual /reference/command/delete/ Delete
- * @mongodb.driver.manual /reference/command/update/ Update
- * @mongodb.driver.manual /reference/command/insert/ Insert
+ *
+ *
+ *
+ *
  * @since 2.12
  */
 public class BulkWriteOperation {
@@ -65,7 +65,7 @@ public class BulkWriteOperation {
      *
      * @return whether to bypass document validation, or null if unspecified.
      * @since 2.14
-     * @mongodb.server.release 3.2
+     *
      */
     public Boolean getBypassDocumentValidation() {
         return bypassDocumentValidation;
@@ -76,7 +76,7 @@ public class BulkWriteOperation {
      *
      * @param bypassDocumentValidation whether to bypass document validation, or null if unspecified
      * @since 2.14
-     * @mongodb.server.release 3.2
+     *
      */
     public void setBypassDocumentValidation(final Boolean bypassDocumentValidation) {
         this.bypassDocumentValidation = bypassDocumentValidation;

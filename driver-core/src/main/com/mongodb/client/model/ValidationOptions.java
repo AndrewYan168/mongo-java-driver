@@ -22,8 +22,8 @@ import org.bson.conversions.Bson;
  * Validation options for documents being inserted or updated in a collection
  *
  * @since 3.2
- * @mongodb.server.release 3.2
- * @mongodb.driver.manual reference/method/db.createCollection/ Create Collection
+ *
+ *
  */
 public final class ValidationOptions {
     private Bson validator;

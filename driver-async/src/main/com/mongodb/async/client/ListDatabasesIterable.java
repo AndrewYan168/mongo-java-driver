@@ -31,7 +31,7 @@ public interface ListDatabasesIterable<T> extends MongoIterable<T> {
      * @param maxTime  the max time
      * @param timeUnit the time unit, which may not be null
      * @return this
-     * @mongodb.driver.manual reference/operator/meta/maxTimeMS/ Max Time
+     *
      */
     ListDatabasesIterable<T> maxTime(long maxTime, TimeUnit timeUnit);
 
@@ -40,7 +40,7 @@ public interface ListDatabasesIterable<T> extends MongoIterable<T> {
      *
      * @param batchSize the batch size
      * @return this
-     * @mongodb.driver.manual reference/method/cursor.batchSize/#cursor.batchSize Batch Size
+     *
      */
     ListDatabasesIterable<T> batchSize(int batchSize);
 }

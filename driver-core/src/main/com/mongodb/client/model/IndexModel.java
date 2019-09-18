@@ -23,7 +23,7 @@ import static com.mongodb.assertions.Assertions.notNull;
 /**
  * A model describing the creation of a single index.
  *
- * @mongodb.driver.manual reference/command/createIndexes Index options
+ *
  * @since 3.0
  */
 public class IndexModel {

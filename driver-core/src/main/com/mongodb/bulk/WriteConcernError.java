@@ -23,7 +23,7 @@ import static com.mongodb.assertions.Assertions.notNull;
 /**
  * An error representing a failure by the server to apply the requested write concern to the bulk operation.
  *
- * @mongodb.driver.manual core/write-concern/  Write Concern
+ *
  * @since 3.0
  */
 public class WriteConcernError {

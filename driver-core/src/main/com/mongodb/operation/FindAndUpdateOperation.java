@@ -59,7 +59,7 @@ import static java.util.concurrent.TimeUnit.MILLISECONDS;
  *
  * @param <T> the operations result type.
  * @since 3.0
- * @mongodb.driver.manual reference/command/findAndModify/ findAndModify
+ *
  */
 public class FindAndUpdateOperation<T> implements AsyncWriteOperation<T>, WriteOperation<T> {
     private final MongoNamespace namespace;
@@ -119,7 +119,7 @@ public class FindAndUpdateOperation<T> implements AsyncWriteOperation<T>, WriteO
      *
      * @return the {@link com.mongodb.WriteConcern}
      * @since 3.2
-     * @mongodb.server.release 3.2
+     *
      */
     public WriteConcern getWriteConcern() {
         return writeConcern;
@@ -147,7 +147,7 @@ public class FindAndUpdateOperation<T> implements AsyncWriteOperation<T>, WriteO
      * Gets the query filter.
      *
      * @return the query filter
-     * @mongodb.driver.manual reference/method/db.collection.find/ Filter
+     *
      */
     public BsonDocument getFilter() {
         return filter;
@@ -158,7 +158,7 @@ public class FindAndUpdateOperation<T> implements AsyncWriteOperation<T>, WriteO
      *
      * @param filter the filter, which may be null.
      * @return this
-     * @mongodb.driver.manual reference/method/db.collection.find/ Filter
+     *
      */
     public FindAndUpdateOperation<T> filter(final BsonDocument filter) {
         this.filter = filter;
@@ -169,7 +169,7 @@ public class FindAndUpdateOperation<T> implements AsyncWriteOperation<T>, WriteO
      * Gets a document describing the fields to return for all matching documents.
      *
      * @return the project document, which may be null
-     * @mongodb.driver.manual reference/method/db.collection.find/ Projection
+     *
      */
     public BsonDocument getProjection() {
         return projection;
@@ -180,7 +180,7 @@ public class FindAndUpdateOperation<T> implements AsyncWriteOperation<T>, WriteO
      *
      * @param projection the project document, which may be null.
      * @return this
-     * @mongodb.driver.manual reference/method/db.collection.find/ Projection
+     *
      */
     public FindAndUpdateOperation<T> projection(final BsonDocument projection) {
         this.projection = projection;
@@ -217,7 +217,7 @@ public class FindAndUpdateOperation<T> implements AsyncWriteOperation<T>, WriteO
      * order.
      *
      * @return a document describing the sort criteria
-     * @mongodb.driver.manual reference/method/cursor.sort/ Sort
+     *
      */
     public BsonDocument getSort() {
         return sort;
@@ -228,7 +228,7 @@ public class FindAndUpdateOperation<T> implements AsyncWriteOperation<T>, WriteO
      *
      * @param sort the sort criteria, which may be null.
      * @return this
-     * @mongodb.driver.manual reference/method/cursor.sort/ Sort
+     *
      */
     public FindAndUpdateOperation<T> sort(final BsonDocument sort) {
         this.sort = sort;
@@ -293,8 +293,8 @@ public class FindAndUpdateOperation<T> implements AsyncWriteOperation<T>, WriteO
      * @param bypassDocumentValidation If true, allows the write to opt-out of document level validation.
      * @return this
      * @since 3.2
-     * @mongodb.driver.manual reference/command/aggregate/ Aggregation
-     * @mongodb.server.release 3.2
+     *
+     *
      */
     public FindAndUpdateOperation<T> bypassDocumentValidation(final Boolean bypassDocumentValidation) {
         this.bypassDocumentValidation = bypassDocumentValidation;
@@ -306,7 +306,7 @@ public class FindAndUpdateOperation<T> implements AsyncWriteOperation<T>, WriteO
      *
      * @return the collation options
      * @since 3.4
-     * @mongodb.server.release 3.4
+     *
      */
     public Collation getCollation() {
         return collation;
@@ -319,7 +319,7 @@ public class FindAndUpdateOperation<T> implements AsyncWriteOperation<T>, WriteO
      * @param collation the collation options to use
      * @return this
      * @since 3.4
-     * @mongodb.server.release 3.4
+     *
      */
     public FindAndUpdateOperation<T> collation(final Collation collation) {
         this.collation = collation;

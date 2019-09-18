@@ -29,7 +29,7 @@ import static com.mongodb.assertions.Assertions.notNull;
  * The options for a count operation.
  *
  * @since 3.4
- * @mongodb.driver.manual reference/command/count/ Count
+ *
  */
 public class DBCollectionCountOptions {
     private DBObject hint;
@@ -91,7 +91,7 @@ public class DBCollectionCountOptions {
      * Gets the limit to apply.  The default is 0, which means there is no limit.
      *
      * @return the limit
-     * @mongodb.driver.manual reference/method/cursor.limit/#cursor.limit Limit
+     *
      */
     public int getLimit() {
         return limit;
@@ -102,7 +102,7 @@ public class DBCollectionCountOptions {
      *
      * @param limit the limit
      * @return this
-     * @mongodb.driver.manual reference/method/cursor.limit/#cursor.limit Limit
+     *
      */
     public DBCollectionCountOptions limit(final int limit) {
         this.limit = limit;
@@ -113,7 +113,7 @@ public class DBCollectionCountOptions {
      * Gets the number of documents to skip.  The default is 0.
      *
      * @return the number of documents to skip
-     * @mongodb.driver.manual reference/method/cursor.skip/#cursor.skip Skip
+     *
      */
     public int getSkip() {
         return skip;
@@ -124,7 +124,7 @@ public class DBCollectionCountOptions {
      *
      * @param skip the number of documents to skip
      * @return this
-     * @mongodb.driver.manual reference/method/cursor.skip/#cursor.skip Skip
+     *
      */
     public DBCollectionCountOptions skip(final int skip) {
         this.skip = skip;
@@ -136,7 +136,7 @@ public class DBCollectionCountOptions {
      *
      * @param limit the limit
      * @return this
-     * @mongodb.driver.manual reference/method/cursor.limit/#cursor.limit Limit
+     *
      */
     public DBCollectionCountOptions limit(final long limit) {
         isTrue("limit is too large", limit <= Integer.MAX_VALUE);
@@ -149,7 +149,7 @@ public class DBCollectionCountOptions {
      *
      * @param skip the number of documents to skip
      * @return this
-     * @mongodb.driver.manual reference/method/cursor.skip/#cursor.skip Skip
+     *
      */
     public DBCollectionCountOptions skip(final long skip) {
         isTrue("skip is too large", skip <= Integer.MAX_VALUE);
@@ -205,7 +205,7 @@ public class DBCollectionCountOptions {
      * Returns the readConcern
      *
      * @return the readConcern
-     * @mongodb.server.release 3.2
+     *
      */
     public ReadConcern getReadConcern() {
         return readConcern;
@@ -216,7 +216,7 @@ public class DBCollectionCountOptions {
      *
      * @param readConcern the readConcern
      * @return this
-     * @mongodb.server.release 3.2
+     *
      */
     public DBCollectionCountOptions readConcern(final ReadConcern readConcern) {
         this.readConcern = readConcern;
@@ -227,7 +227,7 @@ public class DBCollectionCountOptions {
      * Returns the collation options
      *
      * @return the collation options
-     * @mongodb.server.release 3.4
+     *
      */
     public Collation getCollation() {
         return collation;
@@ -238,7 +238,7 @@ public class DBCollectionCountOptions {
      *
      * @param collation the collation
      * @return this
-     * @mongodb.server.release 3.4
+     *
      */
     public DBCollectionCountOptions collation(final Collation collation) {
         this.collation = collation;

@@ -26,7 +26,7 @@ import static com.mongodb.assertions.Assertions.notNull;
  * @param <T> the type of document to update.  In practice this doesn't actually apply to updates but is here for consistency with the
  *           other write models
  * @since 3.0
- * @mongodb.driver.manual tutorial/remove-documents/ Remove
+ *
  */
 public final class DeleteManyModel<T> extends WriteModel<T> {
     private final Bson filter;
@@ -47,7 +47,7 @@ public final class DeleteManyModel<T> extends WriteModel<T> {
      * @param filter  a document describing the query filter, which may not be null.
      * @param options the options to apply
      * @since 3.4
-     * @mongodb.server.release 3.4
+     *
      */
     public DeleteManyModel(final Bson filter, final DeleteOptions options) {
         this.filter = notNull("filter", filter);

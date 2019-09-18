@@ -70,7 +70,7 @@ public class ListDatabasesOperation<T> implements AsyncReadOperation<AsyncBatchC
      *
      * @param timeUnit the time unit to return the result in
      * @return the maximum execution time in the given time unit
-     * @mongodb.driver.manual reference/operator/meta/maxTimeMS/ Max Time
+     *
      */
     public long getMaxTime(final TimeUnit timeUnit) {
         notNull("timeUnit", timeUnit);
@@ -83,7 +83,7 @@ public class ListDatabasesOperation<T> implements AsyncReadOperation<AsyncBatchC
      * @param maxTime  the max time
      * @param timeUnit the time unit, which may not be null
      * @return this
-     * @mongodb.driver.manual reference/operator/meta/maxTimeMS/ Max Time
+     *
      */
     public ListDatabasesOperation<T> maxTime(final long maxTime, final TimeUnit timeUnit) {
         notNull("timeUnit", timeUnit);

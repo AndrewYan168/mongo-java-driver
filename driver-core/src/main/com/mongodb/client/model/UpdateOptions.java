@@ -20,9 +20,9 @@ package com.mongodb.client.model;
  * The options to apply when updating documents.
  *
  * @since 3.0
- * @mongodb.driver.manual tutorial/modify-documents/ Updates
- * @mongodb.driver.manual reference/operator/update/ Update Operators
- * @mongodb.driver.manual reference/command/update/ Update Command
+ *
+ *
+ *
  */
 public class UpdateOptions {
     private boolean upsert;
@@ -54,7 +54,7 @@ public class UpdateOptions {
      *
      * @return the bypass document level validation flag
      * @since 3.2
-     * @mongodb.server.release 3.2
+     *
      */
     public Boolean getBypassDocumentValidation() {
         return bypassDocumentValidation;
@@ -66,7 +66,7 @@ public class UpdateOptions {
      * @param bypassDocumentValidation If true, allows the write to opt-out of document level validation.
      * @return this
      * @since 3.2
-     * @mongodb.server.release 3.2
+     *
      */
     public UpdateOptions bypassDocumentValidation(final Boolean bypassDocumentValidation) {
         this.bypassDocumentValidation = bypassDocumentValidation;
@@ -78,7 +78,7 @@ public class UpdateOptions {
      *
      * @return the collation options
      * @since 3.4
-     * @mongodb.server.release 3.4
+     *
      */
     public Collation getCollation() {
         return collation;
@@ -91,7 +91,7 @@ public class UpdateOptions {
      * @param collation the collation options to use
      * @return this
      * @since 3.4
-     * @mongodb.server.release 3.4
+     *
      */
     public UpdateOptions collation(final Collation collation) {
         this.collation = collation;

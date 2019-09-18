@@ -21,7 +21,7 @@ import org.bson.io.BsonOutput;
 /**
  * An OP_GET_MORE message.
  *
- * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#op-get-more OP_GET_MORE
+ *
  */
 class GetMoreMessage extends RequestMessage {
     private final long cursorId;

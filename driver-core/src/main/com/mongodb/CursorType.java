@@ -20,7 +20,7 @@ package com.mongodb;
  * An enumeration of cursor types.
  *
  * @since 3.0
- * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#op-query OP_QUERY
+ *
  */
 public enum CursorType {
     /**

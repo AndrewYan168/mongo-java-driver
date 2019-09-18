@@ -25,10 +25,10 @@ import org.bson.BsonString;
 /**
  * The options regarding collation support in MongoDB 3.4+
  *
- * @mongodb.driver.manual reference/method/db.createCollection/ Create Collection
- * @mongodb.driver.manual reference/command/createIndexes Index options
+ *
+ *
  * @since 3.4
- * @mongodb.server.release 3.4
+ *
  */
 public final class Collation {
     private final String locale;

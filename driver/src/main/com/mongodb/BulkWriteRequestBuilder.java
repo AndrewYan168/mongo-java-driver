@@ -22,10 +22,10 @@ import org.bson.codecs.Encoder;
 /**
  * A builder for a single write request.
  *
- * @mongodb.server.release 2.6
- * @mongodb.driver.manual /reference/command/delete/ Delete
- * @mongodb.driver.manual /reference/command/update/ Update
- * @mongodb.driver.manual /reference/command/insert/ Insert
+ *
+ *
+ *
+ *
  * @since 2.12
  */
 public class BulkWriteRequestBuilder {
@@ -48,7 +48,7 @@ public class BulkWriteRequestBuilder {
      *
      * @return the collation
      * @since 3.4
-     * @mongodb.server.release 3.4
+     *
      */
     public Collation getCollation() {
         return collation;
@@ -60,7 +60,7 @@ public class BulkWriteRequestBuilder {
      * @param collation the collation
      * @return this
      * @since 3.4
-     * @mongodb.server.release 3.4
+     *
      */
     public BulkWriteRequestBuilder collation(final Collation collation) {
         this.collation = collation;
@@ -113,7 +113,7 @@ public class BulkWriteRequestBuilder {
      * Specifies that the request being built should be an upsert.
      *
      * @return a new builder that allows only update and replace, since upsert does not apply to remove.
-     * @mongodb.driver.manual tutorial/modify-documents/#upsert-option Upsert
+     *
      */
     public BulkUpdateRequestBuilder upsert() {
         return new BulkUpdateRequestBuilder(bulkWriteOperation, query, true, codec, replacementCodec, collation);

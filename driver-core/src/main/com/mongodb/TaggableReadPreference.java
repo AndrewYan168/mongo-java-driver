@@ -102,7 +102,7 @@ public abstract class TaggableReadPreference extends ReadPreference {
      * </p>
      * @param timeUnit the time unit in which to return the value
      * @return the maximum acceptable staleness in the given time unit, or null if the value is not set
-     * @mongodb.server.release 3.4
+     *
      * @since 3.4
      */
     public Long getMaxStaleness(final TimeUnit timeUnit) {

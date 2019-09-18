@@ -133,7 +133,7 @@ public class FindOperation<T> implements AsyncReadOperation<AsyncBatchCursor<T>>
      * Gets the query filter.
      *
      * @return the query filter
-     * @mongodb.driver.manual reference/method/db.collection.find/ Filter
+     *
      */
     public BsonDocument getFilter() {
         return filter;
@@ -144,7 +144,7 @@ public class FindOperation<T> implements AsyncReadOperation<AsyncBatchCursor<T>>
      *
      * @param filter the filter, which may be null.
      * @return this
-     * @mongodb.driver.manual reference/method/db.collection.find/ Filter
+     *
      */
     public FindOperation<T> filter(final BsonDocument filter) {
         this.filter = filter;
@@ -155,7 +155,7 @@ public class FindOperation<T> implements AsyncReadOperation<AsyncBatchCursor<T>>
      * Gets the number of documents to return per batch.  Default to 0, which indicates that the server chooses an appropriate batch size.
      *
      * @return the batch size, which may be null
-     * @mongodb.driver.manual reference/method/cursor.batchSize/#cursor.batchSize Batch Size
+     *
      */
     public int getBatchSize() {
         return batchSize;
@@ -166,7 +166,7 @@ public class FindOperation<T> implements AsyncReadOperation<AsyncBatchCursor<T>>
      *
      * @param batchSize the batch size
      * @return this
-     * @mongodb.driver.manual reference/method/cursor.batchSize/#cursor.batchSize Batch Size
+     *
      */
     public FindOperation<T> batchSize(final int batchSize) {
         this.batchSize = batchSize;
@@ -177,7 +177,7 @@ public class FindOperation<T> implements AsyncReadOperation<AsyncBatchCursor<T>>
      * Gets the limit to apply.  The default is null.
      *
      * @return the limit
-     * @mongodb.driver.manual reference/method/cursor.limit/#cursor.limit Limit
+     *
      */
     public int getLimit() {
         return limit;
@@ -188,7 +188,7 @@ public class FindOperation<T> implements AsyncReadOperation<AsyncBatchCursor<T>>
      *
      * @param limit the limit, which may be null
      * @return this
-     * @mongodb.driver.manual reference/method/cursor.limit/#cursor.limit Limit
+     *
      */
     public FindOperation<T> limit(final int limit) {
         this.limit = limit;
@@ -199,7 +199,7 @@ public class FindOperation<T> implements AsyncReadOperation<AsyncBatchCursor<T>>
      * Gets the query modifiers to apply to this operation.  The default is not to apply any modifiers.
      *
      * @return the query modifiers, which may be null
-     * @mongodb.driver.manual reference/operator/query-modifier/ Query Modifiers
+     *
      */
     public BsonDocument getModifiers() {
         return modifiers;
@@ -210,7 +210,7 @@ public class FindOperation<T> implements AsyncReadOperation<AsyncBatchCursor<T>>
      *
      * @param modifiers the query modifiers to apply, which may be null.
      * @return this
-     * @mongodb.driver.manual reference/operator/query-modifier/ Query Modifiers
+     *
      */
     public FindOperation<T> modifiers(final BsonDocument modifiers) {
         this.modifiers = modifiers;
@@ -221,7 +221,7 @@ public class FindOperation<T> implements AsyncReadOperation<AsyncBatchCursor<T>>
      * Gets a document describing the fields to return for all matching documents.
      *
      * @return the project document, which may be null
-     * @mongodb.driver.manual reference/method/db.collection.find/ Projection
+     *
      */
     public BsonDocument getProjection() {
         return projection;
@@ -232,7 +232,7 @@ public class FindOperation<T> implements AsyncReadOperation<AsyncBatchCursor<T>>
      *
      * @param projection the project document, which may be null.
      * @return this
-     * @mongodb.driver.manual reference/method/db.collection.find/ Projection
+     *
      */
     public FindOperation<T> projection(final BsonDocument projection) {
         this.projection = projection;
@@ -279,7 +279,7 @@ public class FindOperation<T> implements AsyncReadOperation<AsyncBatchCursor<T>>
      * @param timeUnit the time unit to return the result in
      * @return the maximum await execution time in the given time unit
      * @since 3.2
-     * @mongodb.driver.manual reference/method/cursor.maxTimeMS/#cursor.maxTimeMS Max Time
+     *
      */
     public long getMaxAwaitTime(final TimeUnit timeUnit) {
         notNull("timeUnit", timeUnit);
@@ -294,7 +294,7 @@ public class FindOperation<T> implements AsyncReadOperation<AsyncBatchCursor<T>>
      * @param timeUnit the time unit, which may not be null
      * @return this
      * @since 3.2
-     * @mongodb.driver.manual reference/method/cursor.maxTimeMS/#cursor.maxTimeMS Max Time
+     *
      */
     public FindOperation<T> maxAwaitTime(final long maxAwaitTime, final TimeUnit timeUnit) {
         notNull("timeUnit", timeUnit);
@@ -306,7 +306,7 @@ public class FindOperation<T> implements AsyncReadOperation<AsyncBatchCursor<T>>
      * Gets the number of documents to skip.  The default is 0.
      *
      * @return the number of documents to skip, which may be null
-     * @mongodb.driver.manual reference/method/cursor.skip/#cursor.skip Skip
+     *
      */
     public int getSkip() {
         return skip;
@@ -317,7 +317,7 @@ public class FindOperation<T> implements AsyncReadOperation<AsyncBatchCursor<T>>
      *
      * @param skip the number of documents to skip
      * @return this
-     * @mongodb.driver.manual reference/method/cursor.skip/#cursor.skip Skip
+     *
      */
     public FindOperation<T> skip(final int skip) {
         this.skip = skip;
@@ -329,7 +329,7 @@ public class FindOperation<T> implements AsyncReadOperation<AsyncBatchCursor<T>>
      * order.
      *
      * @return a document describing the sort criteria
-     * @mongodb.driver.manual reference/method/cursor.sort/ Sort
+     *
      */
     public BsonDocument getSort() {
         return sort;
@@ -340,7 +340,7 @@ public class FindOperation<T> implements AsyncReadOperation<AsyncBatchCursor<T>>
      *
      * @param sort the sort criteria, which may be null.
      * @return this
-     * @mongodb.driver.manual reference/method/cursor.sort/ Sort
+     *
      */
     public FindOperation<T> sort(final BsonDocument sort) {
         this.sort = sort;
@@ -371,7 +371,7 @@ public class FindOperation<T> implements AsyncReadOperation<AsyncBatchCursor<T>>
      * Returns true if set to allowed to query non-primary replica set members.
      *
      * @return true if set to allowed to query non-primary replica set members.
-     * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#op-query OP_QUERY
+     *
      */
     public boolean isSlaveOk() {
         return slaveOk;
@@ -382,7 +382,7 @@ public class FindOperation<T> implements AsyncReadOperation<AsyncBatchCursor<T>>
      *
      * @param slaveOk true if allowed to query non-primary replica set members.
      * @return this
-     * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#op-query OP_QUERY
+     *
      */
     public FindOperation<T> slaveOk(final boolean slaveOk) {
         this.slaveOk = slaveOk;
@@ -393,7 +393,7 @@ public class FindOperation<T> implements AsyncReadOperation<AsyncBatchCursor<T>>
      * Internal replication use only.  Driver users should ordinarily not use this.
      *
      * @return oplogReplay
-     * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#op-query OP_QUERY
+     *
      */
     public boolean isOplogReplay() {
         return oplogReplay;
@@ -404,7 +404,7 @@ public class FindOperation<T> implements AsyncReadOperation<AsyncBatchCursor<T>>
      *
      * @param oplogReplay the oplogReplay value
      * @return this
-     * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#op-query OP_QUERY
+     *
      */
     public FindOperation<T> oplogReplay(final boolean oplogReplay) {
         this.oplogReplay = oplogReplay;
@@ -417,7 +417,7 @@ public class FindOperation<T> implements AsyncReadOperation<AsyncBatchCursor<T>>
      * <p>The server normally times out idle cursors after an inactivity period (10 minutes) to prevent excess memory use.</p>
      *
      * @return if cursor timeout has been turned off
-     * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#op-query OP_QUERY
+     *
      */
     public boolean isNoCursorTimeout() {
         return noCursorTimeout;
@@ -428,7 +428,7 @@ public class FindOperation<T> implements AsyncReadOperation<AsyncBatchCursor<T>>
      *
      * @param noCursorTimeout true if the cursor timeout should be turned off.
      * @return this
-     * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#op-query OP_QUERY
+     *
      */
     public FindOperation<T> noCursorTimeout(final boolean noCursorTimeout) {
         this.noCursorTimeout = noCursorTimeout;
@@ -439,7 +439,7 @@ public class FindOperation<T> implements AsyncReadOperation<AsyncBatchCursor<T>>
      * Returns true if can get partial results from a mongos if some shards are down.
      *
      * @return if can get partial results from a mongos if some shards are down
-     * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#op-query OP_QUERY
+     *
      */
     public boolean isPartial() {
         return partial;
@@ -450,7 +450,7 @@ public class FindOperation<T> implements AsyncReadOperation<AsyncBatchCursor<T>>
      *
      * @param partial allow partial results from a mongos if some shards are down
      * @return this
-     * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#op-query OP_QUERY
+     *
      */
     public FindOperation<T> partial(final boolean partial) {
         this.partial = partial;
@@ -462,7 +462,7 @@ public class FindOperation<T> implements AsyncReadOperation<AsyncBatchCursor<T>>
      *
      * @return the read concern
      * @since 3.2
-     * @mongodb.driver.manual reference/readConcern/ Read Concern
+     *
      */
     public ReadConcern getReadConcern() {
         return readConcern;
@@ -473,7 +473,7 @@ public class FindOperation<T> implements AsyncReadOperation<AsyncBatchCursor<T>>
      * @param readConcern the read concern
      * @return this
      * @since 3.2
-     * @mongodb.driver.manual reference/readConcern/ Read Concern
+     *
      */
     public FindOperation<T> readConcern(final ReadConcern readConcern) {
         this.readConcern = notNull("readConcern", readConcern);
@@ -485,7 +485,7 @@ public class FindOperation<T> implements AsyncReadOperation<AsyncBatchCursor<T>>
      *
      * @return the collation options
      * @since 3.4
-     * @mongodb.server.release 3.4
+     *
      */
     public Collation getCollation() {
         return collation;
@@ -498,7 +498,7 @@ public class FindOperation<T> implements AsyncReadOperation<AsyncBatchCursor<T>>
      * @param collation the collation options to use
      * @return this
      * @since 3.4
-     * @mongodb.server.release 3.4
+     *
      */
     public FindOperation<T> collation(final Collation collation) {
         this.collation = collation;

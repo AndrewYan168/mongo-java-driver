@@ -109,7 +109,7 @@ public abstract class BaseWriteOperation implements AsyncWriteOperation<WriteCon
      *
      * @return the bypass document level validation flag
      * @since 3.2
-     * @mongodb.server.release 3.2
+     *
      */
     public Boolean getBypassDocumentValidation() {
         return bypassDocumentValidation;
@@ -121,7 +121,7 @@ public abstract class BaseWriteOperation implements AsyncWriteOperation<WriteCon
      * @param bypassDocumentValidation If true, allows the write to opt-out of document level validation.
      * @return this
      * @since 3.2
-     * @mongodb.server.release 3.2
+     *
      */
     public BaseWriteOperation bypassDocumentValidation(final Boolean bypassDocumentValidation) {
         this.bypassDocumentValidation = bypassDocumentValidation;

@@ -59,8 +59,8 @@ import static com.mongodb.assertions.Assertions.notNull;
  *   write operations will fail with an exception if this option is used when the server is running without journaling.</li>
  * </ul>
  *
- * @mongodb.driver.manual core/write-concern Write Concern
- * @mongodb.driver.manual reference/write-concern/ Write Concern Reference
+ *
+ *
  */
 @Immutable
 public class WriteConcern implements Serializable {
@@ -82,7 +82,7 @@ public class WriteConcern implements Serializable {
      * Write operations that use this write concern will wait for acknowledgement, using the default write concern configured on the server.
      *
      * @since 2.10.0
-     * @mongodb.driver.manual core/write-concern/#write-concern-acknowledged Acknowledged
+     *
      */
     public static final WriteConcern ACKNOWLEDGED = new WriteConcern((Object) null, null, null, null);
 
@@ -90,7 +90,7 @@ public class WriteConcern implements Serializable {
      * Write operations that use this write concern will wait for acknowledgement from a single member.
      *
      * @since 3.2
-     * @mongodb.driver.manual reference/write-concern/#w-option w option
+     *
      */
     public static final WriteConcern W1 = new WriteConcern(1);
 
@@ -98,7 +98,7 @@ public class WriteConcern implements Serializable {
      * Write operations that use this write concern will wait for acknowledgement from two members.
      *
      * @since 3.2
-     * @mongodb.driver.manual reference/write-concern/#w-option w option
+     *
      */
     public static final WriteConcern W2 = new WriteConcern(2);
 
@@ -106,7 +106,7 @@ public class WriteConcern implements Serializable {
      * Write operations that use this write concern will wait for acknowledgement from three members.
      *
      * @since 3.2
-     * @mongodb.driver.manual reference/write-concern/#w-option w option
+     *
      */
     public static final WriteConcern W3 = new WriteConcern(3);
 
@@ -116,7 +116,7 @@ public class WriteConcern implements Serializable {
      * network issues, but not server errors.
      *
      * @since 2.10.0
-     * @mongodb.driver.manual core/write-concern/#unacknowledged Unacknowledged
+     *
      */
     public static final WriteConcern UNACKNOWLEDGED = new WriteConcern(0);
 
@@ -131,7 +131,7 @@ public class WriteConcern implements Serializable {
     /**
      * Write operations wait for the server to group commit to the journal file on disk.
      *
-     * @mongodb.driver.manual core/write-concern/#journaled Journaled
+     *
      */
     public static final WriteConcern JOURNALED = ACKNOWLEDGED.withJournal(true);
 
@@ -221,7 +221,7 @@ public class WriteConcern implements Serializable {
      * Construct an instance with the given integer-based value for w.
      *
      * @param w number of servers to ensure write propagation to before acknowledgment, which must be {@code >= 0}
-     * @mongodb.driver.manual reference/write-concern/#w-option w option
+     *
      */
     public WriteConcern(final int w) {
         this(w, null, null, null);
@@ -232,8 +232,8 @@ public class WriteConcern implements Serializable {
      *
      * @param w tag set name, or "majority", representing the servers to ensure write propagation to before acknowledgment.  Do not use
      *          string representation of integer values for w
-     * @mongodb.driver.manual tutorial/configure-replica-set-tag-sets/#replica-set-configuration-tag-sets Tag Sets
-     * @mongodb.driver.manual reference/write-concern/#w-option w option
+     *
+     *
      */
     public WriteConcern(final String w) {
         this(w, null, null, null);
@@ -245,8 +245,8 @@ public class WriteConcern implements Serializable {
      *
      * @param w          the w value, which must be &gt;= 0
      * @param wTimeoutMS the wTimeout in milliseconds, which must be &gt;= 0
-     * @mongodb.driver.manual reference/write-concern/#w-option w option
-     * @mongodb.driver.manual reference/write-concern/#wtimeout wtimeout option
+     *
+     *
      */
     public WriteConcern(final int w, final int wTimeoutMS) {
         this(w, wTimeoutMS, null, null);
@@ -270,8 +270,8 @@ public class WriteConcern implements Serializable {
      * @param wTimeoutMS the wTimeout in milliseconds, which must be &gt;= 0
      * @param fsync      whether or not to fsync
      * @deprecated Prefer {@link #withW(int)}, {@link #withWTimeout(long, TimeUnit)}, {@link #withJournal(Boolean)}
-     * @mongodb.driver.manual reference/write-concern/#w-option w option
-     * @mongodb.driver.manual reference/write-concern/#wtimeout wtimeout option
+     *
+     *
      */
     @Deprecated
     public WriteConcern(final int w, final int wTimeoutMS, final boolean fsync) {
@@ -286,9 +286,9 @@ public class WriteConcern implements Serializable {
      * @param fsync      whether or not to fsync
      * @param journal    whether writes should wait for a journaling group commit
      * @deprecated Prefer {@link #withW(int)}, {@link #withWTimeout(long, TimeUnit)}, {@link #withJournal(Boolean)}
-     * @mongodb.driver.manual reference/write-concern/#w-option w option
-     * @mongodb.driver.manual reference/write-concern/#wtimeout wtimeout option
-     * @mongodb.driver.manual reference/write-concern/#j-option j option
+     *
+     *
+     *
      */
     @Deprecated
     public WriteConcern(final int w, final int wTimeoutMS, final boolean fsync, final boolean journal) {
@@ -361,7 +361,7 @@ public class WriteConcern implements Serializable {
      * @param timeUnit the non-null time unit for the result
      * @return the WTimeout, which may be null if a wTimeout has not been specified
      * @since 3.2
-     * @mongodb.driver.manual core/write-concern/#timeouts wTimeout
+     *
      */
     public Integer getWTimeout(final TimeUnit timeUnit) {
         notNull("timeUnit", timeUnit);
@@ -373,7 +373,7 @@ public class WriteConcern implements Serializable {
      *
      * @return the wTimeout in milliseconds
      * @deprecated Prefer {@link #getWTimeout(TimeUnit)}
-     * @mongodb.driver.manual core/write-concern/#timeouts wTimeout
+     *
      */
     @Deprecated
     public int getWtimeout() {
@@ -385,7 +385,7 @@ public class WriteConcern implements Serializable {
      *
      * @return whether journal syncing is enabled, or null if unspecified.
      * @since 3.2
-     * @mongodb.driver.manual core/write-concern/#journaled Journaled
+     *
      */
     public Boolean getJournal() {
         return journal;
@@ -395,7 +395,7 @@ public class WriteConcern implements Serializable {
      * Gets the journal property.  If journal has not been specified, returns false.
      *
      * @return true if journal is true, false if it false or unspecified.
-     * @mongodb.driver.manual core/write-concern/#journaled Journaled
+     *
      * @deprecated Prefer {@link #getJournal()}
      */
     @Deprecated
@@ -440,7 +440,7 @@ public class WriteConcern implements Serializable {
      * Gets whether this write concern indicates that the server's default write concern will be used.
      *
      * @return true if this write concern indicates that the server's default write concern will be used
-     * @mongodb.driver.manual /reference/replica-configuration/#local.system.replset.settings.getLastErrorDefaults getLastErrorDefaults
+     *
      */
     public boolean isServerDefault() {
         return equals(ACKNOWLEDGED);
@@ -467,7 +467,7 @@ public class WriteConcern implements Serializable {
      * Returns true if this write concern indicates that write operations must be acknowledged.
      *
      * @return true w != null or w &gt; 0 or journal is true or fsync is true
-     * @mongodb.driver.manual core/write-concern/#acknowledged Acknowledged
+     *
      */
     public boolean isAcknowledged() {
         if (w instanceof Integer) {
@@ -534,7 +534,7 @@ public class WriteConcern implements Serializable {
      *
      * @param w number of servers to ensure write propagation to before acknowledgment, which must be {@code >= 0}
      * @return the new WriteConcern
-     * @mongodb.driver.manual core/write-concern/#replica-acknowledged Replica Acknowledged
+     *
      */
     public WriteConcern withW(final int w) {
         return new WriteConcern((Object) Integer.valueOf(w), wTimeoutMS, fsync, journal);
@@ -547,7 +547,7 @@ public class WriteConcern implements Serializable {
      *          representation of integer values for w
      * @return the new WriteConcern
      * @see #withW(int)
-     * @mongodb.driver.manual tutorial/configure-replica-set-tag-sets/#replica-set-configuration-tag-sets Tag Sets
+     *
      */
     public WriteConcern withW(final String w) {
         notNull("w", w);
@@ -572,7 +572,7 @@ public class WriteConcern implements Serializable {
      * @param journal true if journalling is required for acknowledgement, false if not, or null if unspecified
      * @return the new WriteConcern
      * @since 3.2
-     * @mongodb.driver.manual reference/write-concern/#j-option j option
+     *
      */
     public WriteConcern withJournal(final Boolean journal) {
         return new WriteConcern(w, wTimeoutMS, fsync, journal);
@@ -584,7 +584,7 @@ public class WriteConcern implements Serializable {
      * @param journal true if journalling is required for acknowledgement
      * @return the new WriteConcern
      * @deprecated Prefer {@link #withJournal(Boolean)}
-     * @mongodb.driver.manual reference/write-concern/#j-option j option
+     *
      */
     @Deprecated
     public WriteConcern withJ(final boolean journal) {
@@ -598,7 +598,7 @@ public class WriteConcern implements Serializable {
      * @param timeUnit the non-null time unit to apply to wTimeout
      * @return the WriteConcern with the given wTimeout
      * @since 3.2
-     * @mongodb.driver.manual reference/write-concern/#wtimeout wtimeout option
+     *
      */
     public WriteConcern withWTimeout(final long wTimeout, final TimeUnit timeUnit) {
         notNull("timeUnit", timeUnit);

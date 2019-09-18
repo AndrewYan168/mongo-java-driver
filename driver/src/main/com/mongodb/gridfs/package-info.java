@@ -16,6 +16,6 @@
 
 /**
  * Contains the classes for supporting MongoDB's specification for storing very large files, GridFS.
- * @mongodb.driver.manual core/gridfs/ GridFS
+ *
  */
 package com.mongodb.gridfs;

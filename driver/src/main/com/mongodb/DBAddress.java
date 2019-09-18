@@ -21,8 +21,8 @@ import java.net.InetAddress;
 /**
  * Represents a database address, which includes the properties of ServerAddress (host and port) and adds a database name.
  *
- * @mongodb.driver.manual reference/default-mongodb-port/ MongoDB Ports
- * @mongodb.driver.manual reference/connection-string/ MongoDB Connection String
+ *
+ *
  * @deprecated This class is no longer needed, as the driver does not rely on it for anything anymore.  Use {@link ServerAddress} instead.
  */
 @Deprecated
@@ -40,7 +40,7 @@ public class DBAddress extends ServerAddress {
      * </ul>
      *
      * @param urlFormat the URL-formatted host and port
-     * @mongodb.driver.manual reference/connection-string/ MongoDB Connection String
+     *
      * @see MongoClientURI
      */
     public DBAddress(final String urlFormat) {

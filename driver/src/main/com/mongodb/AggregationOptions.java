@@ -27,8 +27,8 @@ import static java.util.concurrent.TimeUnit.MILLISECONDS;
 /**
  * The options to apply to an aggregate operation.
  *
- * @mongodb.server.release 2.2
- * @mongodb.driver.manual reference/command/aggregate/ aggregate
+ *
+ *
  * @since 2.12
  */
 public class AggregationOptions {
@@ -51,7 +51,7 @@ public class AggregationOptions {
         /**
          * The output of the aggregate operation is returned using a cursor.
          *
-         * @mongodb.server.release 2.6
+         *
          */
         CURSOR
     }
@@ -70,7 +70,7 @@ public class AggregationOptions {
      * RAM.
      *
      * @return true if aggregation stages can write data to temporary files
-     * @mongodb.server.release 2.6
+     *
      */
     public Boolean getAllowDiskUse() {
         return allowDiskUse;
@@ -80,7 +80,7 @@ public class AggregationOptions {
      * The size of batches to use when iterating over results.
      *
      * @return the batch size
-     * @mongodb.server.release 2.6
+     *
      */
     public Integer getBatchSize() {
         return batchSize;
@@ -101,7 +101,7 @@ public class AggregationOptions {
      *
      * @param timeUnit the time unit for the result
      * @return the max time
-     * @mongodb.server.release 2.6
+     *
      * @since 2.12
      */
     public long getMaxTime(final TimeUnit timeUnit) {
@@ -113,7 +113,7 @@ public class AggregationOptions {
      *
      * @return whether to bypass document validation, or null if unspecified.
      * @since 2.14
-     * @mongodb.server.release 3.2
+     *
      */
     public Boolean getBypassDocumentValidation() {
         return bypassDocumentValidation;
@@ -124,7 +124,7 @@ public class AggregationOptions {
      *
      * @return the collation options
      * @since 3.4
-     * @mongodb.server.release 3.4
+     *
      */
     public Collation getCollation() {
         return collation;
@@ -154,8 +154,8 @@ public class AggregationOptions {
     /**
      * Builder for creating {@code AggregationOptions}.
      *
-     * @mongodb.server.release 2.2
-     * @mongodb.driver.manual reference/command/aggregate/ aggregate
+     *
+     *
      */
     @NotThreadSafe
     public static class Builder {
@@ -174,7 +174,7 @@ public class AggregationOptions {
          *
          * @param size the batch size to apply to the cursor
          * @return {@code this} so calls can be chained
-         * @mongodb.server.release 2.6
+         *
          */
         public Builder batchSize(final Integer size) {
             batchSize = size;
@@ -187,7 +187,7 @@ public class AggregationOptions {
          *
          * @param allowDiskUse whether or not aggregation stages can write data to temporary files
          * @return {@code this} so calls can be chained
-         * @mongodb.server.release 2.6
+         *
          */
         public Builder allowDiskUse(final Boolean allowDiskUse) {
             this.allowDiskUse = allowDiskUse;
@@ -212,7 +212,7 @@ public class AggregationOptions {
          * @param maxTime  the max time
          * @param timeUnit the time unit
          * @return {@code this} so calls can be chained
-         * @mongodb.server.release 2.6
+         *
          */
         public Builder maxTime(final long maxTime, final TimeUnit timeUnit) {
             maxTimeMS = MILLISECONDS.convert(maxTime, timeUnit);
@@ -225,7 +225,7 @@ public class AggregationOptions {
          * @param bypassDocumentValidation whether to bypass document validation, or null if unspecified
          * @return this
          * @since 2.14
-         * @mongodb.server.release 3.2
+         *
          */
         public Builder bypassDocumentValidation(final Boolean bypassDocumentValidation) {
             this.bypassDocumentValidation = bypassDocumentValidation;
@@ -238,7 +238,7 @@ public class AggregationOptions {
          * @param collation the collation
          * @return this
          * @since 3.4
-         * @mongodb.server.release 3.4
+         *
          */
         public Builder collation(final Collation collation) {
             this.collation = collation;

@@ -57,7 +57,7 @@ import static com.mongodb.operation.OperationHelper.withConnection;
  * <p>When possible, the distinct command uses an index to find documents and return values.</p>
  *
  * @param <T> the type of the distinct value
- * @mongodb.driver.manual reference/command/distinct Distinct Command
+ *
  * @since 3.0
  */
 public class DistinctOperation<T> implements AsyncReadOperation<AsyncBatchCursor<T>>, ReadOperation<BatchCursor<T>> {
@@ -88,7 +88,7 @@ public class DistinctOperation<T> implements AsyncReadOperation<AsyncBatchCursor
      * Gets the query filter.
      *
      * @return the query filter
-     * @mongodb.driver.manual reference/method/db.collection.find/ Filter
+     *
      */
     public BsonDocument getFilter() {
         return filter;
@@ -99,7 +99,7 @@ public class DistinctOperation<T> implements AsyncReadOperation<AsyncBatchCursor
      *
      * @param filter the query filter, which may be null.
      * @return this
-     * @mongodb.driver.manual reference/method/db.collection.find/ Filter
+     *
      */
     public DistinctOperation<T> filter(final BsonDocument filter) {
         this.filter = filter;
@@ -135,7 +135,7 @@ public class DistinctOperation<T> implements AsyncReadOperation<AsyncBatchCursor
      *
      * @return the read concern
      * @since 3.2
-     * @mongodb.driver.manual reference/readConcern/ Read Concern
+     *
      */
     public ReadConcern getReadConcern() {
         return readConcern;
@@ -146,7 +146,7 @@ public class DistinctOperation<T> implements AsyncReadOperation<AsyncBatchCursor
      * @param readConcern the read concern
      * @return this
      * @since 3.2
-     * @mongodb.driver.manual reference/readConcern/ Read Concern
+     *
      */
     public DistinctOperation<T> readConcern(final ReadConcern readConcern) {
         this.readConcern = notNull("readConcern", readConcern);
@@ -158,7 +158,7 @@ public class DistinctOperation<T> implements AsyncReadOperation<AsyncBatchCursor
      *
      * @return the collation options
      * @since 3.4
-     * @mongodb.server.release 3.4
+     *
      */
     public Collation getCollation() {
         return collation;
@@ -171,7 +171,7 @@ public class DistinctOperation<T> implements AsyncReadOperation<AsyncBatchCursor
      * @param collation the collation options to use
      * @return this
      * @since 3.4
-     * @mongodb.server.release 3.4
+     *
      */
     public DistinctOperation<T> collation(final Collation collation) {
         this.collation = collation;

@@ -19,7 +19,7 @@ package com.mongodb.client.model;
 /**
  * The options to apply when renaming a collection.
  *
- * @mongodb.driver.manual reference/command/renameCollection renameCollection
+ *
  * @since 3.0
  */
 public class RenameCollectionOptions {

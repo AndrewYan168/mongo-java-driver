@@ -19,8 +19,8 @@ package com.mongodb.client.model;
 /**
  * The options for an unwind aggregation pipeline stage
  *
- * @mongodb.driver.manual reference/operator/aggregation/unwind/ $unwind
- * @mongodb.server.release 3.2
+ *
+ *
  * @since 3.2
  */
 public final class UnwindOptions {

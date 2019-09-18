@@ -20,9 +20,9 @@ package com.mongodb.client.model;
  * The options to apply to an operation that inserts a single document into a collection.
  *
  * @since 3.2
- * @mongodb.server.release 3.2
- * @mongodb.driver.manual tutorial/insert-documents/ Insert Tutorial
- * @mongodb.driver.manual reference/command/insert/ Insert Command
+ *
+ *
+ *
  */
 public final class InsertOneOptions {
     private Boolean bypassDocumentValidation;

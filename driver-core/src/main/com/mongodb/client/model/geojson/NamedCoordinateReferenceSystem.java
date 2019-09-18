@@ -43,7 +43,7 @@ public final class NamedCoordinateReferenceSystem extends CoordinateReferenceSys
     /**
      * A custom MongoDB EPSG:4326 Coordinate Reference System that uses a strict counter-clockwise winding order.
      *
-     * @mongodb.driver.manual reference/operator/query/geometry/ Strict Winding
+     *
      */
     public static final NamedCoordinateReferenceSystem EPSG_4326_STRICT_WINDING =
     new NamedCoordinateReferenceSystem("urn:x-mongodb:crs:strictwinding:EPSG:4326");

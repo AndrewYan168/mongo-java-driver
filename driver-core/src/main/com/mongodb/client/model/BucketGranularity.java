@@ -19,8 +19,8 @@ package com.mongodb.client.model;
 /**
  * Granularity values for automatic bucketing.
  *
- * @mongodb.driver.manual reference/operator/aggregation/bucketAuto/ $bucketAuto
- * @mongodb.server.release 3.4
+ *
+ *
  * @see <a href="https://en.wikipedia.org/wiki/Preferred_number">Preferred numbers</a>
  * @since 3.4
  */

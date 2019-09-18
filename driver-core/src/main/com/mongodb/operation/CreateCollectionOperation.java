@@ -48,7 +48,7 @@ import static com.mongodb.operation.WriteConcernHelper.writeConcernErrorTransfor
  * An operation to create a collection
  *
  * @since 3.0
- * @mongodb.driver.manual reference/method/db.createCollection Create Collection
+ *
  */
 public class CreateCollectionOperation implements AsyncWriteOperation<Void>, WriteOperation<Void> {
     private final String databaseName;
@@ -199,8 +199,8 @@ public class CreateCollectionOperation implements AsyncWriteOperation<Void>, Wri
      * <p>Note: {@code }usePowerOf2Sizes} became the default allocation strategy in mongodb 2.6</p>
      *
      * @return usePowerOf2Sizes became the default allocation strategy
-     * @mongodb.driver.manual reference/command/collMod/#usePowerOf2Sizes usePowerOf2Sizes
-     * @mongodb.server.release 2.6
+     *
+     *
      * @deprecated As of MongoDB 3.0, power of 2 sizes is ignored by the MongoDB server
      */
     @Deprecated
@@ -215,8 +215,8 @@ public class CreateCollectionOperation implements AsyncWriteOperation<Void>, Wri
      *
      * @param usePowerOf2Sizes as the default allocation strategy
      * @return this
-     * @mongodb.driver.manual reference/command/collMod/#usePowerOf2Sizes usePowerOf2Sizes
-     * @mongodb.server.release 2.6
+     *
+     *
      * @deprecated As of MongoDB 3.0, power of 2 sizes is ignored by the MongoDB server
      */
     @Deprecated
@@ -229,7 +229,7 @@ public class CreateCollectionOperation implements AsyncWriteOperation<Void>, Wri
      * Gets the storage engine options document for this collection.
      *
      * @return the storage engine options
-     * @mongodb.server.release 3.0
+     *
      */
     public BsonDocument getStorageEngineOptions() {
         return storageEngineOptions;
@@ -240,7 +240,7 @@ public class CreateCollectionOperation implements AsyncWriteOperation<Void>, Wri
      *
      * @param storageEngineOptions the storage engine options
      * @return this
-     * @mongodb.server.release 3.0
+     *
      */
     public CreateCollectionOperation storageEngineOptions(final BsonDocument storageEngineOptions) {
         this.storageEngineOptions = storageEngineOptions;
@@ -252,7 +252,7 @@ public class CreateCollectionOperation implements AsyncWriteOperation<Void>, Wri
      *
      * @return the index option defaults
      * @since 3.2
-     * @mongodb.server.release 3.2
+     *
      */
     public BsonDocument getIndexOptionDefaults() {
         return indexOptionDefaults;
@@ -264,7 +264,7 @@ public class CreateCollectionOperation implements AsyncWriteOperation<Void>, Wri
      * @param indexOptionDefaults the index option defaults
      * @return this
      * @since 3.2
-     * @mongodb.server.release 3.2
+     *
      */
     public CreateCollectionOperation indexOptionDefaults(final BsonDocument indexOptionDefaults) {
         this.indexOptionDefaults = indexOptionDefaults;
@@ -276,7 +276,7 @@ public class CreateCollectionOperation implements AsyncWriteOperation<Void>, Wri
      *
      * @return the validation rules if set or null
      * @since 3.2
-     * @mongodb.server.release 3.2
+     *
      */
     public BsonDocument getValidator() {
         return validator;
@@ -288,7 +288,7 @@ public class CreateCollectionOperation implements AsyncWriteOperation<Void>, Wri
      * @param validator the validation rules for inserting or updating documents
      * @return this
      * @since 3.2
-     * @mongodb.server.release 3.2
+     *
      */
     public CreateCollectionOperation validator(final BsonDocument validator) {
         this.validator = validator;
@@ -301,7 +301,7 @@ public class CreateCollectionOperation implements AsyncWriteOperation<Void>, Wri
      *
      * @return the ValidationLevel if set or null
      * @since 3.2
-     * @mongodb.server.release 3.2
+     *
      */
     public ValidationLevel getValidationLevel() {
         return validationLevel;
@@ -314,7 +314,7 @@ public class CreateCollectionOperation implements AsyncWriteOperation<Void>, Wri
      * @param validationLevel the validation level
      * @return this
      * @since 3.2
-     * @mongodb.server.release 3.2
+     *
      */
     public CreateCollectionOperation validationLevel(final ValidationLevel validationLevel) {
         this.validationLevel = validationLevel;
@@ -326,7 +326,7 @@ public class CreateCollectionOperation implements AsyncWriteOperation<Void>, Wri
      *
      * @return the ValidationAction if set or null
      * @since 3.2
-     * @mongodb.server.release 3.2
+     *
      */
     public ValidationAction getValidationAction() {
         return validationAction;
@@ -339,7 +339,7 @@ public class CreateCollectionOperation implements AsyncWriteOperation<Void>, Wri
      * @param validationAction the validation action
      * @return this
      * @since 3.2
-     * @mongodb.server.release 3.2
+     *
      */
     public CreateCollectionOperation validationAction(final ValidationAction validationAction) {
         this.validationAction = validationAction;
@@ -351,7 +351,7 @@ public class CreateCollectionOperation implements AsyncWriteOperation<Void>, Wri
      *
      * @return the collation options
      * @since 3.4
-     * @mongodb.server.release 3.4
+     *
      */
     public Collation getCollation() {
         return collation;
@@ -364,7 +364,7 @@ public class CreateCollectionOperation implements AsyncWriteOperation<Void>, Wri
      * @param collation the collation options to use
      * @return this
      * @since 3.4
-     * @mongodb.server.release 3.4
+     *
      */
     public CreateCollectionOperation collation(final Collation collation) {
         this.collation = collation;

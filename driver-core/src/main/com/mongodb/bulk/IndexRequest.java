@@ -29,7 +29,7 @@ import static java.util.Arrays.asList;
 /**
  * The settings to apply to the creation of an index.
  *
- * @mongodb.driver.manual reference/method/db.collection.ensureIndex/#options Index options
+ *
  * @since 3.0
  */
 public class IndexRequest {
@@ -157,7 +157,7 @@ public class IndexRequest {
      *
      * @param timeUnit the time unit
      * @return the time to live for documents in the collection
-     * @mongodb.driver.manual tutorial/expire-data TTL
+     *
      */
     public Long getExpireAfter(final TimeUnit timeUnit) {
         if (expireAfterSeconds == null) {
@@ -172,7 +172,7 @@ public class IndexRequest {
      * @param expireAfter the time to live for documents in the collection
      * @param timeUnit the time unit
      * @return this
-     * @mongodb.driver.manual tutorial/expire-data TTL
+     *
      */
     public IndexRequest expireAfter(final Long expireAfter, final TimeUnit timeUnit) {
         if (expireAfter == null) {
@@ -210,7 +210,7 @@ public class IndexRequest {
      * of the field relative to the other indexed fields in terms of the score.</p>
      *
      * @return the weighting object
-     * @mongodb.driver.manual tutorial/control-results-of-text-search Control Search Results with Weights
+     *
      */
     public BsonDocument getWeights() {
         return weights;
@@ -224,7 +224,7 @@ public class IndexRequest {
      *
      * @param weights the weighting object
      * @return this
-     * @mongodb.driver.manual tutorial/control-results-of-text-search Control Search Results with Weights
+     *
      */
     public IndexRequest weights(final BsonDocument weights) {
         this.weights = weights;
@@ -237,7 +237,7 @@ public class IndexRequest {
      * <p>The language that determines the list of stop words and the rules for the stemmer and tokenizer.</p>
      *
      * @return the language for a text index.
-     * @mongodb.driver.manual reference/text-search-languages Text Search languages
+     *
      */
     public String getDefaultLanguage() {
         return defaultLanguage;
@@ -250,7 +250,7 @@ public class IndexRequest {
      *
      * @param defaultLanguage the language for the text index.
      * @return this
-     * @mongodb.driver.manual reference/text-search-languages Text Search languages
+     *
      */
     public IndexRequest defaultLanguage(final String defaultLanguage) {
         this.defaultLanguage = defaultLanguage;
@@ -263,7 +263,7 @@ public class IndexRequest {
      * <p>For text indexes, the name of the field, in the collection's documents, that contains the override language for the document.</p>
      *
      * @return the name of the field that contains the language string.
-     * @mongodb.driver.manual tutorial/specify-language-for-text-index/#specify-language-field-text-index-example Language override
+     *
      */
     public String getLanguageOverride() {
         return languageOverride;
@@ -276,7 +276,7 @@ public class IndexRequest {
      *
      * @param languageOverride the name of the field that contains the language string.
      * @return this
-     * @mongodb.driver.manual tutorial/specify-language-for-text-index/#specify-language-field-text-index-example Language override
+     *
      */
     public IndexRequest languageOverride(final String languageOverride) {
         this.languageOverride = languageOverride;
@@ -393,7 +393,7 @@ public class IndexRequest {
      * Gets the specified the number of units within which to group the location values for geoHaystack Indexes
      *
      * @return the specified the number of units within which to group the location values for geoHaystack Indexes
-     * @mongodb.driver.manual core/geohaystack/ geoHaystack Indexes
+     *
      */
     public Double getBucketSize() {
         return bucketSize;
@@ -404,7 +404,7 @@ public class IndexRequest {
      *
      * @param bucketSize the specified the number of units within which to group the location values for geoHaystack Indexes
      * @return this
-     * @mongodb.driver.manual core/geohaystack/ geoHaystack Indexes
+     *
      */
     public IndexRequest bucketSize(final Double bucketSize) {
         this.bucketSize = bucketSize;
@@ -418,7 +418,7 @@ public class IndexRequest {
      * building the index. Later versions of MongoDB will silently ignore this setting.</p>
      *
      * @return the legacy dropDups setting
-     * @mongodb.driver.manual core/index-creation/#index-creation-duplicate-dropping duplicate dropping
+     *
      */
     public boolean getDropDups() {
         return dropDups;
@@ -432,7 +432,7 @@ public class IndexRequest {
      *
      * @param dropDups the legacy dropDups setting
      * @return this
-     * @mongodb.driver.manual core/index-creation/#index-creation-duplicate-dropping duplicate dropping
+     *
      */
     public IndexRequest dropDups(final boolean dropDups) {
         this.dropDups = dropDups;
@@ -443,7 +443,7 @@ public class IndexRequest {
      * Gets the storage engine options document for this index.
      *
      * @return the storage engine options
-     * @mongodb.server.release 3.0
+     *
      */
     public BsonDocument getStorageEngine() {
         return storageEngine;
@@ -454,7 +454,7 @@ public class IndexRequest {
      *
      * @param storageEngineOptions the storage engine options
      * @return this
-     * @mongodb.server.release 3.0
+     *
      */
     public IndexRequest storageEngine(final BsonDocument storageEngineOptions) {
         this.storageEngine = storageEngineOptions;
@@ -465,8 +465,8 @@ public class IndexRequest {
      * Get the filter expression for the documents to be included in the index or null if not set
      *
      * @return the filter expression for the documents to be included in the index or null if not set
-     * @mongodb.server.release 3.2
-     * @mongodb.driver.manual /core/index-partial/ Partial Indexes
+     *
+     *
      * @since 3.2
      */
     public BsonDocument getPartialFilterExpression() {
@@ -478,8 +478,8 @@ public class IndexRequest {
      *
      * @param partialFilterExpression the filter expression for the documents to be included in the index
      * @return this
-     * @mongodb.server.release 3.2
-     * @mongodb.driver.manual /core/index-partial/ Partial Indexes
+     *
+     *
      * @since 3.2
      */
     public IndexRequest partialFilterExpression(final BsonDocument partialFilterExpression) {
@@ -491,7 +491,7 @@ public class IndexRequest {
      * Returns the collation options
      *
      * @return the collation options
-     * @mongodb.server.release 3.4
+     *
      * @since 3.4
      */
     public Collation getCollation() {
@@ -504,7 +504,7 @@ public class IndexRequest {
      * <p>A null value represents the server default.</p>
      * @param collation the collation options to use
      * @return this
-     * @mongodb.server.release 3.4
+     *
      * @since 3.4
      */
     public IndexRequest collation(final Collation collation) {

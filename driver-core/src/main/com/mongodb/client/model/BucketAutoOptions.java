@@ -24,8 +24,8 @@ import static java.util.Arrays.asList;
 /**
  * The options for a $bucketAuto aggregation pipeline stage
  *
- * @mongodb.driver.manual reference/operator/aggregation/bucketAuto/ $bucketAuto
- * @mongodb.server.release 3.4
+ *
+ *
  * @since 3.4
  */
 public class BucketAutoOptions {

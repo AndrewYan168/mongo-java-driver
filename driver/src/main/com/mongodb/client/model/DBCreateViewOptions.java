@@ -21,8 +21,8 @@ package com.mongodb.client.model;
  * The options to apply when creating a view
  *
  * @since 3.4
- * @mongodb.server.release 3.4
- * @mongodb.driver.manual reference/command/create Create Command
+ *
+ *
  */
 public class DBCreateViewOptions {
     private Collation collation;

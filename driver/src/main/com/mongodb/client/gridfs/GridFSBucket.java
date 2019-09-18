@@ -70,8 +70,8 @@ public interface GridFSBucket {
      *
      * @return the {@link com.mongodb.ReadConcern}
      * @since 3.2
-     * @mongodb.server.release 3.2
-     * @mongodb.driver.manual reference/readConcern/ Read Concern
+     *
+     *
      */
     ReadConcern getReadConcern();
 
@@ -105,8 +105,8 @@ public interface GridFSBucket {
      * @param readConcern the new {@link ReadConcern} for the GridFSBucket
      * @return a new GridFSBucket instance with the different ReadConcern
      * @since 3.2
-     * @mongodb.server.release 3.2
-     * @mongodb.driver.manual reference/readConcern/ Read Concern
+     *
+     *
      */
     GridFSBucket withReadConcern(ReadConcern readConcern);
 
@@ -305,7 +305,7 @@ public interface GridFSBucket {
      * Finds all documents in the files collection.
      *
      * @return the GridFS find iterable interface
-     * @mongodb.driver.manual tutorial/query-documents/ Find
+     *
      */
     GridFSFindIterable find();
 

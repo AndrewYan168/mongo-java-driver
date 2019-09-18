@@ -45,7 +45,7 @@ import static com.mongodb.operation.WriteConcernHelper.writeConcernErrorTransfor
 /**
  * An operation that drops an index.
  *
- * @mongodb.driver.manual reference/command/dropIndexes/ Drop indexes
+ *
  * @since 3.0
  */
 public class DropIndexOperation implements AsyncWriteOperation<Void>, WriteOperation<Void> {

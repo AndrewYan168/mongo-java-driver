@@ -42,7 +42,7 @@ import static org.bson.assertions.Assertions.notNull;
  * A representation of a document as a {@code Map}.  All iterators will traverse the elements in insertion order, as with {@code
  * LinkedHashMap}.
  *
- * @mongodb.driver.manual core/document document
+ *
  * @since 3.0.0
  */
 public class Document implements Map<String, Object>, Serializable, Bson {
@@ -84,7 +84,7 @@ public class Document implements Map<String, Object>, Serializable, Bson {
      * @param json the JSON string
      * @return a corresponding {@code Document} object
      * @see org.bson.json.JsonReader
-     * @mongodb.driver.manual reference/mongodb-extended-json/ MongoDB Extended JSON
+     *
      */
     public static Document parse(final String json) {
         return parse(json, new DocumentCodec());
@@ -97,7 +97,7 @@ public class Document implements Map<String, Object>, Serializable, Bson {
      * @param decoder the {@code Decoder} to use to parse the JSON string into a {@code Document}
      * @return a corresponding {@code Document} object
      * @see org.bson.json.JsonReader
-     * @mongodb.driver.manual reference/mongodb-extended-json/ MongoDB Extended JSON
+     *
      */
     public static Document parse(final String json, final Decoder<Document> decoder) {
         notNull("codec", decoder);

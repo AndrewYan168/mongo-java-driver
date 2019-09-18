@@ -30,7 +30,7 @@ import static com.mongodb.assertions.Assertions.notNull;
 /**
  * An immutable set of tags, used to select members of a replica set to use for read operations.
  *
- * @mongodb.driver.manual tutorial/configure-replica-set-tag-sets Tag Sets
+ *
  * @see com.mongodb.ReadPreference
  * @since 2.13
  */

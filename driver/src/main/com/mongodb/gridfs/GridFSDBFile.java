@@ -33,7 +33,7 @@ import java.io.OutputStream;
  *     <li>Creating an {@code InputStream} to stream the data into</li>
  * </ul>
  *
- * @mongodb.driver.manual core/gridfs/ GridFS
+ *
  */
 public class GridFSDBFile extends GridFSFile {
     /**

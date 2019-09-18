@@ -19,7 +19,7 @@ package com.mongodb.client.model;
 /**
  * Indicates which document to return, the original document before change or the document after the change
  *
- * @mongodb.driver.manual reference/command/findAndModify findAndModify
+ *
  * @since 3.0
  */
 public enum ReturnDocument {

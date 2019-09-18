@@ -54,7 +54,7 @@ public final class BulkWriteOptions {
      *
      * @return the bypass document level validation flag
      * @since 3.2
-     * @mongodb.server.release 3.2
+     *
      */
     public Boolean getBypassDocumentValidation() {
         return bypassDocumentValidation;
@@ -66,7 +66,7 @@ public final class BulkWriteOptions {
      * @param bypassDocumentValidation If true, allows the write to opt-out of document level validation.
      * @return this
      * @since 3.2
-     * @mongodb.server.release 3.2
+     *
      */
     public BulkWriteOptions bypassDocumentValidation(final Boolean bypassDocumentValidation) {
         this.bypassDocumentValidation = bypassDocumentValidation;

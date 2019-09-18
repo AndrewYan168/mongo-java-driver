@@ -48,7 +48,7 @@ import static org.bson.assertions.Assertions.notNull;
  *
  * <p>Instances of this class are immutable.</p>
  *
- * @mongodb.driver.manual core/object-id ObjectId
+ *
  */
 public final class ObjectId implements Comparable<ObjectId>, Serializable {
 

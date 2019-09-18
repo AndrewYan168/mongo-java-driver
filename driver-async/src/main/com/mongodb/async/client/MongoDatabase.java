@@ -72,8 +72,8 @@ public interface MongoDatabase {
      *
      * @return the {@link com.mongodb.ReadConcern}
      * @since 3.2
-     * @mongodb.server.release 3.2
-     * @mongodb.driver.manual reference/readConcern/ Read Concern
+     *
+     *
      */
     ReadConcern getReadConcern();
 
@@ -107,8 +107,8 @@ public interface MongoDatabase {
      * @param readConcern the new {@link ReadConcern} for the database
      * @return a new MongoDatabase instance with the different ReadConcern
      * @since 3.2
-     * @mongodb.server.release 3.2
-     * @mongodb.driver.manual reference/readConcern/ Read Concern
+     *
+     *
      */
     MongoDatabase withReadConcern(ReadConcern readConcern);
 
@@ -175,7 +175,7 @@ public interface MongoDatabase {
      * Drops this database.
      *
      * @param callback the callback that is completed once the database has been dropped
-     * @mongodb.driver.manual reference/command/dropDatabase/#dbcmd.dropDatabase Drop database
+     *
      */
     void drop(SingleResultCallback<Void> callback);
 
@@ -190,7 +190,7 @@ public interface MongoDatabase {
      * Finds all the collections in this database.
      *
      * @return the list collections iterable interface
-     * @mongodb.driver.manual reference/command/listCollections listCollections
+     *
      */
     ListCollectionsIterable<Document> listCollections();
 
@@ -200,7 +200,7 @@ public interface MongoDatabase {
      * @param resultClass the class to decode each document into
      * @param <TResult>   the target document type of the iterable.
      * @return the list collections iterable interface
-     * @mongodb.driver.manual reference/command/listCollections listCollections
+     *
      */
     <TResult> ListCollectionsIterable<TResult> listCollections(Class<TResult> resultClass);
 
@@ -209,7 +209,7 @@ public interface MongoDatabase {
      *
      * @param collectionName the name for the new collection to create
      * @param callback       the callback that is completed once the collection has been created
-     * @mongodb.driver.manual reference/command/create Create Command
+     *
      */
     void createCollection(String collectionName, SingleResultCallback<Void> callback);
 
@@ -219,7 +219,7 @@ public interface MongoDatabase {
      * @param collectionName the name for the new collection to create
      * @param options        various options for creating the collection
      * @param callback       the callback that is completed once the collection has been created
-     * @mongodb.driver.manual reference/command/create Create Command
+     *
      */
     void createCollection(String collectionName, CreateCollectionOptions options, SingleResultCallback<Void> callback);
 
@@ -231,8 +231,8 @@ public interface MongoDatabase {
      * @param pipeline the pipeline that defines the view
      * @param callback the callback that is completed once the collection has been created
      * @since 3.4
-     * @mongodb.server.release 3.4
-     * @mongodb.driver.manual reference/command/create Create Command
+     *
+     *
      */
     void createView(String viewName, String viewOn, List<? extends Bson> pipeline, SingleResultCallback<Void> callback);
 
@@ -245,8 +245,8 @@ public interface MongoDatabase {
      * @param createViewOptions various options for creating the view
      * @param callback the callback that is completed once the collection has been created
      * @since 3.4
-     * @mongodb.server.release 3.4
-     * @mongodb.driver.manual reference/command/create Create Command
+     *
+     *
      */
     void createView(String viewName, String viewOn, List<? extends Bson> pipeline, CreateViewOptions createViewOptions,
                     SingleResultCallback<Void> callback);

@@ -19,8 +19,8 @@ package com.mongodb.client.model;
 /**
  * The options for a graphLookup aggregation pipeline stage
  *
- * @mongodb.driver.manual reference/operator/aggregation/graphLookup/ graphLookup
- * @mongodb.server.release 3.4
+ *
+ *
  * @since 3.4
  */
 public final class GraphLookupOptions {

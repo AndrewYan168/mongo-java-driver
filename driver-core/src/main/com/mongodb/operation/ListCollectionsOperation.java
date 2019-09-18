@@ -100,7 +100,7 @@ public class ListCollectionsOperation<T> implements AsyncReadOperation<AsyncBatc
      * Gets the query filter.
      *
      * @return the query filter
-     * @mongodb.driver.manual reference/method/db.collection.find/ Filter
+     *
      */
     public BsonDocument getFilter() {
         return filter;
@@ -111,7 +111,7 @@ public class ListCollectionsOperation<T> implements AsyncReadOperation<AsyncBatc
      *
      * @param filter the filter, which may be null.
      * @return this
-     * @mongodb.driver.manual reference/method/db.collection.find/ Filter
+     *
      */
     public ListCollectionsOperation<T> filter(final BsonDocument filter) {
         this.filter = filter;
@@ -122,8 +122,8 @@ public class ListCollectionsOperation<T> implements AsyncReadOperation<AsyncBatc
      * Gets the number of documents to return per batch.
      *
      * @return the batch size
-     * @mongodb.server.release 3.0
-     * @mongodb.driver.manual reference/method/cursor.batchSize/#cursor.batchSize Batch Size
+     *
+     *
      */
     public Integer getBatchSize() {
         return batchSize;
@@ -134,8 +134,8 @@ public class ListCollectionsOperation<T> implements AsyncReadOperation<AsyncBatc
      *
      * @param batchSize the batch size
      * @return this
-     * @mongodb.server.release 3.0
-     * @mongodb.driver.manual reference/method/cursor.batchSize/#cursor.batchSize Batch Size
+     *
+     *
      */
     public ListCollectionsOperation<T> batchSize(final int batchSize) {
         this.batchSize = batchSize;
@@ -147,7 +147,7 @@ public class ListCollectionsOperation<T> implements AsyncReadOperation<AsyncBatc
      *
      * @param timeUnit the time unit to return the result in
      * @return the maximum execution time in the given time unit
-     * @mongodb.driver.manual reference/operator/meta/maxTimeMS/ Max Time
+     *
      */
     public long getMaxTime(final TimeUnit timeUnit) {
         notNull("timeUnit", timeUnit);
@@ -160,7 +160,7 @@ public class ListCollectionsOperation<T> implements AsyncReadOperation<AsyncBatc
      * @param maxTime  the max time
      * @param timeUnit the time unit, which may not be null
      * @return this
-     * @mongodb.driver.manual reference/operator/meta/maxTimeMS/ Max Time
+     *
      */
     public ListCollectionsOperation<T> maxTime(final long maxTime, final TimeUnit timeUnit) {
         notNull("timeUnit", timeUnit);

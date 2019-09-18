@@ -24,7 +24,7 @@ import static com.mongodb.assertions.Assertions.notNull;
  * A replica set tag.
  *
  * @since 2.13
- * @mongodb.driver.manual tutorial/configure-replica-set-tag-sets Tag Sets
+ *
  */
 @Immutable
 public final class Tag {

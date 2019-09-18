@@ -36,7 +36,7 @@ import static java.util.Collections.singletonList;
 /**
  * An implementation of the MongoDB OP_DELETE wire protocol.
  *
- * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#op-delete OP_DELETE
+ *
  */
 class DeleteProtocol extends WriteProtocol {
     private static final Logger LOGGER = Loggers.getLogger("protocol.delete");

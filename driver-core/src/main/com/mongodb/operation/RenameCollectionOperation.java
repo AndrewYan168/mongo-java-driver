@@ -44,7 +44,7 @@ import static com.mongodb.operation.WriteConcernHelper.writeConcernErrorTransfor
  * <p>If the new name is the same as an existing collection and dropTarget is true, this existing collection will be dropped. If
  * dropTarget is false and the newCollectionName is the same as an existing collection, a MongoServerException will be thrown.</p>
  *
- * @mongodb.driver.manual reference/command/renameCollection renameCollection
+ *
  * @since 3.0
  */
 public class RenameCollectionOperation implements AsyncWriteOperation<Void>, WriteOperation<Void> {

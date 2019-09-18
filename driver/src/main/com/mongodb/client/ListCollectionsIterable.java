@@ -33,7 +33,7 @@ public interface ListCollectionsIterable<TResult> extends MongoIterable<TResult>
      *
      * @param filter the filter, which may be null.
      * @return this
-     * @mongodb.driver.manual reference/method/db.collection.find/ Filter
+     *
      */
     ListCollectionsIterable<TResult> filter(Bson filter);
 
@@ -43,7 +43,7 @@ public interface ListCollectionsIterable<TResult> extends MongoIterable<TResult>
      * @param maxTime  the max time
      * @param timeUnit the time unit, which may not be null
      * @return this
-     * @mongodb.driver.manual reference/operator/meta/maxTimeMS/ Max Time
+     *
      */
     ListCollectionsIterable<TResult> maxTime(long maxTime, TimeUnit timeUnit);
 
@@ -52,7 +52,7 @@ public interface ListCollectionsIterable<TResult> extends MongoIterable<TResult>
      *
      * @param batchSize the batch size
      * @return this
-     * @mongodb.driver.manual reference/method/cursor.batchSize/#cursor.batchSize Batch Size
+     *
      */
     @Override
     ListCollectionsIterable<TResult> batchSize(int batchSize);

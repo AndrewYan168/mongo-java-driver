@@ -33,14 +33,14 @@ public enum ErrorCategory {
     /**
      * A duplicate key error
      *
-     * @mongodb.driver.manual core/index-unique/ Unique Indexes
+     *
      */
     DUPLICATE_KEY,
 
     /**
      * An execution timeout error
      *
-     * @mongodb.driver.manual reference/operator/meta/maxTimeMS/ maxTimeMS
+     *
      */
     EXECUTION_TIMEOUT;
 

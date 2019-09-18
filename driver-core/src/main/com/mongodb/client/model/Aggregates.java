@@ -30,8 +30,8 @@ import static org.bson.assertions.Assertions.notNull;
 /**
  * Builders for aggregation pipeline stages.
  *
- * @mongodb.driver.manual core/aggregation-pipeline/ Aggregation pipeline
- * @mongodb.server.release 2.2
+ *    pipeline
+ *
  * @since 3.1
  */
 public final class Aggregates {
@@ -41,8 +41,8 @@ public final class Aggregates {
      *
      * @param fields        the fields to add
      * @return the $addFields pipeline stage
-     * @mongodb.driver.manual reference/operator/aggregation/addFields/ $addFields
-     * @mongodb.server.release 3.4
+     *
+     *
      * @since 3.4
      */
     public static Bson addFields(final Field<?>... fields) {
@@ -54,8 +54,8 @@ public final class Aggregates {
      *
      * @param fields        the fields to add
      * @return the $addFields pipeline stage
-     * @mongodb.driver.manual reference/operator/aggregation/addFields/ $addFields
-     * @mongodb.server.release 3.4
+     *
+     *
      * @since 3.4
      */
     public static Bson addFields(final List<Field<?>> fields) {
@@ -70,8 +70,8 @@ public final class Aggregates {
      * @param groupBy       the criteria to group By
      * @param boundaries    the boundaries of the buckets
      * @return the $bucket pipeline stage
-     * @mongodb.driver.manual reference/operator/aggregation/bucket/ $bucket
-     * @mongodb.server.release 3.4
+     *
+     *
      * @since 3.4
      */
     public static <TExpression, Boundary> Bson bucket(final TExpression groupBy, final List<Boundary> boundaries) {
@@ -87,8 +87,8 @@ public final class Aggregates {
      * @param boundaries    the boundaries of the buckets
      * @param options       the optional values for the $bucket stage
      * @return the $bucket pipeline stage
-     * @mongodb.driver.manual reference/operator/aggregation/bucket/ $bucket
-     * @mongodb.server.release 3.4
+     *
+     *
      * @since 3.4
      */
     public static <TExpression, TBoundary> Bson bucket(final TExpression groupBy, final List<TBoundary> boundaries,
@@ -103,8 +103,8 @@ public final class Aggregates {
      * @param groupBy       the criteria to group By
      * @param buckets       the number of the buckets
      * @return the $bucketAuto pipeline stage
-     * @mongodb.driver.manual reference/operator/aggregation/bucketAuto/ $bucketAuto
-     * @mongodb.server.release 3.4
+     *
+     *
      * @since 3.4
      */
     public static <TExpression> Bson bucketAuto(final TExpression groupBy, final int buckets) {
@@ -119,8 +119,8 @@ public final class Aggregates {
      * @param buckets       the number of the buckets
      * @param options       the optional values for the $bucketAuto stage
      * @return the $bucketAuto pipeline stage
-     * @mongodb.driver.manual reference/operator/aggregation/bucketAuto/ $bucketAuto
-     * @mongodb.server.release 3.4
+     *
+     *
      * @since 3.4
      */
     public static <TExpression> Bson bucketAuto(final TExpression groupBy, final int buckets, final BucketAutoOptions options) {
@@ -131,8 +131,8 @@ public final class Aggregates {
      * Creates a $count pipeline stage using the field name "count" to store the result
      *
      * @return the $count pipeline stage
-     * @mongodb.driver.manual reference/operator/aggregation/count/ $count
-     * @mongodb.server.release 3.4
+     *
+     *
      * @since 3.4
      */
     public static Bson count() {
@@ -144,8 +144,8 @@ public final class Aggregates {
      *
      * @param field the field in which to store the count
      * @return the $count pipeline stage
-     * @mongodb.driver.manual reference/operator/aggregation/count/ $count
-     * @mongodb.server.release 3.4
+     *
+     *
      * @since 3.4
      */
     public static Bson count(final String field) {
@@ -158,7 +158,7 @@ public final class Aggregates {
      * @param filter the filter to match
      * @return the $match pipeline stage
      * @see Filters
-     * @mongodb.driver.manual reference/operator/aggregation/match/ $match
+     *
      */
     public static Bson match(final Bson filter) {
         return new SimplePipelineStage("$match", filter);
@@ -170,7 +170,7 @@ public final class Aggregates {
      * @param projection the projection
      * @return the $project pipeline stage
      * @see Projections
-     * @mongodb.driver.manual reference/operator/aggregation/project/ $project
+     *
      */
     public static Bson project(final Bson projection) {
         return new SimplePipelineStage("$project", projection);
@@ -182,7 +182,7 @@ public final class Aggregates {
      * @param sort the sort specification
      * @return the $sort pipeline stage
      * @see Sorts
-     * @mongodb.driver.manual reference/operator/aggregation/sort/#sort-aggregation $sort
+     *
      */
     public static Bson sort(final Bson sort) {
         return new SimplePipelineStage("$sort", sort);
@@ -194,8 +194,8 @@ public final class Aggregates {
      * @param <TExpression> the expression type
      * @param filter        the filter specification
      * @return the $sortByCount pipeline stage
-     * @mongodb.driver.manual reference/operator/aggregation/sortByCount/ $sortByCount
-     * @mongodb.server.release 3.4
+     *
+     *
      * @since 3.4
      */
     public static <TExpression> Bson sortByCount(final TExpression filter) {
@@ -207,7 +207,7 @@ public final class Aggregates {
      *
      * @param skip the number of documents to skip
      * @return the $skip pipeline stage
-     * @mongodb.driver.manual reference/operator/aggregation/skip/ $skip
+     *
      */
     public static Bson skip(final int skip) {
         return new BsonDocument("$skip", new BsonInt32(skip));
@@ -218,7 +218,7 @@ public final class Aggregates {
      *
      * @param limit the limit
      * @return the $limit pipeline stage
-     * @mongodb.driver.manual reference/operator/aggregation/limit/  $limit
+     *
      */
     public static Bson limit(final int limit) {
         return new BsonDocument("$limit", new BsonInt32(limit));
@@ -232,8 +232,8 @@ public final class Aggregates {
      * @param foreignField specifies the field in the from collection to match values against.
      * @param as           the name of the new array field to add to the input documents.
      * @return the $lookup pipeline stage
-     * @mongodb.driver.manual reference/operator/aggregation/lookup/ $lookup
-     * @mongodb.server.release 3.2
+     *
+     *
      * @since 3.2
      */
     public static Bson lookup(final String from, final String localField, final String foreignField, final String as) {
@@ -248,8 +248,8 @@ public final class Aggregates {
      *
      * @param facets the facets to use
      * @return the new pipeline stage
-     * @mongodb.driver.manual reference/operator/aggregation/facet/ $facet
-     * @mongodb.server.release 3.4
+     *
+     *
      * @since 3.4
      */
     public static Bson facet(final List<Facet> facets) {
@@ -261,8 +261,8 @@ public final class Aggregates {
      *
      * @param facets the facets to use
      * @return the new pipeline stage
-     * @mongodb.driver.manual reference/operator/aggregation/facet/ $facet
-     * @mongodb.server.release 3.4
+     *
+     *
      * @since 3.4
      */
     public static Bson facet(final Facet... facets) {
@@ -279,8 +279,8 @@ public final class Aggregates {
      * @param connectToField   the to field
      * @param as               name of field in output document
      * @return the $graphLookup pipeline stage
-     * @mongodb.driver.manual reference/operator/aggregation/graphLookup/ $graphLookup
-     * @mongodb.server.release 3.4
+     *
+     *
      * @since 3.4
      */
     public static <TExpression> Bson graphLookup(final String from, final TExpression startWith, final String connectFromField,
@@ -299,8 +299,8 @@ public final class Aggregates {
      * @param as               name of field in output document
      * @param options          optional values for the graphLookup
      * @return the $graphLookup pipeline stage
-     * @mongodb.driver.manual reference/operator/aggregation/graphLookup/ $graphLookup
-     * @mongodb.server.release 3.4
+     *
+     *
      * @since 3.4
      */
     public static <TExpression> Bson graphLookup(final String from, final TExpression startWith, final String connectFromField,
@@ -316,8 +316,8 @@ public final class Aggregates {
      * @param id                the id expression for the group
      * @param fieldAccumulators zero or more field accumulator pairs
      * @return the $group pipeline stage
-     * @mongodb.driver.manual reference/operator/aggregation/group/ $group
-     * @mongodb.driver.manual meta/aggregation-quick-reference/#aggregation-expressions Expressions
+     *
+     *
      */
     public static <TExpression> Bson group(final TExpression id, final BsonField... fieldAccumulators) {
         return group(id, asList(fieldAccumulators));
@@ -330,8 +330,8 @@ public final class Aggregates {
      * @param id                the id expression for the group
      * @param fieldAccumulators zero or more field accumulator pairs
      * @return the $group pipeline stage
-     * @mongodb.driver.manual reference/operator/aggregation/group/ $group
-     * @mongodb.driver.manual meta/aggregation-quick-reference/#aggregation-expressions Expressions
+     *
+     *
      */
     public static <TExpression> Bson group(final TExpression id, final List<BsonField> fieldAccumulators) {
         return new GroupStage<TExpression>(id, fieldAccumulators);
@@ -342,7 +342,7 @@ public final class Aggregates {
      *
      * @param fieldName the field name, prefixed by a {@code '$' sign}
      * @return the $unwind pipeline stage
-     * @mongodb.driver.manual reference/operator/aggregation/unwind/ $unwind
+     *
      */
     public static Bson unwind(final String fieldName) {
         return new BsonDocument("$unwind", new BsonString(fieldName));
@@ -354,8 +354,8 @@ public final class Aggregates {
      * @param fieldName     the field name, prefixed by a {@code '$' sign}
      * @param unwindOptions options for the unwind pipeline stage
      * @return the $unwind pipeline stage
-     * @mongodb.driver.manual reference/operator/aggregation/unwind/ $unwind
-     * @mongodb.server.release 3.2
+     *
+     *
      * @since 3.2
      */
     public static Bson unwind(final String fieldName, final UnwindOptions unwindOptions) {
@@ -375,8 +375,8 @@ public final class Aggregates {
      *
      * @param collectionName the collection name
      * @return the $out pipeline stage
-     * @mongodb.driver.manual reference/operator/aggregation/out/  $out
-     * @mongodb.server.release 2.6
+     *
+     *
      */
     public static Bson out(final String collectionName) {
         return new BsonDocument("$out", new BsonString(collectionName));
@@ -388,8 +388,8 @@ public final class Aggregates {
      * @param <TExpression> the new root type
      * @param value         the new root value
      * @return the $replaceRoot pipeline stage
-     * @mongodb.driver.manual reference/operator/aggregation/replaceRoot/ $replaceRoot
-     * @mongodb.server.release 3.4
+     *
+     *
      * @since 3.4
      */
     public static <TExpression> Bson replaceRoot(final TExpression value) {
@@ -401,8 +401,8 @@ public final class Aggregates {
      *
      * @param size the sample size
      * @return the $sample pipeline stage
-     * @mongodb.driver.manual reference/operator/aggregation/sample/  $sample
-     * @mongodb.server.release 3.2
+     *
+     *
      * @since 3.2
      */
     public static Bson sample(final int size) {

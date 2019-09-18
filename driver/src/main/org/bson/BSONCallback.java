@@ -30,7 +30,7 @@ public interface BSONCallback {
     /**
      * Signals the start of a BSON document, which usually maps onto some Java object.
      *
-     * @mongodb.driver.manual core/document/ MongoDB Documents
+     *
      */
     void objectStart();
 
@@ -38,7 +38,7 @@ public interface BSONCallback {
      * Signals the start of a BSON document, which usually maps onto some Java object.
      *
      * @param name the field name of the document.
-     * @mongodb.driver.manual core/document/ MongoDB Documents
+     *
      */
     void objectStart(String name);
 
@@ -71,7 +71,7 @@ public interface BSONCallback {
     /**
      * Signals the start of a BSON array.
      *
-     * @mongodb.driver.manual tutorial/query-documents/#read-operations-arrays Arrays
+     *
      */
     void arrayStart();
 
@@ -79,7 +79,7 @@ public interface BSONCallback {
      * Signals the start of a BSON array, with its field name.
      *
      * @param name the name of this array field
-     * @mongodb.driver.manual tutorial/query-documents/#read-operations-arrays Arrays
+     *
      */
     void arrayStart(String name);
 
@@ -142,7 +142,7 @@ public interface BSONCallback {
      * @param name the field name
      * @param value the Decimal128 field value
      * @since 3.4
-     * @mongodb.server.release 3.4
+     *
      */
     void gotDecimal128(String name, Decimal128 value);
 
@@ -192,7 +192,7 @@ public interface BSONCallback {
      * @param name    the name of the field
      * @param pattern the regex pattern
      * @param flags   the optional flags for the regular expression
-     * @mongodb.driver.manual reference/operator/query/regex/ $regex
+     *
      */
     void gotRegex(String name, String pattern, String flags);
 
@@ -202,7 +202,7 @@ public interface BSONCallback {
      * @param name      the name of the field
      * @param time      the time in seconds since epoch
      * @param increment an incrementing ordinal for operations within a given second
-     * @mongodb.driver.manual reference/bson-types/#timestamps Timestamps
+     *
      */
     void gotTimestamp(String name, int time, int increment);
 

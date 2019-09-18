@@ -37,7 +37,7 @@ import static java.util.Collections.singletonList;
 /**
  * An implementation of the MongoDB OP_UPDATE wire protocol.
  *
- * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#op-update OP_UPDATE
+ *
  */
 class UpdateProtocol extends WriteProtocol {
     private static final com.mongodb.diagnostics.logging.Logger LOGGER = Loggers.getLogger("protocol.update");

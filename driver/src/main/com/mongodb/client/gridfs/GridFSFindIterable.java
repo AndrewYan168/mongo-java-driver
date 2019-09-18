@@ -43,7 +43,7 @@ public interface GridFSFindIterable extends MongoIterable<GridFSFile> {
      *
      * @param filter the filter, which may be null.
      * @return this
-     * @mongodb.driver.manual reference/method/db.collection.find/ Filter
+     *
      * @see com.mongodb.client.model.Filters
      */
     GridFSFindIterable filter(Bson filter);
@@ -53,7 +53,7 @@ public interface GridFSFindIterable extends MongoIterable<GridFSFile> {
      *
      * @param limit the limit, which may be null
      * @return this
-     * @mongodb.driver.manual reference/method/cursor.limit/#cursor.limit Limit
+     *
      */
     GridFSFindIterable limit(int limit);
 
@@ -62,7 +62,7 @@ public interface GridFSFindIterable extends MongoIterable<GridFSFile> {
      *
      * @param skip the number of documents to skip
      * @return this
-     * @mongodb.driver.manual reference/method/cursor.skip/#cursor.skip Skip
+     *
      */
     GridFSFindIterable skip(int skip);
 
@@ -71,7 +71,7 @@ public interface GridFSFindIterable extends MongoIterable<GridFSFile> {
      *
      * @param sort the sort criteria, which may be null.
      * @return this
-     * @mongodb.driver.manual reference/method/cursor.sort/ Sort
+     *
      */
     GridFSFindIterable sort(Bson sort);
 
@@ -90,7 +90,7 @@ public interface GridFSFindIterable extends MongoIterable<GridFSFile> {
      * @param maxTime  the max time
      * @param timeUnit the time unit, which may not be null
      * @return this
-     * @mongodb.driver.manual reference/method/cursor.maxTimeMS/#cursor.maxTimeMS Max Time
+     *
      */
     GridFSFindIterable maxTime(long maxTime, TimeUnit timeUnit);
 
@@ -99,7 +99,7 @@ public interface GridFSFindIterable extends MongoIterable<GridFSFile> {
      *
      * @param batchSize the batch size
      * @return this
-     * @mongodb.driver.manual reference/method/cursor.batchSize/#cursor.batchSize Batch Size
+     *
      */
     @Override
     GridFSFindIterable batchSize(int batchSize);
@@ -111,7 +111,7 @@ public interface GridFSFindIterable extends MongoIterable<GridFSFile> {
      * @param collation the collation options to use
      * @return this
      * @since 3.4
-     * @mongodb.server.release 3.4
+     *
      */
     GridFSFindIterable collation(Collation collation);
 }

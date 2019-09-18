@@ -50,7 +50,7 @@ import static com.mongodb.operation.OperationHelper.withConnection;
  * command is analogous to a SELECT ... GROUP BY statement in SQL.
  *
  * @param <T> the operations result type.
- * @mongodb.driver.manual reference/command/group Group Command
+ *
  * @since 3.0
  */
 public class GroupOperation<T> implements AsyncReadOperation<AsyncBatchCursor<T>>, ReadOperation<BatchCursor<T>> {
@@ -71,7 +71,7 @@ public class GroupOperation<T> implements AsyncReadOperation<AsyncBatchCursor<T>
      * @param reduceFunction The aggregation function that operates on the documents during the grouping operation.
      * @param initial The initial the aggregation result document.
      * @param decoder the decoder for the result documents.
-     * @mongodb.driver.manual reference/command/group Group Command
+     *
      */
     public GroupOperation(final MongoNamespace namespace, final BsonJavaScript reduceFunction,
                           final BsonDocument initial, final Decoder<T> decoder) {
@@ -205,7 +205,7 @@ public class GroupOperation<T> implements AsyncReadOperation<AsyncBatchCursor<T>
      *
      * @return the collation options
      * @since 3.4
-     * @mongodb.server.release 3.4
+     *
      */
     public Collation getCollation() {
         return collation;
@@ -218,7 +218,7 @@ public class GroupOperation<T> implements AsyncReadOperation<AsyncBatchCursor<T>
      * @param collation the collation options to use
      * @return this
      * @since 3.4
-     * @mongodb.server.release 3.4
+     *
      */
     public GroupOperation<T> collation(final Collation collation) {
         this.collation = collation;

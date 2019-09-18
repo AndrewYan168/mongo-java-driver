@@ -42,7 +42,7 @@ import static com.mongodb.MongoClient.getDefaultCodecRegistry;
  * obj.put( "foo", "bar" );
  * </pre>
  *
- * @mongodb.driver.manual core/document/ MongoDB Documents
+ *
  */
 @SuppressWarnings({"rawtypes"})
 public class BasicDBObject extends BasicBSONObject implements DBObject, Bson {
@@ -56,7 +56,7 @@ public class BasicDBObject extends BasicBSONObject implements DBObject, Bson {
      * @param json the JSON string
      * @return a corresponding {@code BasicDBObject} object
      * @see org.bson.json.JsonReader
-     * @mongodb.driver.manual reference/mongodb-extended-json/ MongoDB Extended JSON
+     *
      */
     public static BasicDBObject parse(final String json) {
         return parse(json, getDefaultCodecRegistry().get(BasicDBObject.class));
@@ -69,7 +69,7 @@ public class BasicDBObject extends BasicBSONObject implements DBObject, Bson {
      * @param decoder the decoder to use to decode the BasicDBObject instance
      * @return a corresponding {@code BasicDBObject} object
      * @see org.bson.json.JsonReader
-     * @mongodb.driver.manual reference/mongodb-extended-json/ MongoDB Extended JSON
+     *
      */
     public static BasicDBObject parse(final String json, final Decoder<BasicDBObject> decoder) {
         return decoder.decode(new JsonReader(json), DecoderContext.builder().build());

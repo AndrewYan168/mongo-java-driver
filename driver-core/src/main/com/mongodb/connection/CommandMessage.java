@@ -24,7 +24,7 @@ import org.bson.io.BsonOutput;
 /**
  * A command message that uses OP_QUERY to send the command.
  *
- * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#op-query OP_QUERY
+ *
  */
 class CommandMessage extends RequestMessage {
     private final boolean slaveOk;

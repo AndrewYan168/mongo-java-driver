@@ -25,8 +25,8 @@ import static java.util.Arrays.asList;
 /**
  * Defines a Facet for use in $facet pipeline stages.
  *
- * @mongodb.driver.manual reference/operator/aggregation/facet/ $facet
- * @mongodb.server.release 3.4
+ *
+ *
  * @since 3.4
  */
 public class Facet {

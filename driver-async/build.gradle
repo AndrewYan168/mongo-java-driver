@@ -15,7 +15,6 @@
  */
 
 apply plugin: 'osgi'
-apply plugin: 'org.kordamp.gradle.clirr'
 
 def configDir = new File(rootDir, 'config')
 archivesBaseName = 'mongodb-driver-async'
@@ -30,12 +29,6 @@ dependencies {
 
     testCompile project(':bson').sourceSets.test.output
     testCompile project(':driver-core').sourceSets.test.output
-}
-
-clirr {
-    excludeFilter = new File("$configDir/clirr-exclude.yml")
-    baseline 'org.mongodb:mongodb-driver-async:3.2.0'
-    failOnErrors = false
 }
 
 tasks.withType(Checkstyle) {

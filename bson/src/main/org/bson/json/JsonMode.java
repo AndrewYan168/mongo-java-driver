@@ -21,7 +21,7 @@ package org.bson.json;
  *
  * @see JsonWriter
  * @since 3.0
- * @mongodb.driver.manual reference/mongodb-extended-json/ MongoDB Extended JSON
+ *
  */
 public enum JsonMode {
 

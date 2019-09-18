@@ -70,7 +70,7 @@ public interface MongoIterable<TResult> {
      *
      * @param batchSize the batch size
      * @return this
-     * @mongodb.driver.manual reference/method/cursor.batchSize/#cursor.batchSize Batch Size
+     *
      */
     MongoIterable<TResult> batchSize(int batchSize);
 

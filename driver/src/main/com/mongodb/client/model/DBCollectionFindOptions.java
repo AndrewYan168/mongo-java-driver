@@ -31,8 +31,8 @@ import static com.mongodb.assertions.Assertions.notNull;
  * The options to apply to a find operation (also commonly referred to as a query).
  *
  * @since 3.4
- * @mongodb.driver.manual tutorial/query-documents/ Find
- * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#op-query OP_QUERY
+ *
+ *
  */
 public final class DBCollectionFindOptions {
     private int batchSize;
@@ -86,7 +86,7 @@ public final class DBCollectionFindOptions {
      * Gets the limit to apply.  The default is null.
      *
      * @return the limit
-     * @mongodb.driver.manual reference/method/cursor.limit/#cursor.limit Limit
+     *
      */
     public int getLimit() {
         return limit;
@@ -97,7 +97,7 @@ public final class DBCollectionFindOptions {
      *
      * @param limit the limit, which may be null
      * @return this
-     * @mongodb.driver.manual reference/method/cursor.limit/#cursor.limit Limit
+     *
      */
     public DBCollectionFindOptions limit(final int limit) {
         this.limit = limit;
@@ -108,7 +108,7 @@ public final class DBCollectionFindOptions {
      * Gets the number of documents to skip.  The default is 0.
      *
      * @return the number of documents to skip, which may be null
-     * @mongodb.driver.manual reference/method/cursor.skip/#cursor.skip Skip
+     *
      */
     public int getSkip() {
         return skip;
@@ -119,7 +119,7 @@ public final class DBCollectionFindOptions {
      *
      * @param skip the number of documents to skip
      * @return this
-     * @mongodb.driver.manual reference/method/cursor.skip/#cursor.skip Skip
+     *
      */
     public DBCollectionFindOptions skip(final int skip) {
         this.skip = skip;
@@ -131,7 +131,7 @@ public final class DBCollectionFindOptions {
      *
      * @param timeUnit the time unit to return the result in
      * @return the maximum execution time in the given time unit
-     * @mongodb.driver.manual reference/method/cursor.maxTimeMS/#cursor.maxTimeMS Max Time
+     *
      */
     public long getMaxTime(final TimeUnit timeUnit) {
         notNull("timeUnit", timeUnit);
@@ -144,7 +144,7 @@ public final class DBCollectionFindOptions {
      * @param maxTime  the max time
      * @param timeUnit the time unit, which may not be null
      * @return this
-     * @mongodb.driver.manual reference/method/cursor.maxTimeMS/#cursor.maxTimeMS Max Time
+     *
      */
     public DBCollectionFindOptions maxTime(final long maxTime, final TimeUnit timeUnit) {
         notNull("timeUnit", timeUnit);
@@ -167,7 +167,7 @@ public final class DBCollectionFindOptions {
      *
      * @param timeUnit the time unit to return the result in
      * @return the maximum await execution time in the given time unit
-     * @mongodb.driver.manual reference/method/cursor.maxTimeMS/#cursor.maxTimeMS Max Time
+     *
      */
     public long getMaxAwaitTime(final TimeUnit timeUnit) {
         notNull("timeUnit", timeUnit);
@@ -181,7 +181,7 @@ public final class DBCollectionFindOptions {
      *                      default value
      * @param timeUnit the time unit, which may not be null
      * @return this
-     * @mongodb.driver.manual reference/method/cursor.maxTimeMS/#cursor.maxTimeMS Max Time
+     *
      */
     public DBCollectionFindOptions maxAwaitTime(final long maxAwaitTime, final TimeUnit timeUnit) {
         notNull("timeUnit", timeUnit);
@@ -195,7 +195,7 @@ public final class DBCollectionFindOptions {
      * size.
      *
      * @return the batch size, which may be null
-     * @mongodb.driver.manual reference/method/cursor.batchSize/#cursor.batchSize Batch Size
+     *
      */
     public int getBatchSize() {
         return batchSize;
@@ -206,7 +206,7 @@ public final class DBCollectionFindOptions {
      *
      * @param batchSize the batch size
      * @return this
-     * @mongodb.driver.manual reference/method/cursor.batchSize/#cursor.batchSize Batch Size
+     *
      */
     public DBCollectionFindOptions batchSize(final int batchSize) {
         this.batchSize = batchSize;
@@ -217,7 +217,7 @@ public final class DBCollectionFindOptions {
      * Gets the query modifiers to apply to this operation.  The default is not to apply any modifiers.
      *
      * @return the query modifiers, which may be null
-     * @mongodb.driver.manual reference/operator/query-modifier/ Query Modifiers
+     *
      */
     public DBObject getModifiers() {
         return modifiers;
@@ -228,7 +228,7 @@ public final class DBCollectionFindOptions {
      *
      * @param modifiers the query modifiers to apply, which may be null.
      * @return this
-     * @mongodb.driver.manual reference/operator/query-modifier/ Query Modifiers
+     *
      */
     public DBCollectionFindOptions modifiers(final DBObject modifiers) {
         this.modifiers = notNull("modifiers", modifiers);
@@ -239,7 +239,7 @@ public final class DBCollectionFindOptions {
      * Gets a document describing the fields to return for all matching documents.
      *
      * @return the project document, which may be null
-     * @mongodb.driver.manual reference/method/db.collection.find/ Projection
+     *
      */
     public DBObject getProjection() {
         return projection;
@@ -250,7 +250,7 @@ public final class DBCollectionFindOptions {
      *
      * @param projection the project document, which may be null.
      * @return this
-     * @mongodb.driver.manual reference/method/db.collection.find/ Projection
+     *
      */
     public DBCollectionFindOptions projection(final DBObject projection) {
         this.projection = projection;
@@ -262,7 +262,7 @@ public final class DBCollectionFindOptions {
      * order.
      *
      * @return a document describing the sort criteria
-     * @mongodb.driver.manual reference/method/cursor.sort/ Sort
+     *
      */
     public DBObject getSort() {
         return sort;
@@ -273,7 +273,7 @@ public final class DBCollectionFindOptions {
      *
      * @param sort the sort criteria, which may be null.
      * @return this
-     * @mongodb.driver.manual reference/method/cursor.sort/ Sort
+     *
      */
     public DBCollectionFindOptions sort(final DBObject sort) {
         this.sort = sort;
@@ -386,7 +386,7 @@ public final class DBCollectionFindOptions {
      * Returns the readConcern
      *
      * @return the readConcern
-     * @mongodb.server.release 3.2
+     *
      */
     public ReadConcern getReadConcern() {
         return readConcern;
@@ -397,7 +397,7 @@ public final class DBCollectionFindOptions {
      *
      * @param readConcern the readConcern
      * @return this
-     * @mongodb.server.release 3.2
+     *
      */
     public DBCollectionFindOptions readConcern(final ReadConcern readConcern) {
         this.readConcern = readConcern;
@@ -408,7 +408,7 @@ public final class DBCollectionFindOptions {
      * Returns the collation options
      *
      * @return the collation options
-     * @mongodb.server.release 3.4
+     *
      */
     public Collation getCollation() {
         return collation;
@@ -419,7 +419,7 @@ public final class DBCollectionFindOptions {
      *
      * @param collation the collation
      * @return this
-     * @mongodb.server.release 3.4
+     *
      */
     public DBCollectionFindOptions collation(final Collation collation) {
         this.collation = collation;

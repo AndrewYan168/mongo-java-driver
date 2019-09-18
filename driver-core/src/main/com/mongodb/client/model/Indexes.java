@@ -46,7 +46,7 @@ public final class Indexes {
      *
      * @param fieldNames the field names, which must contain at least one
      * @return the index specification
-     * @mongodb.driver.manual core/indexes indexes
+     *
      */
     public static Bson ascending(final String... fieldNames) {
         return ascending(asList(fieldNames));
@@ -57,7 +57,7 @@ public final class Indexes {
      *
      * @param fieldNames the field names, which must contain at least one
      * @return the index specification
-     * @mongodb.driver.manual core/indexes indexes
+     *
      */
     public static Bson ascending(final List<String> fieldNames) {
         notNull("fieldNames", fieldNames);
@@ -69,7 +69,7 @@ public final class Indexes {
      *
      * @param fieldNames the field names, which must contain at least one
      * @return the index specification
-     * @mongodb.driver.manual core/indexes indexes
+     *
      */
     public static Bson descending(final String... fieldNames) {
         return descending(asList(fieldNames));
@@ -80,7 +80,7 @@ public final class Indexes {
      *
      * @param fieldNames the field names, which must contain at least one
      * @return the index specification
-     * @mongodb.driver.manual core/indexes indexes
+     *
      */
     public static Bson descending(final List<String> fieldNames) {
         notNull("fieldNames", fieldNames);
@@ -92,7 +92,7 @@ public final class Indexes {
      *
      * @param fieldNames the field names, which must contain at least one
      * @return the index specification
-     * @mongodb.driver.manual core/2dsphere 2dsphere Index
+     *
      */
     public static Bson geo2dsphere(final String... fieldNames) {
         return geo2dsphere(asList(fieldNames));
@@ -103,7 +103,7 @@ public final class Indexes {
      *
      * @param fieldNames the field names, which must contain at least one
      * @return the index specification
-     * @mongodb.driver.manual core/indexes indexes
+     *
      */
     public static Bson geo2dsphere(final List<String> fieldNames) {
         notNull("fieldNames", fieldNames);
@@ -120,7 +120,7 @@ public final class Indexes {
      *
      * @param fieldName the field to create a 2d index on
      * @return the index specification
-     * @mongodb.driver.manual core/2d 2d index
+     *
      */
     public static Bson geo2d(final String fieldName) {
         notNull("fieldName", fieldName);
@@ -139,7 +139,7 @@ public final class Indexes {
      * @param fieldName the field to create a geoHaystack index on
      * @param additional the additional field that forms the geoHaystack index key
      * @return the index specification
-     * @mongodb.driver.manual core/geohaystack geoHaystack index
+     *
      */
     public static Bson geoHaystack(final String fieldName, final Bson additional) {
         notNull("fieldName", fieldName);
@@ -151,7 +151,7 @@ public final class Indexes {
      *
      * @param fieldName the field to create a text index on
      * @return the index specification
-     * @mongodb.driver.manual core/text text index
+     *
      */
     public static Bson text(final String fieldName) {
         notNull("fieldName", fieldName);
@@ -163,7 +163,7 @@ public final class Indexes {
      *
      * @param fieldName the field to create a hashed index on
      * @return the index specification
-     * @mongodb.driver.manual core/hashed hashed index
+     *
      */
     public static Bson hashed(final String fieldName) {
         notNull("fieldName", fieldName);
@@ -175,7 +175,7 @@ public final class Indexes {
      *
      * @param indexes the index specifications
      * @return the compound index specification
-     * @mongodb.driver.manual core/index-compound compoundIndex
+     *
      */
     public static Bson compoundIndex(final Bson... indexes) {
         return compoundIndex(asList(indexes));
@@ -186,7 +186,7 @@ public final class Indexes {
      *
      * @param indexes the index specifications
      * @return the compound index specification
-     * @mongodb.driver.manual core/index-compound compoundIndex
+     *
      */
     public static Bson compoundIndex(final List<Bson> indexes) {
         notNull("indexes", indexes);

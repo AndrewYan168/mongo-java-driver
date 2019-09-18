@@ -192,7 +192,7 @@ public final class DBCollectionFindAndModifyOptions {
      *
      * @param timeUnit the time unit to return the result in
      * @return the maximum execution time in the given time unit
-     * @mongodb.driver.manual reference/method/cursor.maxTimeMS/#cursor.maxTimeMS Max Time
+     *
      */
     public long getMaxTime(final TimeUnit timeUnit) {
         notNull("timeUnit", timeUnit);
@@ -205,7 +205,7 @@ public final class DBCollectionFindAndModifyOptions {
      * @param maxTime  the max time
      * @param timeUnit the time unit, which may not be null
      * @return this
-     * @mongodb.driver.manual reference/method/cursor.maxTimeMS/#cursor.maxTimeMS Max Time
+     *
      */
     public DBCollectionFindAndModifyOptions maxTime(final long maxTime, final TimeUnit timeUnit) {
         notNull("timeUnit", timeUnit);
@@ -218,7 +218,7 @@ public final class DBCollectionFindAndModifyOptions {
      * Returns the writeConcern
      *
      * @return the writeConcern
-     * @mongodb.server.release 3.2
+     *
      */
     public WriteConcern getWriteConcern() {
         return writeConcern;
@@ -229,7 +229,7 @@ public final class DBCollectionFindAndModifyOptions {
      *
      * @param writeConcern the writeConcern
      * @return this
-     * @mongodb.server.release 3.2
+     *
      */
     public DBCollectionFindAndModifyOptions writeConcern(final WriteConcern writeConcern) {
         this.writeConcern = writeConcern;
@@ -240,7 +240,7 @@ public final class DBCollectionFindAndModifyOptions {
      * Returns the collation options
      *
      * @return the collation options
-     * @mongodb.server.release 3.4
+     *
      */
     public Collation getCollation() {
         return collation;
@@ -251,7 +251,7 @@ public final class DBCollectionFindAndModifyOptions {
      *
      * @param collation the collation
      * @return this
-     * @mongodb.server.release 3.4
+     *
      */
     public DBCollectionFindAndModifyOptions collation(final Collation collation) {
         this.collation = collation;

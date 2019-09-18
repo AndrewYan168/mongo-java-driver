@@ -51,7 +51,7 @@ import static java.util.concurrent.TimeUnit.MILLISECONDS;
  * An operation that atomically finds and deletes a single document.
  *
  * @param <T> the operations result type.
- * @mongodb.driver.manual reference/command/findAndModify/ findAndModify
+ *
  * @since 3.0
  */
 public class FindAndDeleteOperation<T> implements AsyncWriteOperation<T>, WriteOperation<T> {
@@ -103,7 +103,7 @@ public class FindAndDeleteOperation<T> implements AsyncWriteOperation<T>, WriteO
      * Get the write concern for this operation
      *
      * @return the {@link com.mongodb.WriteConcern}
-     * @mongodb.server.release 3.2
+     *
      * @since 3.2
      */
     public WriteConcern getWriteConcern() {
@@ -123,7 +123,7 @@ public class FindAndDeleteOperation<T> implements AsyncWriteOperation<T>, WriteO
      * Gets the query filter.
      *
      * @return the query filter
-     * @mongodb.driver.manual reference/method/db.collection.find/ Filter
+     *
      */
     public BsonDocument getFilter() {
         return filter;
@@ -134,7 +134,7 @@ public class FindAndDeleteOperation<T> implements AsyncWriteOperation<T>, WriteO
      *
      * @param filter the filter, which may be null.
      * @return this
-     * @mongodb.driver.manual reference/method/db.collection.find/ Filter
+     *
      */
     public FindAndDeleteOperation<T> filter(final BsonDocument filter) {
         this.filter = filter;
@@ -145,7 +145,7 @@ public class FindAndDeleteOperation<T> implements AsyncWriteOperation<T>, WriteO
      * Gets a document describing the fields to return for all matching documents.
      *
      * @return the project document, which may be null
-     * @mongodb.driver.manual reference/method/db.collection.find/ Projection
+     *
      */
     public BsonDocument getProjection() {
         return projection;
@@ -156,7 +156,7 @@ public class FindAndDeleteOperation<T> implements AsyncWriteOperation<T>, WriteO
      *
      * @param projection the project document, which may be null.
      * @return this
-     * @mongodb.driver.manual reference/method/db.collection.find/ Projection
+     *
      */
     public FindAndDeleteOperation<T> projection(final BsonDocument projection) {
         this.projection = projection;
@@ -193,7 +193,7 @@ public class FindAndDeleteOperation<T> implements AsyncWriteOperation<T>, WriteO
      * order.
      *
      * @return a document describing the sort criteria
-     * @mongodb.driver.manual reference/method/cursor.sort/ Sort
+     *
      */
     public BsonDocument getSort() {
         return sort;
@@ -204,7 +204,7 @@ public class FindAndDeleteOperation<T> implements AsyncWriteOperation<T>, WriteO
      *
      * @param sort the sort criteria, which may be null.
      * @return this
-     * @mongodb.driver.manual reference/method/cursor.sort/ Sort
+     *
      */
     public FindAndDeleteOperation<T> sort(final BsonDocument sort) {
         this.sort = sort;
@@ -215,7 +215,7 @@ public class FindAndDeleteOperation<T> implements AsyncWriteOperation<T>, WriteO
      * Returns the collation options
      *
      * @return the collation options
-     * @mongodb.server.release 3.4
+     *
      * @since 3.4
      */
     public Collation getCollation() {
@@ -228,7 +228,7 @@ public class FindAndDeleteOperation<T> implements AsyncWriteOperation<T>, WriteO
      * <p>A null value represents the server default.</p>
      * @param collation the collation options to use
      * @return this
-     * @mongodb.server.release 3.4
+     *
      * @since 3.4
      */
     public FindAndDeleteOperation<T> collation(final Collation collation) {

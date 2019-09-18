@@ -100,8 +100,8 @@ public interface MongoCollection<TDocument> {
      *
      * @return the {@link com.mongodb.ReadConcern}
      * @since 3.2
-     * @mongodb.server.release 3.2
-     * @mongodb.driver.manual reference/readConcern/ Read Concern
+     *
+     *
      */
     ReadConcern getReadConcern();
 
@@ -144,8 +144,8 @@ public interface MongoCollection<TDocument> {
      * @param readConcern the new {@link ReadConcern} for the collection
      * @return a new MongoCollection instance with the different ReadConcern
      * @since 3.2
-     * @mongodb.server.release 3.2
-     * @mongodb.driver.manual reference/readConcern/ Read Concern
+     *
+     *
      */
     MongoCollection<TDocument> withReadConcern(ReadConcern readConcern);
 
@@ -180,7 +180,7 @@ public interface MongoCollection<TDocument> {
      * @param resultClass the default class to cast any distinct items into.
      * @param <TResult>   the target type of the iterable.
      * @return an iterable of distinct values
-     * @mongodb.driver.manual reference/command/distinct/ Distinct
+     *
      */
     <TResult> DistinctIterable<TResult> distinct(String fieldName, Class<TResult> resultClass);
 
@@ -192,7 +192,7 @@ public interface MongoCollection<TDocument> {
      * @param resultClass the default class to cast any distinct items into.
      * @param <TResult>   the target type of the iterable.
      * @return an iterable of distinct values
-     * @mongodb.driver.manual reference/command/distinct/ Distinct
+     *
      */
     <TResult> DistinctIterable<TResult> distinct(String fieldName, Bson filter, Class<TResult> resultClass);
 
@@ -200,7 +200,7 @@ public interface MongoCollection<TDocument> {
      * Finds all documents in the collection.
      *
      * @return the find iterable interface
-     * @mongodb.driver.manual tutorial/query-documents/ Find
+     *
      */
     FindIterable<TDocument> find();
 
@@ -210,7 +210,7 @@ public interface MongoCollection<TDocument> {
      * @param resultClass the class to decode each document into
      * @param <TResult>   the target document type of the iterable.
      * @return the find iterable interface
-     * @mongodb.driver.manual tutorial/query-documents/ Find
+     *
      */
     <TResult> FindIterable<TResult> find(Class<TResult> resultClass);
 
@@ -219,7 +219,7 @@ public interface MongoCollection<TDocument> {
      *
      * @param filter the query filter
      * @return the find iterable interface
-     * @mongodb.driver.manual tutorial/query-documents/ Find
+     *
      */
     FindIterable<TDocument> find(Bson filter);
 
@@ -230,7 +230,7 @@ public interface MongoCollection<TDocument> {
      * @param resultClass the class to decode each document into
      * @param <TResult>   the target document type of the iterable.
      * @return the find iterable interface
-     * @mongodb.driver.manual tutorial/query-documents/ Find
+     *
      */
     <TResult> FindIterable<TResult> find(Bson filter, Class<TResult> resultClass);
 
@@ -241,7 +241,7 @@ public interface MongoCollection<TDocument> {
      *
      * @param pipeline the aggregate pipeline
      * @return an iterable containing the result of the aggregation operation
-     * @mongodb.driver.manual aggregation/ Aggregation
+     *
      */
     AggregateIterable<TDocument> aggregate(List<? extends Bson> pipeline);
 
@@ -254,7 +254,7 @@ public interface MongoCollection<TDocument> {
      * @param resultClass the class to decode each document into
      * @param <TResult>   the target document type of the iterable.
      * @return an iterable containing the result of the aggregation operation
-     * @mongodb.driver.manual aggregation/ Aggregation
+     *
      */
     <TResult> AggregateIterable<TResult> aggregate(List<? extends Bson> pipeline, Class<TResult> resultClass);
 
@@ -264,7 +264,7 @@ public interface MongoCollection<TDocument> {
      * @param mapFunction    A JavaScript function that associates or "maps" a value with a key and emits the key and value pair.
      * @param reduceFunction A JavaScript function that "reduces" to a single object all the values associated with a particular key.
      * @return an iterable containing the result of the map-reduce operation
-     * @mongodb.driver.manual reference/command/mapReduce/ map-reduce
+     *
      */
     MapReduceIterable<TDocument> mapReduce(String mapFunction, String reduceFunction);
 
@@ -276,7 +276,7 @@ public interface MongoCollection<TDocument> {
      * @param resultClass    the class to decode each resulting document into.
      * @param <TResult>      the target document type of the iterable.
      * @return an iterable containing the result of the map-reduce operation
-     * @mongodb.driver.manual reference/command/mapReduce/ map-reduce
+     *
      */
     <TResult> MapReduceIterable<TResult> mapReduce(String mapFunction, String reduceFunction, Class<TResult> resultClass);
 
@@ -403,7 +403,7 @@ public interface MongoCollection<TDocument> {
      * @throws com.mongodb.MongoWriteException        returned via the callback
      * @throws com.mongodb.MongoWriteConcernException returned via the callback
      * @throws com.mongodb.MongoException             returned via the callback
-     * @mongodb.driver.manual tutorial/modify-documents/#replace-the-document Replace
+     *
      */
     void replaceOne(Bson filter, TDocument replacement, SingleResultCallback<UpdateResult> callback);
 
@@ -417,7 +417,7 @@ public interface MongoCollection<TDocument> {
      * @throws com.mongodb.MongoWriteException        returned via the callback
      * @throws com.mongodb.MongoWriteConcernException returned via the callback
      * @throws com.mongodb.MongoException             returned via the callback
-     * @mongodb.driver.manual tutorial/modify-documents/#replace-the-document Replace
+     *
      */
     void replaceOne(Bson filter, TDocument replacement, UpdateOptions options, SingleResultCallback<UpdateResult> callback);
 
@@ -430,8 +430,8 @@ public interface MongoCollection<TDocument> {
      * @throws com.mongodb.MongoWriteException        returned via the callback
      * @throws com.mongodb.MongoWriteConcernException returned via the callback
      * @throws com.mongodb.MongoException             returned via the callback
-     * @mongodb.driver.manual tutorial/modify-documents/ Updates
-     * @mongodb.driver.manual reference/operator/update/ Update Operators
+     *
+     *
      */
     void updateOne(Bson filter, Bson update, SingleResultCallback<UpdateResult> callback);
 
@@ -445,8 +445,8 @@ public interface MongoCollection<TDocument> {
      * @throws com.mongodb.MongoWriteException        returned via the callback
      * @throws com.mongodb.MongoWriteConcernException returned via the callback
      * @throws com.mongodb.MongoException             returned via the callback
-     * @mongodb.driver.manual tutorial/modify-documents/ Updates
-     * @mongodb.driver.manual reference/operator/update/ Update Operators
+     *
+     *
      */
     void updateOne(Bson filter, Bson update, UpdateOptions options, SingleResultCallback<UpdateResult> callback);
 
@@ -459,8 +459,8 @@ public interface MongoCollection<TDocument> {
      * @throws com.mongodb.MongoWriteException        returned via the callback
      * @throws com.mongodb.MongoWriteConcernException returned via the callback
      * @throws com.mongodb.MongoException             returned via the callback
-     * @mongodb.driver.manual tutorial/modify-documents/ Updates
-     * @mongodb.driver.manual reference/operator/update/ Update Operators
+     *
+     *
      */
     void updateMany(Bson filter, Bson update, SingleResultCallback<UpdateResult> callback);
 
@@ -474,8 +474,8 @@ public interface MongoCollection<TDocument> {
      * @throws com.mongodb.MongoWriteException        returned via the callback
      * @throws com.mongodb.MongoWriteConcernException returned via the callback
      * @throws com.mongodb.MongoException             returned via the callback
-     * @mongodb.driver.manual tutorial/modify-documents/ Updates
-     * @mongodb.driver.manual reference/operator/update/ Update Operators
+     *
+     *
      */
     void updateMany(Bson filter, Bson update, UpdateOptions options, SingleResultCallback<UpdateResult> callback);
 
@@ -547,7 +547,7 @@ public interface MongoCollection<TDocument> {
      * Drops this collection from the Database.
      *
      * @param callback the callback that is completed once the collection has been dropped
-     * @mongodb.driver.manual reference/command/drop/ Drop Collection
+     *
      */
     void drop(SingleResultCallback<Void> callback);
 
@@ -556,7 +556,7 @@ public interface MongoCollection<TDocument> {
      *
      * @param key      an object describing the index key(s), which may not be null.
      * @param callback the callback that is completed once the index has been created
-     * @mongodb.driver.manual reference/command/createIndexes/ Create indexes
+     *
      */
     void createIndex(Bson key, SingleResultCallback<String> callback);
 
@@ -566,7 +566,7 @@ public interface MongoCollection<TDocument> {
      * @param key      an object describing the index key(s), which may not be null.
      * @param options  the options for the index
      * @param callback the callback that is completed once the index has been created
-     * @mongodb.driver.manual reference/command/createIndexes/ Create indexes
+     *
      */
     void createIndex(Bson key, IndexOptions options, SingleResultCallback<String> callback);
 
@@ -575,8 +575,8 @@ public interface MongoCollection<TDocument> {
      *
      * @param indexes the list of indexes
      * @param callback the callback that is completed once the indexes has been created
-     * @mongodb.driver.manual reference/command/createIndexes Create indexes
-     * @mongodb.server.release 2.6
+     *
+     *
      */
     void createIndexes(List<IndexModel> indexes, SingleResultCallback<List<String>> callback);
 
@@ -584,7 +584,7 @@ public interface MongoCollection<TDocument> {
      * Get all the indexes in this collection.
      *
      * @return the list indexes iterable interface
-     * @mongodb.driver.manual reference/command/listIndexes/ List indexes
+     *
      */
     ListIndexesIterable<Document> listIndexes();
 
@@ -594,7 +594,7 @@ public interface MongoCollection<TDocument> {
      * @param resultClass the class to decode each document into
      * @param <TResult>   the target document type of the iterable.
      * @return the list indexes iterable interface
-     * @mongodb.driver.manual reference/command/listIndexes/ List indexes
+     *
      */
     <TResult> ListIndexesIterable<TResult> listIndexes(Class<TResult> resultClass);
 
@@ -603,7 +603,7 @@ public interface MongoCollection<TDocument> {
      *
      * @param indexName the name of the index to remove
      * @param callback  the callback that is completed once the index has been dropped
-     * @mongodb.driver.manual reference/command/dropIndexes/ Drop indexes
+     *
      */
     void dropIndex(String indexName, SingleResultCallback<Void> callback);
 
@@ -612,7 +612,7 @@ public interface MongoCollection<TDocument> {
      *
      * @param keys the keys of the index to remove
      * @param callback  the callback that is completed once the index has been dropped
-     * @mongodb.driver.manual reference/command/dropIndexes/ Drop indexes
+     *
      */
     void dropIndex(Bson keys, SingleResultCallback<Void> callback);
 
@@ -620,7 +620,7 @@ public interface MongoCollection<TDocument> {
      * Drop all the indexes on this collection, except for the default on _id.
      *
      * @param callback the callback that is completed once all the indexes have been dropped
-     * @mongodb.driver.manual reference/command/dropIndexes/ Drop indexes
+     *
      */
     void dropIndexes(SingleResultCallback<Void> callback);
 
@@ -631,7 +631,7 @@ public interface MongoCollection<TDocument> {
      * @param callback               the callback that is completed once the collection has been renamed
      * @throws com.mongodb.MongoServerException if you provide a newCollectionName that is the name of an existing collection, or if the
      *                                          oldCollectionName is the name of a collection that doesn't exist
-     * @mongodb.driver.manual reference/command/renameCollection Rename collection
+     *
      */
     void renameCollection(MongoNamespace newCollectionNamespace, SingleResultCallback<Void> callback);
 
@@ -643,7 +643,7 @@ public interface MongoCollection<TDocument> {
      * @param callback               the callback that is completed once the collection has been renamed
      * @throws com.mongodb.MongoServerException if you provide a newCollectionName that is the name of an existing collection and dropTarget
      *                                          is false, or if the oldCollectionName is the name of a collection that doesn't exist
-     * @mongodb.driver.manual reference/command/renameCollection Rename collection
+     *
      */
     void renameCollection(MongoNamespace newCollectionNamespace, RenameCollectionOptions options, SingleResultCallback<Void> callback);
 

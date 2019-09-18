@@ -37,7 +37,7 @@ import static java.util.concurrent.TimeUnit.MILLISECONDS;
 /**
  * A class that represents preferred replica set members to which a query or command can be sent.
  *
- * @mongodb.driver.manual core/read-preference  Read Preference
+ *
  */
 @Immutable
 public abstract class ReadPreference {

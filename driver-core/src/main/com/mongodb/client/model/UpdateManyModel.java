@@ -27,8 +27,8 @@ import static com.mongodb.assertions.Assertions.notNull;
  * @param <T> the type of document to update.  In practice this doesn't actually apply to updates but is here for consistency with the
  *           other write models
  * @since 3.0
- * @mongodb.driver.manual tutorial/modify-documents/ Updates
- * @mongodb.driver.manual reference/operator/update/ Update Operators
+ *
+ *
  */
 public final class UpdateManyModel<T> extends WriteModel<T> {
     private final Bson filter;

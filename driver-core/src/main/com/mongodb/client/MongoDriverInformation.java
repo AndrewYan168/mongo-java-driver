@@ -43,7 +43,7 @@ import static com.mongodb.assertions.Assertions.notNull;
  * </p>
  *
  * @since 3.4
- * @mongodb.server.release 3.4
+ *
  */
 public final class MongoDriverInformation {
     private final List<String> driverNames;

@@ -75,7 +75,7 @@ public class CountOperation implements AsyncReadOperation<Long>, ReadOperation<L
      * Gets the query filter.
      *
      * @return the query filter
-     * @mongodb.driver.manual reference/method/db.collection.find/ filter
+     *
      */
     public BsonDocument getFilter() {
         return filter;
@@ -86,7 +86,7 @@ public class CountOperation implements AsyncReadOperation<Long>, ReadOperation<L
      *
      * @param filter the filter, which may be null.
      * @return this
-     * @mongodb.driver.manual reference/method/db.collection.find/ Filter
+     *
      */
     public CountOperation filter(final BsonDocument filter) {
         this.filter = filter;
@@ -117,7 +117,7 @@ public class CountOperation implements AsyncReadOperation<Long>, ReadOperation<L
      * Gets the limit to apply.  The default is 0, which means there is no limit.
      *
      * @return the limit
-     * @mongodb.driver.manual reference/method/cursor.limit/#cursor.limit Limit
+     *
      */
     public long getLimit() {
         return limit;
@@ -128,7 +128,7 @@ public class CountOperation implements AsyncReadOperation<Long>, ReadOperation<L
      *
      * @param limit the limit
      * @return this
-     * @mongodb.driver.manual reference/method/cursor.limit/#cursor.limit Limit
+     *
      */
     public CountOperation limit(final long limit) {
         this.limit = limit;
@@ -139,7 +139,7 @@ public class CountOperation implements AsyncReadOperation<Long>, ReadOperation<L
      * Gets the number of documents to skip.  The default is 0.
      *
      * @return the number of documents to skip, which may be null
-     * @mongodb.driver.manual reference/method/cursor.skip/#cursor.skip Skip
+     *
      */
     public long getSkip() {
         return skip;
@@ -150,7 +150,7 @@ public class CountOperation implements AsyncReadOperation<Long>, ReadOperation<L
      *
      * @param skip the number of documents to skip
      * @return this
-     * @mongodb.driver.manual reference/method/cursor.skip/#cursor.skip Skip
+     *
      */
     public CountOperation skip(final long skip) {
         this.skip = skip;
@@ -186,7 +186,7 @@ public class CountOperation implements AsyncReadOperation<Long>, ReadOperation<L
      *
      * @return the read concern
      * @since 3.2
-     * @mongodb.driver.manual reference/readConcern/ Read Concern
+     *
      */
     public ReadConcern getReadConcern() {
         return readConcern;
@@ -197,7 +197,7 @@ public class CountOperation implements AsyncReadOperation<Long>, ReadOperation<L
      * @param readConcern the read concern
      * @return this
      * @since 3.2
-     * @mongodb.driver.manual reference/readConcern/ Read Concern
+     *
      */
     public CountOperation readConcern(final ReadConcern readConcern) {
         this.readConcern = notNull("readConcern", readConcern);
@@ -209,7 +209,7 @@ public class CountOperation implements AsyncReadOperation<Long>, ReadOperation<L
      *
      * @return the collation options
      * @since 3.4
-     * @mongodb.server.release 3.4
+     *
      */
     public Collation getCollation() {
         return collation;

@@ -29,7 +29,7 @@ import static com.mongodb.bulk.WriteRequest.Type.REPLACE;
 /**
  * An OP_UPDATE message.
  *
- * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#op-update OP_UPDATE
+ *
  */
 class UpdateMessage extends RequestMessage {
     private final List<UpdateRequest> updates;

@@ -64,7 +64,7 @@ import static com.mongodb.operation.OperationHelper.withConnection;
  *
  * @param <T> the operations result type.
  * @since 3.0
- * @mongodb.driver.manual reference/command/listIndexes/ List indexes
+ *
  */
 public class ListIndexesOperation<T> implements AsyncReadOperation<AsyncBatchCursor<T>>, ReadOperation<BatchCursor<T>> {
     private final MongoNamespace namespace;
@@ -87,8 +87,8 @@ public class ListIndexesOperation<T> implements AsyncReadOperation<AsyncBatchCur
      * Gets the number of documents to return per batch.
      *
      * @return the batch size
-     * @mongodb.server.release 3.0
-     * @mongodb.driver.manual reference/method/cursor.batchSize/#cursor.batchSize Batch Size
+     *
+     *
      */
     public Integer getBatchSize() {
         return batchSize;
@@ -99,8 +99,8 @@ public class ListIndexesOperation<T> implements AsyncReadOperation<AsyncBatchCur
      *
      * @param batchSize the batch size
      * @return this
-     * @mongodb.server.release 3.0
-     * @mongodb.driver.manual reference/method/cursor.batchSize/#cursor.batchSize Batch Size
+     *
+     *
      */
     public ListIndexesOperation<T> batchSize(final int batchSize) {
         this.batchSize = batchSize;
@@ -112,7 +112,7 @@ public class ListIndexesOperation<T> implements AsyncReadOperation<AsyncBatchCur
      *
      * @param timeUnit the time unit to return the result in
      * @return the maximum execution time in the given time unit
-     * @mongodb.driver.manual reference/operator/meta/maxTimeMS/ Max Time
+     *
      */
     public long getMaxTime(final TimeUnit timeUnit) {
         notNull("timeUnit", timeUnit);
@@ -125,7 +125,7 @@ public class ListIndexesOperation<T> implements AsyncReadOperation<AsyncBatchCur
      * @param maxTime  the max time
      * @param timeUnit the time unit, which may not be null
      * @return this
-     * @mongodb.driver.manual reference/operator/meta/maxTimeMS/ Max Time
+     *
      */
     public ListIndexesOperation<T> maxTime(final long maxTime, final TimeUnit timeUnit) {
         notNull("timeUnit", timeUnit);

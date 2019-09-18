@@ -27,7 +27,7 @@ import java.util.List;
  * @since 3.0
  *
  * @param <T> The type of documents the cursor contains
- * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#wire-op-get-more OP_GET_MORE
+ *
  */
 public interface AsyncBatchCursor<T> extends Closeable {
     /**

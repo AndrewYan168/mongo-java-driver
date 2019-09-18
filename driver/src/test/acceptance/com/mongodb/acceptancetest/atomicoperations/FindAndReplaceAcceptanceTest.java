@@ -42,7 +42,7 @@ import static org.junit.Assert.assertThat;
 /**
  * Documents and tests the functionality provided for find-and-replace atomic operations.
  *
- * @mongodb.driver.manual reference/command/findAndModify/ Find and Modify
+ *
  */
 public class FindAndReplaceAcceptanceTest extends DatabaseTestCase {
     private static final String KEY = "searchKey";

@@ -66,7 +66,7 @@ import static java.util.Arrays.asList;
  *
  * See {@link Mongo#getDB(String)} for further information about the effective deprecation of this class.
  *
- * @mongodb.driver.manual reference/glossary/#term-database Database
+ *
  * @see MongoClient
  */
 @ThreadSafe
@@ -115,7 +115,7 @@ public class DB {
      * documentation for {@link ReadPreference} for more information.
      *
      * @param readPreference {@code ReadPreference} to use
-     * @mongodb.driver.manual core/read-preference/ Read Preference
+     *
      */
     public void setReadPreference(final ReadPreference readPreference) {
         this.readPreference = readPreference;
@@ -126,7 +126,7 @@ public class DB {
      * documentation for {@link WriteConcern} for more information.
      *
      * @param writeConcern {@code WriteConcern} to use
-     * @mongodb.driver.manual core/write-concern/ Write Concern
+     *
      */
     public void setWriteConcern(final WriteConcern writeConcern) {
         this.writeConcern = writeConcern;
@@ -136,7 +136,7 @@ public class DB {
      * Gets the read preference for this database.
      *
      * @return {@code ReadPreference} to be used for read operations, if not specified explicitly
-     * @mongodb.driver.manual core/read-preference/ Read Preference
+     *
      */
     public ReadPreference getReadPreference() {
         return readPreference != null ? readPreference : mongo.getReadPreference();
@@ -146,7 +146,7 @@ public class DB {
      * Gets the write concern for this database.
      *
      * @return {@code WriteConcern} to be used for write operations, if not specified explicitly
-     * @mongodb.driver.manual core/write-concern/ Write Concern
+     *
      */
     public WriteConcern getWriteConcern() {
         return writeConcern != null ? writeConcern : mongo.getWriteConcern();
@@ -157,8 +157,8 @@ public class DB {
      *
      * @param readConcern the read concern to use for this collection
      * @since 3.3
-     * @mongodb.server.release 3.2
-     * @mongodb.driver.manual reference/readConcern/ Read Concern
+     *
+     *
      */
     public void setReadConcern(final ReadConcern readConcern) {
         this.readConcern = readConcern;
@@ -169,8 +169,8 @@ public class DB {
      *
      * @return the {@link com.mongodb.ReadConcern}
      * @since 3.3
-     * @mongodb.server.release 3.2
-     * @mongodb.driver.manual reference/readConcern/ Read Concern
+     *
+     *
      */
     public ReadConcern getReadConcern() {
         return readConcern != null ? readConcern : mongo.getReadConcern();
@@ -219,7 +219,7 @@ public class DB {
      * Drops this database. Removes all data on disk. Use with caution.
      *
      * @throws MongoException if the operation failed
-     * @mongodb.driver.manual reference/command/dropDatabase/ Drop Database
+     *
      */
     public void dropDatabase() {
         try {
@@ -253,7 +253,7 @@ public class DB {
      *
      * @return the names of collections in this database
      * @throws MongoException if the operation failed
-     * @mongodb.driver.manual reference/method/db.getCollectionNames/ getCollectionNames()
+     *
      */
     public Set<String> getCollectionNames() {
         List<String> collectionNames = new OperationIterable<DBObject>(new ListCollectionsOperation<DBObject>(name, commandCodec),
@@ -290,7 +290,7 @@ public class DB {
      * @throws MongoCommandException if the server is unable to create the collection
      * @throws WriteConcernException if the {@code WriteConcern} specified on this {@code DB} could not be satisfied
      * @throws MongoException for all other failures
-     * @mongodb.driver.manual reference/method/db.createCollection/ createCollection()
+     *
      */
     public DBCollection createCollection(final String collectionName, final DBObject options) {
         if (options != null) {
@@ -314,8 +314,8 @@ public class DB {
      * @throws WriteConcernException if the {@code WriteConcern} specified on this {@code DB} could not be satisfied
      * @throws MongoException for all other failures
      * @since 3.4
-     * @mongodb.server.release 3.4
-     * @mongodb.driver.manual reference/command/create Create Command
+     *
+     *
      */
     public DBCollection createView(final String viewName, final String viewOn, final List<? extends DBObject> pipeline) {
         return createView(viewName, viewOn, pipeline, new DBCreateViewOptions());
@@ -333,8 +333,8 @@ public class DB {
      * @throws WriteConcernException if the {@code WriteConcern} specified on this {@code DB} could not be satisfied
      * @throws MongoException for all other failures
      * @since 3.4
-     * @mongodb.server.release 3.4
-     * @mongodb.driver.manual reference/command/create Create Command
+     *
+     *
      */
     public DBCollection createView(final String viewName, final String viewOn, final List<? extends DBObject> pipeline,
                                    final DBCreateViewOptions options) {
@@ -443,7 +443,7 @@ public class DB {
      * @param command command to execute
      * @return result of command from the database
      * @throws MongoException if the command failed
-     * @mongodb.driver.manual tutorial/use-database-commands Commands
+     *
      */
     public CommandResult command(final String command) {
         return command(new BasicDBObject(command, Boolean.TRUE), getReadPreference());
@@ -456,7 +456,7 @@ public class DB {
      * @param command {@code DBObject} representation of the command to be executed
      * @return result of the command execution
      * @throws MongoException  if the command failed
-     * @mongodb.driver.manual tutorial/use-database-commands Commands
+     *
      */
     public CommandResult command(final DBObject command) {
         return command(command, getReadPreference());
@@ -470,7 +470,7 @@ public class DB {
      * @param encoder {@link DBEncoder} to be used for command encoding
      * @return result of the command execution
      * @throws MongoException if the command failed
-     * @mongodb.driver.manual tutorial/use-database-commands Commands
+     *
      */
     public CommandResult command(final DBObject command, final DBEncoder encoder) {
         return command(command, getReadPreference(), encoder);
@@ -483,7 +483,7 @@ public class DB {
      * @param readPreference Where to execute the command - this will only be applied for a subset of commands
      * @param encoder        The DBEncoder that knows how to serialise the command
      * @return The result of executing the command, success or failure
-     * @mongodb.driver.manual tutorial/use-database-commands Commands
+     *
      * @since 2.12
      */
     public CommandResult command(final DBObject command, final ReadPreference readPreference, final DBEncoder encoder) {
@@ -500,7 +500,7 @@ public class DB {
      * @param command        The {@code DBObject} representation the command to be executed
      * @param readPreference Where to execute the command - this will only be applied for a subset of commands
      * @return The result of executing the command, success or failure
-     * @mongodb.driver.manual tutorial/use-database-commands Commands
+     *
      * @since 2.12
      */
     public CommandResult command(final DBObject command, final ReadPreference readPreference) {
@@ -515,7 +515,7 @@ public class DB {
      * @param readPreference Where to execute the command - this will only be applied for a subset of commands
      * @return The result of the command execution
      * @throws MongoException if the command failed
-     * @mongodb.driver.manual tutorial/use-database-commands Commands
+     *
      * @since 2.12
      */
     public CommandResult command(final String command, final ReadPreference readPreference) {
@@ -558,7 +558,7 @@ public class DB {
      * @param args arguments to pass to the JavaScript function
      * @return result of the command execution
      * @throws MongoException if the operation failed
-     * @mongodb.driver.manual reference/method/db.eval/ db.eval()
+     *
      */
     public CommandResult doEval(final String code, final Object... args) {
         DBObject commandDocument = new BasicDBObject("$eval", code).append("args", asList(args));
@@ -573,7 +573,7 @@ public class DB {
      * @param args arguments to pass to the JavaScript function
      * @return result of the execution
      * @throws MongoException if the operation failed
-     * @mongodb.driver.manual reference/method/db.eval/ db.eval()
+     *
      */
     public Object eval(final String code, final Object... args) {
         CommandResult result = doEval(code, args);
@@ -586,7 +586,7 @@ public class DB {
      *
      * @return result of the execution
      * @throws MongoException if the operation failed
-     * @mongodb.driver.manual reference/command/dbStats/ Database Stats
+     *
      */
     public CommandResult getStats() {
         BsonDocument commandDocument = new BsonDocument("dbStats", new BsonInt32(1)).append("scale", new BsonInt32(1));
@@ -600,9 +600,9 @@ public class DB {
      * @param password the password
      * @return the result of executing this operation
      * @throws MongoException if the operation failed
-     * @mongodb.driver.manual administration/security-access-control/  Access Control
-     * @mongodb.driver.manual reference/command/createUser createUser
-     * @mongodb.driver.manual reference/command/updateUser updateUser
+     *
+     *
+     *
      * @deprecated Use {@code DB.command} to call either the createUser or updateUser command
      */
     @Deprecated
@@ -618,9 +618,9 @@ public class DB {
      * @param readOnly if true, user will only be able to read
      * @return the result of executing this operation
      * @throws MongoException if the operation failed
-     * @mongodb.driver.manual administration/security-access-control/  Access Control
-     * @mongodb.driver.manual reference/command/createUser createUser
-     * @mongodb.driver.manual reference/command/updateUser updateUser
+     *
+     *
+     *
      * @deprecated Use {@code DB.command} to call either the createUser or updateUser command
      */
     @Deprecated
@@ -653,7 +653,7 @@ public class DB {
      * @param userName user to be removed
      * @return the result of executing this operation
      * @throws MongoException if the operation failed
-     * @mongodb.driver.manual administration/security-access-control/  Access Control
+     *
      * @deprecated Use {@code DB.command} to call the dropUser command
      */
     @Deprecated
@@ -681,7 +681,7 @@ public class DB {
      * Adds the given flag to the default query options.
      *
      * @param option value to be added
-     * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#op-query Query Flags
+     *
      */
     public void addOption(final int option) {
         optionHolder.add(option);
@@ -691,7 +691,7 @@ public class DB {
      * Sets the query options, overwriting previous value.
      *
      * @param options bit vector of query options
-     * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#op-query Query Flags
+     *
      */
     public void setOptions(final int options) {
         optionHolder.set(options);
@@ -699,7 +699,7 @@ public class DB {
 
     /**
      * Resets the query options.
-     * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#op-query Query Flags
+     *
      */
     public void resetOptions() {
         optionHolder.reset();
@@ -709,7 +709,7 @@ public class DB {
      * Gets the query options
      *
      * @return bit vector of query options
-     * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#op-query Query Flags
+     *
      */
     public int getOptions() {
         return optionHolder.get();

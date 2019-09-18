@@ -23,7 +23,7 @@ import com.mongodb.WriteConcern;
  * The options to apply when removing documents from the DBCollection
  *
  * @since 3.4
- * @mongodb.driver.manual tutorial/remove-documents/ Remove Documents
+ *
  */
 public final class DBCollectionRemoveOptions {
     private Collation collation;
@@ -40,7 +40,7 @@ public final class DBCollectionRemoveOptions {
      * Returns the collation options
      *
      * @return the collation options
-     * @mongodb.server.release 3.4
+     *
      */
     public Collation getCollation() {
         return collation;
@@ -51,7 +51,7 @@ public final class DBCollectionRemoveOptions {
      *
      * @param collation the collation
      * @return this
-     * @mongodb.server.release 3.4
+     *
      */
     public DBCollectionRemoveOptions collation(final Collation collation) {
         this.collation = collation;

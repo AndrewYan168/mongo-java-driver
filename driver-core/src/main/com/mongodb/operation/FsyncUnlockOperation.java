@@ -32,7 +32,7 @@ import static com.mongodb.operation.OperationHelper.withConnection;
  * Unlocks the MongoDB server, allowing write operations to go through. This may be asynchronous on the server, which means
  * there may be a small delay before the database becomes writable.
  *
- * @mongodb.driver.manual reference/command/fsyncUnlock/ fsyncUnlock command
+ *
  * @since 3.2
  */
 public class FsyncUnlockOperation implements WriteOperation<BsonDocument> {

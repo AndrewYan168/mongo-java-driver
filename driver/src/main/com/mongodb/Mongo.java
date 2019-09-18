@@ -265,7 +265,7 @@ public class Mongo {
      *
      * @param uri URI to connect to, optionally containing additional information like credentials
      * @throws MongoException if there's a failure
-     * @mongodb.driver.manual reference/connection-string Connection String URI Format
+     *
      * @see MongoURI
      * @deprecated Replaced by {@link MongoClient#MongoClient(MongoClientURI)}
      */
@@ -608,7 +608,7 @@ public class Mongo {
      * @param async if true, the fsync will be done asynchronously on the server.
      * @return result of the command execution
      * @throws MongoException if there's a failure
-     * @mongodb.driver.manual reference/command/fsync/ fsync command
+     *
      */
     public CommandResult fsync(final boolean async) {
         DBObject command = new BasicDBObject("fsync", 1);
@@ -624,7 +624,7 @@ public class Mongo {
      *
      * @return result of the command execution
      * @throws MongoException if there's a failure
-     * @mongodb.driver.manual reference/command/fsync/ fsync command
+     *
      */
     public CommandResult fsyncAndLock() {
         DBObject command = new BasicDBObject("fsync", 1);
@@ -638,7 +638,7 @@ public class Mongo {
      *
      * @return {@code DBObject} in the following form {@code {"ok": 1,"info": "unlock completed"}}
      * @throws MongoException if there's a failure
-     * @mongodb.driver.manual reference/command/fsync/ fsync command
+     *
      */
     public DBObject unlock() {
         return DBObjects.toDBObject(execute(new FsyncUnlockOperation()));
@@ -649,7 +649,7 @@ public class Mongo {
      *
      * @return result of the command execution
      * @throws MongoException if the operation fails
-     * @mongodb.driver.manual reference/command/fsync/ fsync command
+     *
      */
     public boolean isLocked() {
         return execute(new CurrentOpOperation(), ReadPreference.primary())

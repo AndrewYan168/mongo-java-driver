@@ -37,7 +37,7 @@ import static java.util.Arrays.asList;
  * </pre></blockquote>
  *
  * @since 3.0
- * @mongodb.driver.manual reference/operator/meta/orderby Sort
+ *
  */
 public final class Sorts {
     private Sorts() {
@@ -48,7 +48,7 @@ public final class Sorts {
      *
      * @param fieldNames the field names, which must contain at least one
      * @return the sort specification
-     * @mongodb.driver.manual reference/operator/meta/orderby Sort
+     *
      */
     public static Bson ascending(final String... fieldNames) {
         return ascending(asList(fieldNames));
@@ -59,7 +59,7 @@ public final class Sorts {
      *
      * @param fieldNames the field names, which must contain at least one
      * @return the sort specification
-     * @mongodb.driver.manual reference/operator/meta/orderby Sort
+     *
      */
     public static Bson ascending(final List<String> fieldNames) {
         notNull("fieldNames", fieldNames);
@@ -71,7 +71,7 @@ public final class Sorts {
      *
      * @param fieldNames the field names, which must contain at least one
      * @return the sort specification
-     * @mongodb.driver.manual reference/operator/meta/orderby Sort
+     *
      */
     public static Bson descending(final String... fieldNames) {
         return descending(asList(fieldNames));
@@ -82,7 +82,7 @@ public final class Sorts {
      *
      * @param fieldNames the field names, which must contain at least one
      * @return the sort specification
-     * @mongodb.driver.manual reference/operator/meta/orderby Sort
+     *
      */
     public static Bson descending(final List<String> fieldNames) {
         notNull("fieldNames", fieldNames);
@@ -94,7 +94,7 @@ public final class Sorts {
      *
      * @param fieldName the field name
      * @return the sort specification
-     * @mongodb.driver.manual reference/operator/projection/meta/#sort textScore
+     *
      */
     public static Bson metaTextScore(final String fieldName) {
         return new BsonDocument(fieldName, new BsonDocument("$meta", new BsonString("textScore")));

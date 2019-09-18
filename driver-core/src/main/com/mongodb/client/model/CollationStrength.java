@@ -20,7 +20,7 @@ package com.mongodb.client.model;
  * Collation support allows the specific configuration of how differences between characters are handled.
  *
  * @since 3.4
- * @mongodb.server.release 3.4
+ *
  */
 public enum CollationStrength {
 

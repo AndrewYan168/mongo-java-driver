@@ -57,7 +57,7 @@ import static java.util.concurrent.TimeUnit.MILLISECONDS;
  *
  * See {@link Mongo#getDB(String)} for further information about the effective deprecation of this class.
  *
- * @mongodb.driver.manual core/read-operations Read Operations
+ *
  */
 @NotThreadSafe
 public class DBCursor implements Cursor, Iterable<DBObject> {
@@ -126,7 +126,7 @@ public class DBCursor implements Cursor, Iterable<DBObject> {
      * {@link Bytes#QUERYOPTION_TAILABLE} option set. For non blocking tailable cursors see {@link #tryNext }.</p>
      *
      * @return true if there is another object available
-     * @mongodb.driver.manual /core/cursors/#cursor-batches Cursor Batches
+     *
      */
     @Override
     public boolean hasNext() {
@@ -154,7 +154,7 @@ public class DBCursor implements Cursor, Iterable<DBObject> {
      * {@link Bytes#QUERYOPTION_TAILABLE} option set. For non blocking tailable cursors see {@link #tryNext }.</p>
      *
      * @return the next element
-     * @mongodb.driver.manual /core/cursors/#cursor-batches Cursor Batches
+     *
      */
     @Override
     public DBObject next() {
@@ -175,7 +175,7 @@ public class DBCursor implements Cursor, Iterable<DBObject> {
      * @return the next element or null
      * @throws MongoException if failed
      * @throws IllegalArgumentException if the cursor is not tailable
-     * @mongodb.driver.manual /core/cursors/#cursor-batches Cursor Batches
+     *
      */
     public DBObject tryNext() {
         if (cursor == null) {
@@ -211,7 +211,7 @@ public class DBCursor implements Cursor, Iterable<DBObject> {
      * @param option the option to be added
      * @return {@code this} so calls can be chained
      * @see Bytes
-     * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#op-query Query Flags
+     *
      */
     public DBCursor addOption(final int option) {
         setOptions(this.options |= option);
@@ -224,7 +224,7 @@ public class DBCursor implements Cursor, Iterable<DBObject> {
      * @param options the bitmask of options
      * @return {@code this} so calls can be chained
      * @see Bytes
-     * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#op-query Query Flags
+     *
      */
     public DBCursor setOptions(final int options) {
         if ((options & Bytes.QUERYOPTION_EXHAUST) != 0) {
@@ -238,7 +238,7 @@ public class DBCursor implements Cursor, Iterable<DBObject> {
      * Resets the query options.
      *
      * @return {@code this} so calls can be chained
-     * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#op-query Query Flags
+     *
      */
     public DBCursor resetOptions() {
         this.options = 0;
@@ -249,7 +249,7 @@ public class DBCursor implements Cursor, Iterable<DBObject> {
      * Gets the query options.
      *
      * @return the bitmask of options
-     * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#op-query Query Flags
+     *
      */
     public int getOptions() {
         return options;
@@ -283,7 +283,7 @@ public class DBCursor implements Cursor, Iterable<DBObject> {
      * @param name  the name of the special query operator
      * @param value the value of the special query operator
      * @return {@code this} so calls can be chained
-     * @mongodb.driver.manual reference/operator Special Operators
+     *
      */
     public DBCursor addSpecial(final String name, final Object value) {
         if (name == null || value == null) {
@@ -329,7 +329,7 @@ public class DBCursor implements Cursor, Iterable<DBObject> {
      *
      * @param comment the comment that is to appear in the profiler output
      * @return {@code this} so calls can be chained
-     * @mongodb.driver.manual reference/operator/meta/comment/ $comment
+     *
      * @since 2.12
      */
     public DBCursor comment(final String comment) {
@@ -342,7 +342,7 @@ public class DBCursor implements Cursor, Iterable<DBObject> {
      *
      * @param max the maximum number of documents to return
      * @return {@code this} so calls can be chained
-     * @mongodb.driver.manual reference/operator/meta/maxScan/ $maxScan
+     *
      * @see #limit(int)
      * @since 2.12
      */
@@ -356,7 +356,7 @@ public class DBCursor implements Cursor, Iterable<DBObject> {
      *
      * @param max a document specifying the fields, and the upper bound values for those fields
      * @return {@code this} so calls can be chained
-     * @mongodb.driver.manual reference/operator/meta/max/ $max
+     *
      * @since 2.12
      */
     public DBCursor max(final DBObject max) {
@@ -369,7 +369,7 @@ public class DBCursor implements Cursor, Iterable<DBObject> {
      *
      * @param min a document specifying the fields, and the lower bound values for those fields
      * @return {@code this} so calls can be chained
-     * @mongodb.driver.manual reference/operator/meta/min/ $min
+     *
      * @since 2.12
      */
     public DBCursor min(final DBObject min) {
@@ -381,7 +381,7 @@ public class DBCursor implements Cursor, Iterable<DBObject> {
      * Forces the cursor to only return fields included in the index.
      *
      * @return {@code this} so calls can be chained
-     * @mongodb.driver.manual reference/operator/meta/returnKey/ $returnKey
+     *
      * @since 2.12
      */
     public DBCursor returnKey() {
@@ -394,7 +394,7 @@ public class DBCursor implements Cursor, Iterable<DBObject> {
      * property named {@code $diskLoc}
      *
      * @return {@code this} so calls can be chained
-     * @mongodb.driver.manual reference/operator/meta/showDiskLoc/ $showDiskLoc
+     *
      * @since 2.12
      */
     public DBCursor showDiskLoc() {
@@ -407,7 +407,7 @@ public class DBCursor implements Cursor, Iterable<DBObject> {
      *
      * @param indexKeys a {@code DBObject} with fields and direction
      * @return same DBCursor for chaining operations
-     * @mongodb.driver.manual reference/operator/meta/hint/ $hint
+     *
      */
     public DBCursor hint(final DBObject indexKeys) {
         findOptions.getModifiers().put("$hint", indexKeys);
@@ -419,7 +419,7 @@ public class DBCursor implements Cursor, Iterable<DBObject> {
      *
      * @param indexName the name of an index
      * @return same DBCursor for chaining operations
-     * @mongodb.driver.manual reference/operator/meta/hint/ $hint
+     *
      */
     public DBCursor hint(final String indexName) {
         findOptions.getModifiers().put("$hint", indexName);
@@ -433,8 +433,8 @@ public class DBCursor implements Cursor, Iterable<DBObject> {
      *                 a server version &gt;= 2.6
      * @param timeUnit the time unit
      * @return same DBCursor for chaining operations
-     * @mongodb.server.release 2.6
-     * @mongodb.driver.manual reference/operator/meta/maxTimeMS/ $maxTimeMS
+     *
+     *
      * @since 2.12.0
      */
     public DBCursor maxTime(final long maxTime, final TimeUnit timeUnit) {
@@ -451,7 +451,7 @@ public class DBCursor implements Cursor, Iterable<DBObject> {
      *
      * @see com.mongodb.DBCursor#sort(DBObject)
      * @see com.mongodb.DBCursor#hint(DBObject)
-     * @mongodb.driver.manual reference/operator/meta/snapshot/ $snapshot
+     *
      */
     public DBCursor snapshot() {
         findOptions.getModifiers().put("$snapshot", true);
@@ -470,7 +470,7 @@ public class DBCursor implements Cursor, Iterable<DBObject> {
      *
      * @return a {@code DBObject} containing the explain output for this DBCursor's query
      * @throws MongoException if the operation failed
-     * @mongodb.driver.manual reference/explain Explain Output
+     *
      */
     public DBObject explain() {
         return toDBObject(executor.execute(getQueryOperation(collection.getObjectCodec())
@@ -536,7 +536,7 @@ public class DBCursor implements Cursor, Iterable<DBObject> {
      *
      * @param limit the number of elements to return
      * @return a cursor to iterate the results
-     * @mongodb.driver.manual reference/method/cursor.limit Limit
+     *
      */
     public DBCursor limit(final int limit) {
         findOptions.limit(limit);
@@ -786,8 +786,8 @@ public class DBCursor implements Cursor, Iterable<DBObject> {
      *
      * @param readConcern the read concern to use for this collection
      * @since 3.2
-     * @mongodb.server.release 3.2
-     * @mongodb.driver.manual reference/readConcern/ Read Concern
+     *
+     *
      */
     DBCursor setReadConcern(final ReadConcern readConcern) {
         findOptions.readConcern(readConcern);
@@ -799,8 +799,8 @@ public class DBCursor implements Cursor, Iterable<DBObject> {
      *
      * @return the {@link com.mongodb.ReadConcern}
      * @since 3.2
-     * @mongodb.server.release 3.2
-     * @mongodb.driver.manual reference/readConcern/ Read Concern
+     *
+     *
      */
     ReadConcern getReadConcern() {
         if (findOptions.getReadConcern() != null) {
@@ -814,7 +814,7 @@ public class DBCursor implements Cursor, Iterable<DBObject> {
      *
      * @return the collation options
      * @since 3.4
-     * @mongodb.server.release 3.4
+     *
      */
     public Collation getCollation() {
         return findOptions.getCollation();
@@ -827,7 +827,7 @@ public class DBCursor implements Cursor, Iterable<DBObject> {
      * @param collation the collation options to use
      * @return this
      * @since 3.4
-     * @mongodb.server.release 3.4
+     *
      */
     public DBCursor setCollation(final Collation collation) {
         findOptions.collation(collation);

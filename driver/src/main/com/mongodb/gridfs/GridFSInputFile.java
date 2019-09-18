@@ -37,7 +37,7 @@ import java.util.Date;
  *     <li>Getting an OutputStream to stream the data out to</li>
  * </ul>
  *
- * @mongodb.driver.manual core/gridfs/ GridFS
+ *
  */
 public class GridFSInputFile extends GridFSFile {
 

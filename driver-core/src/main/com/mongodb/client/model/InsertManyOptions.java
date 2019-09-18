@@ -20,8 +20,8 @@ package com.mongodb.client.model;
  * The options to apply to an operation that inserts multiple documents into a collection.
  *
  * @since 3.0
- * @mongodb.driver.manual tutorial/insert-documents/ Insert Tutorial
- * @mongodb.driver.manual reference/command/insert/ Insert Command
+ *
+ *
  */
 public final class InsertManyOptions {
     private boolean ordered = true;
@@ -53,7 +53,7 @@ public final class InsertManyOptions {
      *
      * @return the bypass document level validation flag
      * @since 3.2
-     * @mongodb.server.release 3.2
+     *
      */
     public Boolean getBypassDocumentValidation() {
         return bypassDocumentValidation;
@@ -65,7 +65,7 @@ public final class InsertManyOptions {
      * @param bypassDocumentValidation If true, allows the write to opt-out of document level validation.
      * @return this
      * @since 3.2
-     * @mongodb.server.release 3.2
+     *
      */
     public InsertManyOptions bypassDocumentValidation(final Boolean bypassDocumentValidation) {
         this.bypassDocumentValidation = bypassDocumentValidation;

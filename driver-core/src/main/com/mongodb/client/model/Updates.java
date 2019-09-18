@@ -37,7 +37,7 @@ import static java.util.Arrays.asList;
  * </pre></blockquote>
  *
  * @since 3.1
- * @mongodb.driver.manual reference/operator/update/ Update Operators
+ *
  */
 public final class Updates {
 
@@ -69,7 +69,7 @@ public final class Updates {
      * @param value     the value
      * @param <TItem>   the value type
      * @return the update
-     * @mongodb.driver.manual reference/operator/update/set/ $set
+     *
      */
     public static <TItem> Bson set(final String fieldName, final TItem value) {
         return new SimpleUpdate<TItem>(fieldName, value, "$set");
@@ -80,7 +80,7 @@ public final class Updates {
      *
      * @param fieldName the non-null field name
      * @return the update
-     * @mongodb.driver.manual reference/operator/update/unset/ $unset
+     *
      */
     public static Bson unset(final String fieldName) {
         return new SimpleUpdate<String>(fieldName, "", "$unset");
@@ -94,7 +94,7 @@ public final class Updates {
      * @param value     the value
      * @param <TItem>   the value type
      * @return the update
-     * @mongodb.driver.manual reference/operator/update/setOnInsert/ $setOnInsert
+     *
      * @see UpdateOptions#upsert(boolean)
      */
     public static <TItem> Bson setOnInsert(final String fieldName, final TItem value) {
@@ -107,7 +107,7 @@ public final class Updates {
      * @param fieldName    the non-null field name
      * @param newFieldName the non-null new field name
      * @return the update
-     * @mongodb.driver.manual reference/operator/update/rename/ $rename
+     *
      */
     public static Bson rename(final String fieldName, final String newFieldName) {
         notNull("newFieldName", newFieldName);
@@ -120,7 +120,7 @@ public final class Updates {
      * @param fieldName the non-null field name
      * @param number    the value
      * @return the update
-     * @mongodb.driver.manual reference/operator/update/inc/ $inc
+     *
      */
     public static Bson inc(final String fieldName, final Number number) {
         notNull("number", number);
@@ -133,7 +133,7 @@ public final class Updates {
      * @param fieldName the non-null field name
      * @param number    the non-null number
      * @return the update
-     * @mongodb.driver.manual reference/operator/update/mul/ $mul
+     *
      */
     public static Bson mul(final String fieldName, final Number number) {
         notNull("number", number);
@@ -149,7 +149,7 @@ public final class Updates {
      * @param value     the value
      * @param <TItem>   the value type
      * @return the update
-     * @mongodb.driver.manual reference/operator/update/min/ $min
+     *
      */
     public static <TItem> Bson min(final String fieldName, final TItem value) {
         return new SimpleUpdate<TItem>(fieldName, value, "$min");
@@ -163,7 +163,7 @@ public final class Updates {
      * @param value     the value
      * @param <TItem>   the value type
      * @return the update
-     * @mongodb.driver.manual reference/operator/update/min/ $min
+     *
      */
     public static <TItem> Bson max(final String fieldName, final TItem value) {
         return new SimpleUpdate<TItem>(fieldName, value, "$max");
@@ -174,8 +174,8 @@ public final class Updates {
      *
      * @param fieldName the non-null field name
      * @return the update
-     * @mongodb.driver.manual reference/operator/update/currentDate/ $currentDate
-     * @mongodb.driver.manual reference/bson-types/#date Date
+     *
+     *
      */
     public static Bson currentDate(final String fieldName) {
         return new SimpleUpdate<Boolean>(fieldName, true, "$currentDate");
@@ -186,8 +186,8 @@ public final class Updates {
      *
      * @param fieldName the non-null field name
      * @return the update
-     * @mongodb.driver.manual reference/operator/update/currentDate/ $currentDate
-     * @mongodb.driver.manual reference/bson-types/#document-bson-type-timestamp Timestamp
+     *
+     *
      */
     public static Bson currentTimestamp(final String fieldName) {
         return new SimpleUpdate<BsonDocument>(fieldName, new BsonDocument("$type", new BsonString("timestamp")), "$currentDate");
@@ -201,7 +201,7 @@ public final class Updates {
      * @param value     the value
      * @param <TItem>   the value type
      * @return the update
-     * @mongodb.driver.manual reference/operator/update/addToSet/ $addToSet
+     *
      */
     public static <TItem> Bson addToSet(final String fieldName, final TItem value) {
         return new SimpleUpdate<TItem>(fieldName, value, "$addToSet");
@@ -215,7 +215,7 @@ public final class Updates {
      * @param values    the values
      * @param <TItem>   the value type
      * @return the update
-     * @mongodb.driver.manual reference/operator/update/addToSet/ $addToSet
+     *
      */
     public static <TItem> Bson addEachToSet(final String fieldName, final List<TItem> values) {
         return new WithEachUpdate<TItem>(fieldName, values, "$addToSet");
@@ -228,7 +228,7 @@ public final class Updates {
      * @param value     the value
      * @param <TItem>   the value type
      * @return the update
-     * @mongodb.driver.manual reference/operator/update/push/ $push
+     *
      */
     public static <TItem> Bson push(final String fieldName, final TItem value) {
         return new SimpleUpdate<TItem>(fieldName, value, "$push");
@@ -241,7 +241,7 @@ public final class Updates {
      * @param values    the values
      * @param <TItem>   the value type
      * @return the update
-     * @mongodb.driver.manual reference/operator/update/push/ $push
+     *
      */
     public static <TItem> Bson pushEach(final String fieldName, final List<TItem> values) {
         return new PushUpdate<TItem>(fieldName, values, new PushOptions());
@@ -256,7 +256,7 @@ public final class Updates {
      * @param options   the non-null push options
      * @param <TItem>   the value type
      * @return the update
-     * @mongodb.driver.manual reference/operator/update/push/ $push
+     *
      */
     public static <TItem> Bson pushEach(final String fieldName, final List<TItem> values, final PushOptions options) {
         return new PushUpdate<TItem>(fieldName, values, options);
@@ -269,7 +269,7 @@ public final class Updates {
      * @param value     the value
      * @param <TItem>   the value type
      * @return the update
-     * @mongodb.driver.manual reference/operator/update/pull/ $pull
+     *
      */
     public static <TItem> Bson pull(final String fieldName, final TItem value) {
         return new SimpleUpdate<TItem>(fieldName, value, "$pull");
@@ -280,7 +280,7 @@ public final class Updates {
      *
      * @param filter the query filter
      * @return the update
-     * @mongodb.driver.manual reference/operator/update/pull/ $pull
+     *
      */
     public static Bson pullByFilter(final Bson filter) {
         return new Bson() {
@@ -307,7 +307,7 @@ public final class Updates {
      * @param values    the values
      * @param <TItem>   the value type
      * @return the update
-     * @mongodb.driver.manual reference/operator/update/pull/ $pull
+     *
      */
     public static <TItem> Bson pullAll(final String fieldName, final List<TItem> values) {
         return new PullAllUpdate<TItem>(fieldName, values);
@@ -318,7 +318,7 @@ public final class Updates {
      *
      * @param fieldName the non-null field name
      * @return the update
-     * @mongodb.driver.manual reference/operator/update/pop/ $pop
+     *
      */
     public static Bson popFirst(final String fieldName) {
         return new SimpleUpdate<Integer>(fieldName, -1, "$pop");
@@ -329,7 +329,7 @@ public final class Updates {
      *
      * @param fieldName the non-null field name
      * @return the update
-     * @mongodb.driver.manual reference/operator/update/pop/ $pop
+     *
      */
     public static Bson popLast(final String fieldName) {
         return new SimpleUpdate<Integer>(fieldName, 1, "$pop");
@@ -353,7 +353,7 @@ public final class Updates {
      * @param fieldName the field name
      * @param value     the value
      * @return the update
-     * @mongodb.driver.manual reference/operator/update/bit/ $bit
+     *
      */
     public static Bson bitwiseAnd(final String fieldName, final long value) {
         return createBitUpdateDocument(fieldName, "and", value);
@@ -366,7 +366,7 @@ public final class Updates {
      * @param fieldName the field name
      * @param value     the value
      * @return the update
-     * @mongodb.driver.manual reference/operator/update/bit/ $bit
+     *
      */
     public static Bson bitwiseOr(final String fieldName, final int value) {
         return createBitUpdateDocument(fieldName, "or", value);
@@ -378,7 +378,7 @@ public final class Updates {
      * @param fieldName the field name
      * @param value     the value
      * @return the update
-     * @mongodb.driver.manual reference/operator/update/bit/ $bit
+     *
      */
     public static Bson bitwiseOr(final String fieldName, final long value) {
         return createBitUpdateDocument(fieldName, "or", value);

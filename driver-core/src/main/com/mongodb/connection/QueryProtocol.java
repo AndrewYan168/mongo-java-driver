@@ -49,7 +49,7 @@ import static java.lang.String.format;
  * An implementation of the MongoDB OP_QUERY wire protocol.
  *
  * @param <T> the type of document to decode query results to
- * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#op-query OP_QUERY
+ *
  */
 class QueryProtocol<T> implements Protocol<QueryResult<T>> {
 
@@ -126,7 +126,7 @@ class QueryProtocol<T> implements Protocol<QueryResult<T>> {
      * the cursor may become invalid at some point - for example if the final object it references were deleted.</p>
      *
      * @return true if the cursor is configured to be a tailable cursor
-     * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#op-query OP_QUERY
+     *
      */
     public boolean isTailableCursor() {
         return tailableCursor;
@@ -141,7 +141,7 @@ class QueryProtocol<T> implements Protocol<QueryResult<T>> {
      *
      * @param tailableCursor whether the cursor should be a tailable cursor.
      * @return this
-     * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#op-query OP_QUERY
+     *
      */
     public QueryProtocol<T> tailableCursor(final boolean tailableCursor) {
         this.tailableCursor = tailableCursor;
@@ -152,7 +152,7 @@ class QueryProtocol<T> implements Protocol<QueryResult<T>> {
      * Returns true if set to allowed to query non-primary replica set members.
      *
      * @return true if set to allowed to query non-primary replica set members.
-     * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#op-query OP_QUERY
+     *
      */
     public boolean isSlaveOk() {
         return slaveOk;
@@ -163,7 +163,7 @@ class QueryProtocol<T> implements Protocol<QueryResult<T>> {
      *
      * @param slaveOk true if allowed to query non-primary replica set members.
      * @return this
-     * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#op-query OP_QUERY
+     *
      */
     public QueryProtocol<T> slaveOk(final boolean slaveOk) {
         this.slaveOk = slaveOk;
@@ -174,7 +174,7 @@ class QueryProtocol<T> implements Protocol<QueryResult<T>> {
      * Internal replication use only.  Driver users should ordinarily not use this.
      *
      * @return oplogReplay
-     * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#op-query OP_QUERY
+     *
      */
     public boolean isOplogReplay() {
         return oplogReplay;
@@ -185,7 +185,7 @@ class QueryProtocol<T> implements Protocol<QueryResult<T>> {
      *
      * @param oplogReplay the oplogReplay value
      * @return this
-     * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#op-query OP_QUERY
+     *
      */
     public QueryProtocol<T> oplogReplay(final boolean oplogReplay) {
         this.oplogReplay = oplogReplay;
@@ -198,7 +198,7 @@ class QueryProtocol<T> implements Protocol<QueryResult<T>> {
      * <p>The server normally times out idle cursors after an inactivity period (10 minutes) to prevent excess memory use.</p>
      *
      * @return if cursor timeout has been turned off
-     * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#op-query OP_QUERY
+     *
      */
     public boolean isNoCursorTimeout() {
         return noCursorTimeout;
@@ -209,7 +209,7 @@ class QueryProtocol<T> implements Protocol<QueryResult<T>> {
      *
      * @param noCursorTimeout true if the cursor timeout should be turned off.
      * @return this
-     * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#op-query OP_QUERY
+     *
      */
     public QueryProtocol<T> noCursorTimeout(final boolean noCursorTimeout) {
         this.noCursorTimeout = noCursorTimeout;
@@ -223,7 +223,7 @@ class QueryProtocol<T> implements Protocol<QueryResult<T>> {
      * timeout period, we do return as normal.</p>
      *
      * @return if the cursor should await for data
-     * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#op-query OP_QUERY
+     *
      */
     public boolean isAwaitData() {
         return awaitData;
@@ -237,7 +237,7 @@ class QueryProtocol<T> implements Protocol<QueryResult<T>> {
      *
      * @param awaitData if we should await for data
      * @return this
-     * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#op-query OP_QUERY
+     *
      */
     public QueryProtocol<T> awaitData(final boolean awaitData) {
         this.awaitData = awaitData;
@@ -248,7 +248,7 @@ class QueryProtocol<T> implements Protocol<QueryResult<T>> {
      * Returns true if can get partial results from a mongos if some shards are down.
      *
      * @return if can get partial results from a mongos if some shards are down
-     * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#op-query OP_QUERY
+     *
      */
     public boolean isPartial() {
         return partial;
@@ -259,7 +259,7 @@ class QueryProtocol<T> implements Protocol<QueryResult<T>> {
      *
      * @param partial allow partial results from a mongos if some shards are down
      * @return this
-     * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#op-query OP_QUERY
+     *
      */
     public QueryProtocol<T> partial(final boolean partial) {
         this.partial = partial;

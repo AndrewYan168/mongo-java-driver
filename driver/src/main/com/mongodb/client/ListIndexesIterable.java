@@ -32,7 +32,7 @@ public interface ListIndexesIterable<TResult> extends MongoIterable<TResult> {
      * @param maxTime  the max time
      * @param timeUnit the time unit, which may not be null
      * @return this
-     * @mongodb.driver.manual reference/operator/meta/maxTimeMS/ Max Time
+     *
      */
     ListIndexesIterable<TResult> maxTime(long maxTime, TimeUnit timeUnit);
 
@@ -41,7 +41,7 @@ public interface ListIndexesIterable<TResult> extends MongoIterable<TResult> {
      *
      * @param batchSize the batch size
      * @return this
-     * @mongodb.driver.manual reference/method/cursor.batchSize/#cursor.batchSize Batch Size
+     *
      */
     @Override
     ListIndexesIterable<TResult> batchSize(int batchSize);

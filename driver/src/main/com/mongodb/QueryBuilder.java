@@ -26,7 +26,7 @@ import static java.util.Arrays.asList;
 /**
  * Utility for creating DBObject queries
  *
- * @mongodb.driver.manual tutorial/query-documents/ Querying
+ *
  */
 @SuppressWarnings("rawtypes")
 public class QueryBuilder {
@@ -370,7 +370,7 @@ public class QueryBuilder {
      *
      * @param search the search terms to apply to the text index.
      * @return {@code this}
-     * @mongodb.server.release 2.6
+     *
      */
     public QueryBuilder text(final String search) {
         return text(search, null);
@@ -382,7 +382,7 @@ public class QueryBuilder {
      * @param search   the search terms to apply to the text index.
      * @param language the language to use.
      * @return {@code this}
-     * @mongodb.server.release 2.6
+     *
      */
     public QueryBuilder text(final String search, final String language) {
         if (_currentKey != null) {

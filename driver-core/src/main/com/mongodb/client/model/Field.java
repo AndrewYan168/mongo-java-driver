@@ -22,8 +22,8 @@ import static com.mongodb.assertions.Assertions.notNull;
  * Helps define new fields for the $addFields pipeline stage
  *
  * @param <TExpression> the type of the value for the new field
- * @mongodb.driver.manual reference/operator/aggregation/addFields/  $addFields
- * @mongodb.server.release 3.4
+ *
+ *
  * @since 3.4
  */
 public class Field<TExpression> {
@@ -35,7 +35,7 @@ public class Field<TExpression> {
      *
      * @param name  the name of the new field
      * @param value the value of the new field
-     * @mongodb.driver.manual reference/operator/aggregation/addFields/  $addFields
+     *
      */
     public Field(final String name, final TExpression value) {
         this.name = notNull("name", name);

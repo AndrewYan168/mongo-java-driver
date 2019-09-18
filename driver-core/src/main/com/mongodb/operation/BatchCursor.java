@@ -33,7 +33,7 @@ import java.util.List;
  * @since 3.0
  *
  * @param <T> The type of documents the cursor contains
- * @mongodb.driver.manual ../meta-driver/latest/legacy/mongodb-wire-protocol/#wire-op-get-more OP_GET_MORE
+ *
  */
 @NotThreadSafe
 public interface BatchCursor<T> extends Iterator<List<T>>, Closeable {
@@ -76,7 +76,7 @@ public interface BatchCursor<T> extends Iterator<List<T>>, Closeable {
      * {@code tryNext()} would return a new batch if a document had been added to the capped collection.</p>
      *
      * @return the next batch if available or null.
-     * @mongodb.driver.manual reference/glossary/#term-tailable-cursor Tailable Cursor
+     *
      */
     List<T> tryNext();
 

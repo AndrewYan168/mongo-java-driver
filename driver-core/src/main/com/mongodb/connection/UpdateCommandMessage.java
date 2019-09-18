@@ -38,7 +38,7 @@ import java.util.Map;
 /**
  * A message for the update command.
  *
- * @mongodb.driver.manual reference/command/insert/#dbcmd.update Update Command
+ *
  */
 class UpdateCommandMessage extends BaseWriteCommandMessage {
     private final List<UpdateRequest> updates;

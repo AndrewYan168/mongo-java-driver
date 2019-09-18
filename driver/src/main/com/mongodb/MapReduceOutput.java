@@ -26,7 +26,7 @@ import java.util.List;
  * Represents the result of a map/reduce operation.  Users should interact with the results of the map reduce via the results() method, or
  * by interacting directly with the collection the results were input into.
  *
- * @mongodb.driver.manual applications/map-reduce Map-Reduce
+ *
  */
 public class MapReduceOutput {
 

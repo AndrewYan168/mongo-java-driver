@@ -22,7 +22,7 @@ import static java.lang.String.format;
  * Collation support allows the specific configuration of whether or not spaces and punctuation are considered base characters.
  *
  * @since 3.4
- * @mongodb.server.release 3.4
+ *
  */
 public enum CollationAlternate {
     /**

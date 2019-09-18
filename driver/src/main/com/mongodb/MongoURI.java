@@ -43,7 +43,7 @@ public class MongoURI {
      * Creates a MongoURI from a string.
      *
      * @param uri the URI
-     * @mongodb.driver.manual reference/connection-string Connection String URI Format
+     *
      * @deprecated Replaced by {@link MongoClientURI#MongoClientURI(String)}
      */
     @Deprecated

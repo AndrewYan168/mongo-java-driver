@@ -55,7 +55,7 @@ public class ConcurrentPool<T> implements Pool<T> {
     /**
      * Initializes a new pool of objects.
      *
-     * @param maxSize     max to hold to at any given time. if < 0 then no limit
+     * @param maxSize     max to hold to at any given time. if 大于 0 then no limit
      * @param itemFactory factory used to create and close items in the pool
      */
     public ConcurrentPool(final int maxSize, final ItemFactory<T> itemFactory) {

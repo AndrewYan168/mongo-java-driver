@@ -69,8 +69,8 @@ class AggregateExplainOperation implements AsyncReadOperation<BsonDocument>, Rea
      *
      * @param allowDiskUse true if writing to temporary files is enabled
      * @return this
-     * @mongodb.driver.manual reference/command/aggregate/ Aggregation
-     * @mongodb.server.release 2.6
+     *
+     *
      */
     public AggregateExplainOperation allowDiskUse(final Boolean allowDiskUse) {
         this.allowDiskUse = allowDiskUse;
@@ -83,7 +83,7 @@ class AggregateExplainOperation implements AsyncReadOperation<BsonDocument>, Rea
      * @param maxTime  the max time
      * @param timeUnit the time unit, which may not be null
      * @return this
-     * @mongodb.driver.manual reference/method/cursor.maxTimeMS/#cursor.maxTimeMS Max Time
+     *
      */
     public AggregateExplainOperation maxTime(final long maxTime, final TimeUnit timeUnit) {
         notNull("timeUnit", timeUnit);
@@ -98,8 +98,8 @@ class AggregateExplainOperation implements AsyncReadOperation<BsonDocument>, Rea
      * @param collation the collation options to use
      * @return this
      * @since 3.4
-     * @mongodb.driver.manual reference/command/aggregate/ Aggregation
-     * @mongodb.server.release 3.4
+     *
+     *
      */
     public AggregateExplainOperation collation(final Collation collation) {
         this.collation = collation;

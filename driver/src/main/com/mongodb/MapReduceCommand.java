@@ -26,7 +26,7 @@ import static java.util.concurrent.TimeUnit.MILLISECONDS;
 /**
  * This class groups the argument for a map/reduce operation and can build the underlying command object
  *
- * @mongodb.driver.manual applications/map-reduce Map-Reduce
+ *
  */
 public class MapReduceCommand {
 
@@ -58,7 +58,7 @@ public class MapReduceCommand {
      * @param type             the type of output
      * @param query            specifies the selection criteria using query operators for determining the documents input to the map
      *                         function.
-     * @mongodb.driver.manual reference/command/mapReduce/ Map Reduce Command
+     *
      */
     public MapReduceCommand(final DBCollection inputCollection, final String map, final String reduce, final String outputCollection,
                             final OutputType type, final DBObject query) {
@@ -206,7 +206,7 @@ public class MapReduceCommand {
      *
      * @param timeUnit the time unit to return the value in.
      * @return the maximum execution time
-     * @mongodb.server.release 2.6
+     *
      * @since 2.12.0
      */
     public long getMaxTime(final TimeUnit timeUnit) {
@@ -218,7 +218,7 @@ public class MapReduceCommand {
      *
      * @param maxTime  the maximum execution time. A non-zero value requires a server version &gt;= 2.6
      * @param timeUnit the time unit that maxTime is specified in
-     * @mongodb.server.release 2.6
+     *
      * @since 2.12.0
      */
     public void setMaxTime(final long maxTime, final TimeUnit timeUnit) {
@@ -286,7 +286,7 @@ public class MapReduceCommand {
      *
      * @return whether to bypass document validation, or null if unspecified.
      * @since 2.14
-     * @mongodb.server.release 3.2
+     *
      */
     public Boolean getBypassDocumentValidation() {
         return bypassDocumentValidation;
@@ -297,7 +297,7 @@ public class MapReduceCommand {
      *
      * @param bypassDocumentValidation whether to bypass document validation, or null if unspecified
      * @since 2.14
-     * @mongodb.server.release 3.2
+     *
      */
     public void setBypassDocumentValidation(final Boolean bypassDocumentValidation) {
         this.bypassDocumentValidation = bypassDocumentValidation;
@@ -395,7 +395,7 @@ public class MapReduceCommand {
      *
      * @return the collation
      * @since 3.4
-     * @mongodb.server.release 3.4
+     *
      */
     public Collation getCollation() {
         return collation;
@@ -406,7 +406,7 @@ public class MapReduceCommand {
      *
      * @param collation the collation options
      * @since 3.4
-     * @mongodb.server.release 3.4
+     *
      */
     public void setCollation(final Collation collation) {
         this.collation = collation;
@@ -420,7 +420,7 @@ public class MapReduceCommand {
     /**
      * Represents the different options available for outputting the results of a map-reduce operation.
      *
-     * @mongodb.driver.manual reference/command/mapReduce/#mapreduce-out-cmd Output options
+     *
      */
     public enum OutputType {
         /**

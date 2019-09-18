@@ -120,7 +120,7 @@ public final class UpdateRequest extends WriteRequest {
      *
      * @return the collation options
      * @since 3.4
-     * @mongodb.server.release 3.4
+     *
      */
     public Collation getCollation() {
         return collation;
@@ -133,7 +133,7 @@ public final class UpdateRequest extends WriteRequest {
      * @param collation the collation options to use
      * @return this
      * @since 3.4
-     * @mongodb.server.release 3.4
+     *
      */
     public UpdateRequest collation(final Collation collation) {
         this.collation = collation;

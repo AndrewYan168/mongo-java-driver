@@ -35,7 +35,7 @@ public interface FindIterable<TResult> extends MongoIterable<TResult> {
      *
      * @param filter the filter, which may be null.
      * @return this
-     * @mongodb.driver.manual reference/method/db.collection.find/ Filter
+     *
      */
     FindIterable<TResult> filter(Bson filter);
 
@@ -44,7 +44,7 @@ public interface FindIterable<TResult> extends MongoIterable<TResult> {
      *
      * @param limit the limit, which may be null
      * @return this
-     * @mongodb.driver.manual reference/method/cursor.limit/#cursor.limit Limit
+     *
      */
     FindIterable<TResult> limit(int limit);
     /**
@@ -52,7 +52,7 @@ public interface FindIterable<TResult> extends MongoIterable<TResult> {
      *
      * @param skip the number of documents to skip
      * @return this
-     * @mongodb.driver.manual reference/method/cursor.skip/#cursor.skip Skip
+     *
      */
     FindIterable<TResult> skip(int skip);
 
@@ -62,7 +62,7 @@ public interface FindIterable<TResult> extends MongoIterable<TResult> {
      * @param maxTime  the max time
      * @param timeUnit the time unit, which may not be null
      * @return this
-     * @mongodb.driver.manual reference/method/cursor.maxTimeMS/#cursor.maxTimeMS Max Time
+     *
      */
     FindIterable<TResult> maxTime(long maxTime, TimeUnit timeUnit);
 
@@ -81,7 +81,7 @@ public interface FindIterable<TResult> extends MongoIterable<TResult> {
      * @param maxAwaitTime  the max await time
      * @param timeUnit the time unit to return the result in
      * @return the maximum await execution time in the given time unit
-     * @mongodb.driver.manual reference/method/cursor.maxTimeMS/#cursor.maxTimeMS Max Time
+     *
      * @since 3.2
      */
     FindIterable<TResult> maxAwaitTime(long maxAwaitTime, TimeUnit timeUnit);
@@ -91,7 +91,7 @@ public interface FindIterable<TResult> extends MongoIterable<TResult> {
      *
      * @param modifiers the query modifiers to apply, which may be null.
      * @return this
-     * @mongodb.driver.manual reference/operator/query-modifier/ Query Modifiers
+     *
      */
     FindIterable<TResult> modifiers(Bson modifiers);
 
@@ -100,7 +100,7 @@ public interface FindIterable<TResult> extends MongoIterable<TResult> {
      *
      * @param projection the project document, which may be null.
      * @return this
-     * @mongodb.driver.manual reference/method/db.collection.find/ Projection
+     *
      */
     FindIterable<TResult> projection(Bson projection);
     /**
@@ -108,7 +108,7 @@ public interface FindIterable<TResult> extends MongoIterable<TResult> {
      *
      * @param sort the sort criteria, which may be null.
      * @return this
-     * @mongodb.driver.manual reference/method/cursor.sort/ Sort
+     *
      */
     FindIterable<TResult> sort(Bson sort);
 
@@ -150,7 +150,7 @@ public interface FindIterable<TResult> extends MongoIterable<TResult> {
      *
      * @param batchSize the batch size
      * @return this
-     * @mongodb.driver.manual reference/method/cursor.batchSize/#cursor.batchSize Batch Size
+     *
      */
     @Override
     FindIterable<TResult> batchSize(int batchSize);
@@ -162,7 +162,7 @@ public interface FindIterable<TResult> extends MongoIterable<TResult> {
      * @param collation the collation options to use
      * @return this
      * @since 3.4
-     * @mongodb.server.release 3.4
+     *
      */
     FindIterable<TResult> collation(Collation collation);
 }

@@ -59,7 +59,7 @@ import static java.util.concurrent.TimeUnit.MILLISECONDS;
  *
  * @param <T> the operations result type.
  * @since 3.0
- * @mongodb.driver.manual reference/command/findAndModify/ findAndModify
+ *
  */
 public class FindAndReplaceOperation<T> implements AsyncWriteOperation<T>, WriteOperation<T> {
     private final MongoNamespace namespace;
@@ -119,7 +119,7 @@ public class FindAndReplaceOperation<T> implements AsyncWriteOperation<T>, Write
      *
      * @return the {@link com.mongodb.WriteConcern}
      * @since 3.2
-     * @mongodb.server.release 3.2
+     *
      */
     public WriteConcern getWriteConcern() {
         return writeConcern;
@@ -147,7 +147,7 @@ public class FindAndReplaceOperation<T> implements AsyncWriteOperation<T>, Write
      * Gets the query filter.
      *
      * @return the query filter
-     * @mongodb.driver.manual reference/method/db.collection.find/ Filter
+     *
      */
     public BsonDocument getFilter() {
         return filter;
@@ -158,7 +158,7 @@ public class FindAndReplaceOperation<T> implements AsyncWriteOperation<T>, Write
      *
      * @param filter the query filter, which may be null.
      * @return this
-     * @mongodb.driver.manual reference/method/db.collection.find/ Filter
+     *
      */
     public FindAndReplaceOperation<T> filter(final BsonDocument filter) {
         this.filter = filter;
@@ -169,7 +169,7 @@ public class FindAndReplaceOperation<T> implements AsyncWriteOperation<T>, Write
      * Gets a document describing the fields to return for all matching documents.
      *
      * @return the project document, which may be null
-     * @mongodb.driver.manual reference/method/db.collection.find/ Projection
+     *
      */
     public BsonDocument getProjection() {
         return projection;
@@ -180,7 +180,7 @@ public class FindAndReplaceOperation<T> implements AsyncWriteOperation<T>, Write
      *
      * @param projection the project document, which may be null.
      * @return this
-     * @mongodb.driver.manual reference/method/db.collection.find/ Projection
+     *
      */
     public FindAndReplaceOperation<T> projection(final BsonDocument projection) {
         this.projection = projection;
@@ -216,7 +216,7 @@ public class FindAndReplaceOperation<T> implements AsyncWriteOperation<T>, Write
      * order.
      *
      * @return a document describing the sort criteria
-     * @mongodb.driver.manual reference/method/cursor.sort/ Sort
+     *
      */
     public BsonDocument getSort() {
         return sort;
@@ -227,7 +227,7 @@ public class FindAndReplaceOperation<T> implements AsyncWriteOperation<T>, Write
      *
      * @param sort the sort criteria, which may be null.
      * @return this
-     * @mongodb.driver.manual reference/method/cursor.sort/ Sort
+     *
      */
     public FindAndReplaceOperation<T> sort(final BsonDocument sort) {
         this.sort = sort;
@@ -292,8 +292,8 @@ public class FindAndReplaceOperation<T> implements AsyncWriteOperation<T>, Write
      * @param bypassDocumentValidation If true, allows the write to opt-out of document level validation.
      * @return this
      * @since 3.2
-     * @mongodb.driver.manual reference/command/aggregate/ Aggregation
-     * @mongodb.server.release 3.2
+     *
+     *
      */
     public FindAndReplaceOperation<T> bypassDocumentValidation(final Boolean bypassDocumentValidation) {
         this.bypassDocumentValidation = bypassDocumentValidation;
@@ -305,7 +305,7 @@ public class FindAndReplaceOperation<T> implements AsyncWriteOperation<T>, Write
      *
      * @return the collation options
      * @since 3.4
-     * @mongodb.server.release 3.4
+     *
      */
     public Collation getCollation() {
         return collation;
@@ -318,7 +318,7 @@ public class FindAndReplaceOperation<T> implements AsyncWriteOperation<T>, Write
      * @param collation the collation options to use
      * @return this
      * @since 3.4
-     * @mongodb.server.release 3.4
+     *
      */
     public FindAndReplaceOperation<T> collation(final Collation collation) {
         this.collation = collation;

@@ -65,7 +65,7 @@ public final class RawBsonDocument extends BsonDocument {
      * @param json the JSON string
      * @return a corresponding {@code RawBsonDocument} object
      * @see org.bson.json.JsonReader
-     * @mongodb.driver.manual reference/mongodb-extended-json/ MongoDB Extended JSON
+     *
      * @since 3.3
      */
     public static RawBsonDocument parse(final String json) {

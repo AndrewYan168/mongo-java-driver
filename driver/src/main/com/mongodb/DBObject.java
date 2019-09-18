@@ -21,7 +21,7 @@ import org.bson.BSONObject;
 /**
  * This interface adds some specific behaviour to {@link org.bson.BSONObject} for MongoDB documents.
  *
- * @mongodb.driver.manual core/document/ Documents
+ *
  */
 public interface DBObject extends BSONObject {
     /**
